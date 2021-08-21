@@ -592,6 +592,11 @@
         }
         .slider-card{
             position: unset;
+            .swiper-slide{
+                height: 285px;
+                display: flex;
+                align-items: flex-end;
+            }
         }
         .swiper-wrapper{
             position: unset;
