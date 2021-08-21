@@ -1,0 +1,71 @@
+div.join-modal(
+    style='display: none'
+    id='join-modal'
+)   
+    .join-modal__inner
+        .tabs-wrapper
+            .tabs
+                a.tab.tab--active.active-line.hover-line(href='#modal-login') Авторизация     
+                a.tab.hover-line(href='#modal-register') регистрация
+        .tabs-container
+            .tabs-content.tabs-content--active(id='modal-login')
+                p.join-modal__descr Войти через соцсети:
+                include _connect-list.pug
+                form.join-modal__form
+                    label.label 
+                        | Логин
+                        input.input.input--small
+                    label.label 
+                        | Пароль
+                        input.input.input--small
+                    .join-modal__actions
+                        button.btn(type='submit') войти
+                        a.link(href='#') Забыли пароль?
+            .tabs-content(id='modal-register')
+                form.join-modal__form
+                    label.label.label--important
+                        span Имя
+                        input.input.input--small(required type='text')
+                    label.label 
+                        span Фамилия
+                        input.input.input--small(type='text')
+                    label.label.label--important 
+                        span Дата рождения
+                        input.input.input--small.datepicker-here#register-data(type='text' required data-language='ru')
+                        svg.icon.icon-calendar
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#calendar"
+                            )
+                    label.label.label--important 
+                        span Город
+                        input.input.input--small(required type='text')
+                    label.label.label--important 
+                        span E-mail
+                        input.input.input--small(type='email' required)
+                    label.label.label--important
+                        span Телефон
+                        input.input.input--small#register-phone(required type='text' ) 
+                    label.label.label--important 
+                        span Пароль
+                        input.input.input--small(required type='password')
+                        svg.icon.icon-password.icon-hidden
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#password-hidden"
+                            )
+                        svg.icon.icon-password.icon-visible
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#password-visible"
+                            )
+                    label.label.label--important 
+                        span Повторите пароль
+                        input.input.input--small(required type='password')
+                        svg.icon.icon-password.icon-hidden
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#password-hidden"
+                            )
+                        svg.icon.icon-password.icon-visible
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#password-visible"
+                            )
+                    .join-modal__actions
+                        button.btn(type='submit') зарегистрироваться

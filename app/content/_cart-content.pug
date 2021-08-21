@@ -1,0 +1,124 @@
+section.cart
+        .container
+            h1.cart__title.subtitle корзина
+            .cart__inner
+                .cart__left
+                    .card-cart
+                        span.card__like
+                            svg
+                                use(
+                                    xlink:href="assets/sprites/sprite.svg#save"
+                                )
+                        span.card-cart__bin
+                            svg
+                                use(
+                                    xlink:href="assets/sprites/sprite.svg#bin"
+                                )
+                        .card-cart__left
+                            a.card-cart__imgwrapper(href='#')
+                                img(src='temp/novelty-week-3.jpg')
+                            .card-cart__info
+                                p.card-cart__title Valentino Garavani
+                                p.card-cart__descr Сумка на плечо
+                                p.card-cart__vendor Артикул: 255461
+                                p.card-cart__color Цвет: 
+                                    span Бежевый
+                        .card-cart__right
+                            p.card-cart__size Размер:
+                                span 43
+                            .card-cart__count
+                                button.card-cart__count--minus -
+                                input.card-cart__count-input( type='number' value='1' min='1' max='100')
+                                button.card-cart__count--plus +
+                            .card-cart__price
+                                span.card-cart__price--curr 29 995 ₸
+                                p 109 990 ₸ 
+                                    span.card-cart__price--discount &nbsp; -50%
+                    .card-cart.card-cart--show-size
+                        span.card__like
+                            svg
+                                use(
+                                    xlink:href="assets/sprites/sprite.svg#save"
+                                )
+                        span.card-cart__bin
+                            svg
+                                use(
+                                    xlink:href="assets/sprites/sprite.svg#bin"
+                                )
+                        .card-cart__left
+                            a.card-cart__imgwrapper(href='#')
+                                img(src='temp/novelty-week-2.jpg')
+                            .card-cart__info
+                                p.card-cart__title Valentino
+                                p.card-cart__descr Укороченные расклешенные брюки
+                                p.card-cart__vendor Артикул: 2441145
+                                p.card-cart__color Цвет: 
+                                    span Коричневый
+                        .card-cart__right
+                            p.card-cart__size Размер:
+                                span 43
+                            .card-cart__count
+                                button.card-cart__count--minus -
+                                input.card-cart__count-input( type='number' value='1' min='1' max='100')
+                                button.card-cart__count--plus +
+                            .card-cart__price
+                                span.card-cart__price--curr 32 995 ₸
+                                p 65 990 ₸ 
+                                    span.card-cart__price--discount &nbsp; -64%
+                    .card-cart
+                        span.card__like
+                            svg
+                                use(
+                                    xlink:href="assets/sprites/sprite.svg#save"
+                                )
+                        span.card-cart__bin
+                            svg
+                                use(
+                                    xlink:href="assets/sprites/sprite.svg#bin"
+                                )
+                        .card-cart__left
+                            a.card-cart__imgwrapper(href='#')
+                                img(src='temp/novelty-week-3.jpg')
+                            .card-cart__info
+                                p.card-cart__title Valentino Garavani
+                                p.card-cart__descr Сумка на плечо
+                                p.card-cart__vendor Артикул: 255461
+                                p.card-cart__color Цвет: 
+                                    span Бежевый
+                        .card-cart__right
+                            p.card-cart__size Размер:
+                                span 43
+                            .card-cart__count
+                                button.card-cart__count--minus -
+                                input.card-cart__count-input( type='number' value='1' min='1' max='100')
+                                button.card-cart__count--plus +
+                            .card-cart__price
+                                span.card-cart__price--curr 29 995 ₸
+                                p 109 990 ₸ 
+                                    span.card-cart__price--discount &nbsp; -50%
+                .cart__right
+                    h2.cart__right-title итог заказа
+                    ul.cart__right-list.cart-list
+                        li.cart-list__item.cart-list__item--price-goods
+                            p Товаров на сумму:
+                            span 62 990 ₸
+                        li.cart-list__item.cart-list__item--delivery
+                            p Доставка:
+                            span 600 ₸
+                        li.cart-list__item.cart__promo.accordion-wrapper
+                            button.cart__promo-head.accordion-head Добавить промокод
+                            .cart__promo-content.accordion-body.input-wrapper
+                                input.input.input--small(type='text' placeholder='Введите промокод')
+                        li.cart-list__item.cart-list__item--all
+                            p Итого:
+                            span 48 990 ₸ 
+                    p.cart__economy Вы экономите &nbsp;
+                        span 14 000 ₸
+                    a.cart__btn.btn Перейти к оформлению заказа
+                    include ../components/_pay-partners.pug
+            
+section.slider.slider--left
+    .container
+        h2.subtitle c этими товарами покупают
+        include ../components/_slider-auto.pug
+

@@ -1,0 +1,700 @@
+.cataloge__cards
+    a.card.card--haveDiscount(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__discount 70%
+                ul.card__info
+                    li.card__info-item.card__info-item--pink promo
+                    li.card__info-item.card__info-item--blue exclusive online
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino
+            span.card__descr
+                | Укороченные расклешенные брюки
+            span.card__price
+                span.card__price--old 65 990 ₸
+                | 32 995 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-1") Быстрый просмотр
+    
+    .card-modal.card-modal--haveDiscount.modal-parent(
+        style="position:absolute; left:-5000px;"
+        id='card-modal-1'
+    )
+        .card-modal__inner.modal-inner
+            .card-modal__left.slider
+                .slider.slider--card-modal.swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="temp/preview-1.jpg")
+                        .swiper-slide
+                            img(src="temp/preview-1.jpg")
+                        .swiper-slide
+                            img(src="temp/preview-1.jpg")
+                .arrow-prev
+                .arrow-next
+            .card-modal__right
+                p.card-modal__title СВИТЕР УДЛИНЕННЫЙ MM6
+                .card-modal__descr-block
+                    p.card-modal__descr Бежевый свитер
+                    p.card-modal__article Артикул: 255461
+                span.card__price
+                    span.card__price--old 65 990 ₸
+                    | 32 995 ₸
+                p.card-modal__curr-color Выберите цвет:
+                    span Светлобежевый
+                ul.card-modal__colors-list
+                    li.card-modal__colors-item.card-modal__colors-item--active(style='background-color: #ddc5b9')
+                    li.card-modal__colors-item(style='background-color: #5d5d62')
+                    li.card-modal__colors-item(style='background-color: #c5c5c8')
+                p.card-modal__curr-size Выберите цвет:
+                    a(href='#') Таблица размеров
+                ul.card-modal__size-list
+                    li.card-modal__size-item.card-modal__size-item--active S
+                    li.card-modal__size-item.card-modal__size-item--not-available M
+                    li.card-modal__size-item L
+                    li.card-modal__size-item XL
+                .card-modal__buttons
+                    button.card__cart-btn.btn добавить в корзину
+                    span.card__like
+                        svg.icon.icon-save
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#save"
+                            )
+                a.card-modal__link(href='#')
+                    svg.icon.icon-box
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#box"
+                        )
+                    span.link Проверить наличие в магазине
+    a.card.card--new(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__new
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino Garavani
+            span.card__descr
+                | Сумка на плечо 
+                br
+                | VSling
+            span.card__price
+                | 105 900 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-2") Быстрый просмотр
+
+    .card-modal.modal-parent(
+        style="position:absolute; left:-5000px;"
+        id='card-modal-2'
+    )
+        .card-modal__inner.modal-inner
+            .card-modal__left.slider
+                .slider.slider--card-modal.swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="temp/preview-1.jpg")
+                        .swiper-slide
+                            img(src="temp/preview-1.jpg")
+                        .swiper-slide
+                            img(src="temp/preview-1.jpg")
+                .arrow-prev
+                .arrow-next
+            .card-modal__right
+                p.card-modal__title СВИТЕР УДЛИНЕННЫЙ MM6
+                .card-modal__descr-block
+                    p.card-modal__descr Бежевый свитер
+                    p.card-modal__article Артикул: 255461
+                span.card__price
+                    span.card__price--old 65 990 ₸
+                    | 32 995 ₸
+                p.card-modal__curr-color Выберите цвет:
+                    span Светлобежевый
+                ul.card-modal__colors-list
+                    li.card-modal__colors-item.card-modal__colors-item--active(style='background-color: #ddc5b9')
+                    li.card-modal__colors-item(style='background-color: #5d5d62')
+                    li.card-modal__colors-item(style='background-color: #c5c5c8')
+                p.card-modal__curr-size Выберите цвет:
+                    a(href='#') Таблица размеров
+                ul.card-modal__size-list
+                    li.card-modal__size-item.card-modal__size-item--active S
+                    li.card-modal__size-item.card-modal__size-item--not-available M
+                    li.card-modal__size-item L
+                    li.card-modal__size-item XL
+                .card-modal__buttons
+                    button.card__cart-btn.btn добавить в корзину
+                    span.card__like
+                        svg.icon.icon-save
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#save"
+                            )
+                a.card-modal__link(href='#')
+                    svg.icon.icon-box
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#box"
+                        )
+                    span.link Проверить наличие в магазине
+
+    a.card.card--haveDiscount(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__discount 70%
+                ul.card__info
+                    li.card__info-item.card__info-item--brown рассрочка
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-4.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-4.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-4.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-4.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Jordan
+            span.card__descr
+                | Кроссовки 
+                br
+                | Air Jordan Union
+            span.card__price
+                span.card__price--old 125 900 ₸
+                | 90 900 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-1") Быстрый просмотр
+    a.card.card--haveDiscount(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__discount 70%
+                ul.card__info
+                    li.card__info-item.card__info-item--red promo code
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-5.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-5.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-5.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Acne Studios 
+            span.card__descr
+                | Серое
+                br
+                | худи
+            span.card__price
+                span.card__price--old 77 990 ₸
+                | 18 995 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-2") Быстрый просмотр
+    a.card.card--haveDiscount(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__discount 70%
+                ul.card__info
+                    li.card__info-item.card__info-item--pink promo
+                    li.card__info-item.card__info-item--blue exclusive online
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino
+            span.card__descr
+                | Укороченные расклешенные брюки
+            span.card__price
+                span.card__price--old 65 990 ₸
+                | 32 995 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-1") Быстрый просмотр
+    a.card.card--new(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__new
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino Garavani
+            span.card__descr
+                | Сумка на плечо 
+                br
+                | VSling
+            span.card__price
+                | 105 900 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-2") Быстрый просмотр
+    a.card.card--haveDiscount(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__discount 70%
+                ul.card__info
+                    li.card__info-item.card__info-item--pink promo
+                    li.card__info-item.card__info-item--blue exclusive online
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino
+            span.card__descr
+                | Укороченные расклешенные брюки
+            span.card__price
+                span.card__price--old 65 990 ₸
+                | 32 995 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-1") Быстрый просмотр
+    a.card.card--new(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__new
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino Garavani
+            span.card__descr
+                | Сумка на плечо 
+                br
+                | VSling
+            span.card__price
+                | 105 900 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-2") Быстрый просмотр
+    a.card.card--haveDiscount(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__discount 70%
+                ul.card__info
+                    li.card__info-item.card__info-item--pink promo
+                    li.card__info-item.card__info-item--blue exclusive online
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino
+            span.card__descr
+                | Укороченные расклешенные брюки
+            span.card__price
+                span.card__price--old 65 990 ₸
+                | 32 995 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-1") Быстрый просмотр
+    a.card.card--new(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__new
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino Garavani
+            span.card__descr
+                | Сумка на плечо 
+                br
+                | VSling
+            span.card__price
+                | 105 900 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-2") Быстрый просмотр
+    a.card.card--haveDiscount(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__discount 70%
+                ul.card__info
+                    li.card__info-item.card__info-item--pink promo
+                    li.card__info-item.card__info-item--blue exclusive online
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino
+            span.card__descr
+                | Укороченные расклешенные брюки
+            span.card__price
+                span.card__price--old 65 990 ₸
+                | 32 995 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-1") Быстрый просмотр
+    a.card.card--new(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__new
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino Garavani
+            span.card__descr
+                | Сумка на плечо 
+                br
+                | VSling
+            span.card__price
+                | 105 900 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-2") Быстрый просмотр
+    a.card.card--haveDiscount(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__discount 70%
+                ul.card__info
+                    li.card__info-item.card__info-item--pink promo
+                    li.card__info-item.card__info-item--blue exclusive online
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino
+            span.card__descr
+                | Укороченные расклешенные брюки
+            span.card__price
+                span.card__price--old 65 990 ₸
+                | 32 995 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-1") Быстрый просмотр
+    a.card.card--new(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__new
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino Garavani
+            span.card__descr
+                | Сумка на плечо 
+                br
+                | VSling
+            span.card__price
+                | 105 900 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-2") Быстрый просмотр
+    a.card.card--haveDiscount(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__discount 70%
+                ul.card__info
+                    li.card__info-item.card__info-item--pink promo
+                    li.card__info-item.card__info-item--blue exclusive online
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-2.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino
+            span.card__descr
+                | Укороченные расклешенные брюки
+            span.card__price
+                span.card__price--old 65 990 ₸
+                | 32 995 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-1") Быстрый просмотр
+    a.card.card--new(
+        href='#'
+    )
+        span.card__inner
+            span.card__top
+                span.card__new
+                span.card__like
+                    svg
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#save"
+                        )
+                span.slider-card.swiper-container
+                    span.swiper-wrapper
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                        .swiper-slide
+                            img(src='temp/novelty-week-3.jpg')
+                    span.swiper-pagination
+            span.card__title
+                | Valentino Garavani
+            span.card__descr
+                | Сумка на плечо 
+                br
+                | VSling
+            span.card__price
+                | 105 900 ₸
+            span.card__hover-panel
+                span.card__cart
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                span.card__quick(data-fancybox data-src="#card-modal-2") Быстрый просмотр

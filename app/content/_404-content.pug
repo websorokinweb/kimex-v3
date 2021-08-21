@@ -1,0 +1,16 @@
+section.not-found
+    h1.not-found__title 404
+    h2.not-found__subtitle К сожалению, страница не найдена!
+    p.not-found__descr
+        | Возможно, она была удалена или перемещена в другой раздел. 
+        br
+        | Вы можете вернуться на 
+        a.link(href='/') главную страницу 
+        | &nbsp; или воспользоваться 
+        a.link(href='#') формой поиска
+        | .
+
+section.slider.slider--left
+    .container
+        h3.subtitle недавно просмотренные
+        include ../components/_slider-auto.pug

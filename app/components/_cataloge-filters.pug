@@ -1,0 +1,102 @@
+.page-filter
+    .page-filter__top
+        .page-filter__top-left
+            ul.breadcrumbs
+                li.breadcrumbs__item
+                    a.breadcrumbs__content(href='#') Женская 
+                li.breadcrumbs__item
+                    span.breadcrumbs__content Одежда
+            h1.page-filter__title Одежда
+        .page-filter__top-right
+            p.page-filter__results Всего 3256 предложений
+            select.page-filter__order.select.select--no-search(data-dropdown-css-class='select--relative' data-minimum-results-for-search='-1')
+                option Цена по возрастанию
+                option Цена по убыванию
+                option Со скидками
+                option По новизне
+    form.page-filter__bottom
+        ul.page-filter__list
+            li.page-filter__item.filter-price
+                .filter-price__background
+                .filter-price__select
+                    span Цена
+                .filter-price__content
+                    .extra-controls
+                        label.filter-price__label
+                            span от
+                            input.js-input-from(type='text' value='0')
+                        label.filter-price__label
+                            span до
+                            input.js-input-to(type='text' value='0')
+                    input.filter-price__input(type='text'
+                        data-type='double'
+                        data-min='0'
+                        data-max='135000'
+                        data-from='10000'
+                        data-to='125000'
+                    )
+            li.page-filter__item
+                span.page-filter__item-number.page-filter__item-number--hidden 0
+                select.page-filter__select.select-filter--multiple.select-color(
+                    multiple="multiple"
+                )
+                    option(selected='selected') Цвет
+                    option Бежевый #e5d8d2 
+                    option Персиковый #ae8979
+                    option Серый #9d9f9e
+                    option Хаки #6c685a
+                    option Фиолетовый #6e6872
+                    option Светлосерый #a9adb8
+                    option Бежевый #e5d8d2 
+                    option Персиковый #ae8979
+                    option Серый #9d9f9e
+                    option Хаки #6c685a
+                    option Фиолетовый #6e6872
+                    option Светлосерый #a9adb8
+            li.page-filter__item
+                span.page-filter__item-number.page-filter__item-number--hidden 0
+                select.page-filter__select.select-filter--multiple(
+                    multiple="multiple"
+                    selection-css-class='select-dropdown__filter--multiple-select select-filter--brand'
+                    data-dropdown-css-class='select-dropdown__filter--multiple select-filter--brand-dropdown'
+                )
+                    option(selected='selected') Бренд
+                    option BALENCIAGA
+                    option BALMAIN
+                    option BOTTEGA
+                    option VENETA
+                    option BRUNELLO
+                    option CUCINELLI
+                    option CELINE
+                    option CELINE
+                    option CELINE
+                    option CELINE
+                    option CELINE
+                    option CELINE
+                    option CELINE
+            li.page-filter__item
+                span.page-filter__item-number.page-filter__item-number--hidden 0
+                select.page-filter__select.select-filter--multiple(
+                    multiple="multiple"
+                )
+                    option(selected='selected') Размер
+                    option Цена2               
+                    option Цена3
+            li.page-filter__item
+                span.page-filter__item-number.page-filter__item-number--hidden 0
+                select.page-filter__select.select-filter--multiple(
+                    multiple="multiple"
+                )
+                    option(selected='selected') Тип
+                    option Цена2               
+                    option Цена3     
+        label.label--have-checkbox.page-filter__label
+            input.checkbox(type='checkbox')
+            span.checkbox-style
+                svg.icon.icon-check
+                    use(xlink:href="assets/sprites/sprite.svg#check")
+            span.page-filter__label-name
+            | Новая коллекция
+        button.page-filter__clear.link(type='button') Очистить фильтры
+
+

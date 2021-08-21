@@ -1,0 +1,29 @@
+.cataloge
+    .container
+        .cataloge__inner
+            include ../components/_cataloge-aside.pug
+            .cataloge__page
+                include ../components/_cataloge-filters.pug
+                include ../components/_cataloge-cards.pug
+                nav.cataloge__page-nav.pagination
+                    p.pagination__descr Страницы: &nbsp;
+                    ul.pagination__list
+                        li.pagination__item
+                            span.pagination__link.hover-line.hover-line--thin.pagination__link--active 1
+                        li.pagination__item
+                            a.pagination__link.hover-line.hover-line--thin(href='#') 2
+                        li.pagination__item
+                            a.pagination__link.hover-line.hover-line--thin(href='#') 3
+                        li.pagination__item
+                            a.pagination__link.hover-line.hover-line--thin(href='#') 4
+                        li.pagination__item
+                            a.pagination__link.hover-line.hover-line--thin(href='#') 5
+                        li.pagination__item
+                            a.pagination__link.hover-line.hover-line--thin(href='#') 6
+                        li.pagination__item
+                            a.pagination__link.hover-line.hover-line--thin(href='#') 7
+                        li.pagination__item.pagination__item--dots ...
+                        li.pagination__item
+                            a.pagination__link.hover-line.hover-line--thin(href='#') 12
+                p.cataloge-page__all-goods Ещё товаров: &nbsp; 
+                    span 3251
