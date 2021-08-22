@@ -248,7 +248,7 @@ $('.header__join a').on('click', function(e){
     }
 });
 
-$('#register-phone').mask('+7 (000) 000-00-00', {placeholder: "+7 (__) ___-__-__"});
+$('[data-phone-mask]').mask('+7 (000) 000-00-00', {placeholder: "+7 (__) ___-__-__"});
 
 $('#register-data').datepicker({
     autoClose: true
@@ -535,3 +535,19 @@ $('.reviews__close').on('click', function(){
     }
     $(this).text('Свернуть все отзывы')
 });
+
+// Submit order
+
+$('.submit-tab__head').on('click', function(){
+    $(this).parent().removeClass('submit-tab--checked')
+    $(this).parent().siblings('.submit-tab').removeClass('submit-tab--active')
+    $(this).parent().toggleClass('submit-tab--active')
+})
+
+$('.btn--next').on('click', function(){
+    $(this).parent().parent().next().addClass('submit-tab--active')
+    $(this).parent().parent().removeClass('submit-tab--active')
+    $(this).parent().parent().addClass('submit-tab--checked')
+})
+
+// Submit order

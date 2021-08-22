@@ -118,6 +118,21 @@ img{
             }
         }
     }   
+    &--important{
+        span{
+            position: relative;
+            &:before{
+                content: '*';
+                position: absolute;
+                right: -7px;
+                bottom: 1.3px;
+                font-size: 12px;
+                line-height: 12px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+            }
+        }
+    }
 }
 
 .input-wrapper{
@@ -177,6 +192,9 @@ img{
         background-color: #fff;
         color: $text-main;
         border: 1px solid $text-main;
+    }
+    &--next{
+        padding: 0 64px;
     }
     &:hover{
         background-color: #363636;
@@ -815,6 +833,12 @@ img{
     }
 
     &__contacts-link {
+    }
+    &--light{
+        background-color: #fff;
+        .partners .picon{
+            opacity: 1;
+        }
     }
 }
 .mailing {
@@ -1710,21 +1734,6 @@ img{
             .label{
                 margin-top: 22px;
                 position: relative;
-                &--important{
-                    span{
-                        position: relative;
-                        &:before{
-                            content: '*';
-                            position: absolute;
-                            right: -7px;
-                            bottom: 1.3px;
-                            font-size: 12px;
-                            line-height: 12px;
-                            font-family: 'Montserrat', sans-serif;
-                            font-weight: 500;
-                        }
-                    }
-                }
                 &--show-password{
                     .icon-visible{
                         opacity: 1;

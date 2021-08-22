@@ -1,0 +1,64 @@
+section.submit-order
+    .container
+        h1.subtitle Оформление заказа
+        .submit-cart.submit-order__block
+            .submit-cart__left
+                .submit-cart__count
+                    svg.icon.icon-cart
+                        use(
+                            xlink:href="assets/sprites/sprite.svg#cart"
+                        )
+                    | В корзине &nbsp; 
+                    span (2 товара)
+                .submit-cart__price
+                    | На сумму: 
+                    span 62 990 ₸
+            a.submit-cart__link.link(href='#') Посмотреть товары
+        form.submit-order__form
+            .submit-adress.submit-order__block.submit-tab.submit-tab--active
+                button.submit-tab__head(type='button') адрес доставки
+                .submit-tab__body
+                    label.label.label--important
+                        span Имя
+                        input.input.input--small(type='text')
+                    label.label.label--important 
+                        span Фамилия
+                        input.input.input--small(type='text')
+                    label.label.label--important
+                        span Телефон
+                        input.input.input--small(type='text' data-phone-mask)
+                    label.label.label--important 
+                        span Эл. почта
+                        input.input.input--small(type='text')
+                    label.label.label--important
+                        span Город
+                        input.input.input--small(type='text')
+                    label.label.label--important 
+                        span Адрес
+                        input.input.input--small(type='text')
+                    button.btn.btn--next(type='button') далее
+            .submit-delivery.submit-order__block.submit-tab
+                button.submit-tab__head(type='button') способ доставки
+                .submit-tab__body
+                    label.label--have-checkbox
+                        input.checkbox(type='radio' name='order-delivery')
+                        span.checkbox-style
+                        span.submit-delivery__subtitle Доставка в пределах квадрата пр. Аль-Фараби – ул. Бузурбаева – пр. Рыскулова – ул. Яссауи 
+                        | Стоимость: 
+                        span.submit-delivery__price 1 000 ₸
+                    label.label--have-checkbox
+                        input.checkbox(type='radio' name='order-delivery')
+                        span.checkbox-style
+                        span.submit-delivery__subtitle Доставка вне указанного квадрата
+                        | Стоимость: 
+                        span.submit-delivery__price 1 500 ₸
+                    label.label--have-checkbox
+                        input.checkbox(type='radio' name='order-delivery')
+                        span.checkbox-style
+                        span.submit-delivery__subtitle Cамовывоз: г. Алматы, ул. Жибек Жолы 104 , магазин «Kimex»
+                        | Стоимость: 
+                        span.submit-delivery__price 0 ₸
+                    button.btn.btn--next(type='button') далее
+            .submit-pay.submit-order__block.submit-tab
+                button.submit-tab__head(type='button') способ оплаты
+                .submit-tab__body

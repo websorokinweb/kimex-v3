@@ -1,0 +1,184 @@
+.only-logo{
+    background-color: #fff;
+    text-align: center;
+    display: block;
+    padding: 16px 0;
+    img{
+        position: unset;
+        width: 178px;
+    }
+}
+
+.submit-order{
+    padding: 20px 0 56px;
+    background-color: #f6f6f6;
+    .subtitle{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    &__block{
+        background-color: #fff;
+        padding: 24px;
+        max-width: 800px;
+        margin: 16px auto 0;
+    }
+    &__form{
+        counter-reset: section;
+    }
+}
+
+.submit-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    &__count{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 12px;
+        .icon-cart{
+            margin-right: 9px;
+            font-size: 20px;
+        }
+        span{
+            color: $text-main;
+            font-weight: 600;
+        }
+    }
+    &__price{
+        span{
+            font-size: 18px;
+            line-height: 18px;
+            color: $text-main;
+            font-weight: 600;
+        }
+    }
+}
+
+.submit-tab{
+    &__head{
+        color: $text-light;
+        border: none;
+        background-color: transparent;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 11px 0 6px 42px;
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        text-align: left;
+        &:before{
+            counter-increment: section;
+            content: counter(section);
+            position: absolute;
+            left: 0;
+            top: 53%;
+            transform: translateY(-50%);
+            border: 2px solid $text-light;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__body{
+        opacity: 0;
+        height: 0;
+        transition: opacity .2s height .4s;
+        pointer-events: none;
+    }
+    &--active{
+        .submit-tab__head{
+            color: $text-main;
+            margin-bottom: 25px;
+            &:before{
+                border: 2px solid $text-main;
+            }
+        }
+        .submit-tab__body{
+            opacity: 1;
+            height: unset;
+            pointer-events: all;
+        }
+    }
+    &--checked{
+        .submit-tab__head{
+            color: $text-main;
+            margin-bottom: 19px;
+            &:before{
+                border: 2px solid $text-main;
+            }
+        }
+    }
+}
+
+.submit-adress{
+    .label{
+        color: $text-main;
+        margin-bottom: 22px;
+        .input{
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+        }
+        span{
+            font-weight: 600;
+        }
+    }
+}
+
+.submit-delivery{
+    .submit-tab__head{
+        margin-bottom: 22px;
+    }
+    .submit-tab__body{
+        margin-left: 40px;
+    }
+    &__subtitle{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .label--have-checkbox{
+        margin-bottom: 22px;
+        display: block;
+        position: relative;
+        padding-left: 24px;
+        cursor: pointer;
+        .checkbox-style{
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-color: #dfdfdf;
+            border-radius: 50%;
+            &:after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 8px;
+                background-color: $text-main;
+                border-radius: 50%;
+                opacity: 0;
+            }
+        }
+        input:checked+.checkbox-style{
+            border-color: $text-main;
+            &:after{
+                opacity: 1;
+            }
+        }
+        span{
+            color: $text-main;
+            font-weight: 600;
+        }
+    }
+    .btn{
+        margin-top: 5px;
+    }
+}
