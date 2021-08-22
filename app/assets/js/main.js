@@ -538,16 +538,58 @@ $('.reviews__close').on('click', function(){
 
 // Submit order
 
+$('.submit-order__form .input').on('input', function(){
+    let inputId = $(this).attr('id')
+    let inputValue = $(this).val()
+    let needItem = $(`[data-id='${inputId}'`)
+    needItem.text(inputValue)
+});
+
+$('.submit-order__form .checkbox').on('input', function(){
+    let inputId = $(this).attr('id')
+    let inputValue = $(this).val()
+    let needItem = $(`[data-id='${inputId}'`)
+    needItem.text(inputValue)
+});
+
 $('.submit-tab__head').on('click', function(){
-    $(this).parent().removeClass('submit-tab--checked')
-    $(this).parent().siblings('.submit-tab').removeClass('submit-tab--active')
-    $(this).parent().toggleClass('submit-tab--active')
+    let tabParent = $(this).closest('.submit-tab')
+    if (tabParent.hasClass('submit-tab--active')){
+        tabParent.toggleClass('submit-tab--active')
+        tabParent.addClass('submit-tab--checked')
+    } else{
+        tabParent.siblings('.submit-tab').removeClass('submit-tab--active')
+        tabParent.addClass('submit-tab--active')
+        tabParent.siblings().addClass('submit-tab--checked')
+        tabParent.addClass('submit-tab--checked')
+    }
+
+    if ($(tabParent).hasClass('submit-pay')){
+        tabParent.next().toggleClass('submit-order__submit--active')
+    } else{
+        $('.submit-order__submit').removeClass('submit-order__submit--active')
+    }
+});
+
+$('.submit-tab__checked-link').on('click', function(){
+    let tabParent = $(this).closest('.submit-tab')
+    tabParent.siblings('.submit-tab').removeClass('submit-tab--active')
+    tabParent.addClass('submit-tab--active')
+    tabParent.removeClass('submit-tab--checked')
 })
 
 $('.btn--next').on('click', function(){
-    $(this).parent().parent().next().addClass('submit-tab--active')
-    $(this).parent().parent().removeClass('submit-tab--active')
-    $(this).parent().parent().addClass('submit-tab--checked')
+    let tabParent = $(this).closest('.submit-tab')
+    if ($(tabParent.next().next()).hasClass('submit-order__submit')){
+        tabParent.next().next().toggleClass('submit-order__submit--active')
+    }
+    tabParent.next().addClass('submit-tab--active')
+    tabParent.removeClass('submit-tab--active')
+    tabParent.addClass('submit-tab--checked')
 })
+
+// $('.submit-pay .submit-tab__head').on('click', function(){
+//     submitOrder.toggleClass('submit-order__submit--active')
+// })
 
 // Submit order

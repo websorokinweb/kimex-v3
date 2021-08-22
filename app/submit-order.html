@@ -27,44 +27,88 @@
             <button class="submit-tab__head" type="button">адрес доставки</button>
             <div class="submit-tab__body">
               <label class="label label--important"><span>Имя</span>
-                <input class="input input--small" type="text">
+                <input class="input input--small" type="text" id="submit-name">
               </label>
               <label class="label label--important"> <span>Фамилия</span>
-                <input class="input input--small" type="text">
+                <input class="input input--small" type="text" id="submit-surname">
               </label>
               <label class="label label--important"><span>Телефон</span>
-                <input class="input input--small" type="text" data-phone-mask>
+                <input class="input input--small" type="text" id="submit-phone" data-phone-mask>
               </label>
               <label class="label label--important"> <span>Эл. почта</span>
-                <input class="input input--small" type="text">
+                <input class="input input--small" type="text" id="submit-email">
               </label>
               <label class="label label--important"><span>Город</span>
-                <input class="input input--small" type="text">
+                <input class="input input--small" type="text" id="submit-city">
               </label>
               <label class="label label--important"> <span>Адрес</span>
-                <input class="input input--small" type="text">
+                <input class="input input--small" type="text" id="submit-adress">
               </label>
               <button class="btn btn--next" type="button">далее</button>
+            </div>
+            <div class="submit-tab__checked">
+              <ul class="submit-tab__checked-list">
+                <li class="submit-tab__checked-item" data-id="submit-name">Алексей Заморин</li>
+                <li class="submit-tab__checked-item" data-id="submit-phone">+7 965 443-33-33</li>
+                <li class="submit-tab__checked-item" data-id="submit-email">zamorin@gmail.com</li>
+                <li class="submit-tab__checked-item" data-id="submit-city">г. Астана, ул. Сивасова, д. 44, кв. 95</li>
+              </ul>
+              <button class="submit-tab__checked-link link" type="button">Изменить адрес доставки</button>
             </div>
           </div>
           <div class="submit-delivery submit-order__block submit-tab">
             <button class="submit-tab__head" type="button">способ доставки</button>
             <div class="submit-tab__body">
               <label class="label--have-checkbox">
-                <input class="checkbox" type="radio" name="order-delivery"><span class="checkbox-style"></span><span class="submit-delivery__subtitle">Доставка в пределах квадрата пр. Аль-Фараби – ул. Бузурбаева – пр. Рыскулова – ул. Яссауи </span>Стоимость: <span class="submit-delivery__price">1 000 ₸</span>
+                <input class="checkbox" type="radio" name="order-delivery" id=""><span class="checkbox-style"></span><span class="submit-delivery__subtitle">Доставка в пределах квадрата пр. Аль-Фараби – ул. Бузурбаева – пр. Рыскулова – ул. Яссауи </span>Стоимость: <span class="submit-delivery__price">1 000 ₸</span>
               </label>
               <label class="label--have-checkbox">
-                <input class="checkbox" type="radio" name="order-delivery"><span class="checkbox-style"></span><span class="submit-delivery__subtitle">Доставка вне указанного квадрата</span>Стоимость: <span class="submit-delivery__price">1 500 ₸</span>
+                <input class="checkbox" type="radio" name="order-delivery" id=""><span class="checkbox-style"></span><span class="submit-delivery__subtitle">Доставка вне указанного квадрата</span>Стоимость: <span class="submit-delivery__price">1 500 ₸</span>
               </label>
               <label class="label--have-checkbox">
-                <input class="checkbox" type="radio" name="order-delivery"><span class="checkbox-style"></span><span class="submit-delivery__subtitle">Cамовывоз: г. Алматы, ул. Жибек Жолы 104 , магазин «Kimex»</span>Стоимость: <span class="submit-delivery__price">0 ₸</span>
+                <input class="checkbox" type="radio" name="order-delivery" id=""><span class="checkbox-style"></span><span class="submit-delivery__subtitle">Cамовывоз: г. Алматы, ул. Жибек Жолы 104 , магазин «Kimex»</span>Стоимость: <span class="submit-delivery__price">0 ₸</span>
               </label>
               <button class="btn btn--next" type="button">далее</button>
+            </div>
+            <div class="submit-tab__checked">
+              <ul class="submit-tab__checked-list">
+                <li class="submit-tab__checked-item">Доставка вне указанного квадрата</li>
+                <li class="submit-tab__checked-item">Стоимость: 1 500 ₸</li>
+              </ul>
+              <button class="submit-tab__checked-link link" type="button">Изменить способ доставки</button>
             </div>
           </div>
           <div class="submit-pay submit-order__block submit-tab">
             <button class="submit-tab__head" type="button">способ оплаты</button>
-            <div class="submit-tab__body"></div>
+            <div class="submit-tab__body">
+              <div class="submit-pay__top">
+                <label class="label--have-checkbox">
+                  <input class="checkbox" type="radio" name="order-pay"><span class="checkbox-style"></span><span class="submit-pay__title">Наличными</span>
+                </label>
+                <label class="label--have-checkbox">
+                  <input class="checkbox" type="radio" name="order-pay"><span class="checkbox-style"></span><span class="submit-pay__title">Оплата сертификатом</span>
+                </label>
+              </div>
+              <div class="submit-pay__bottom">
+                <label class="label--have-checkbox">
+                  <input class="checkbox" type="radio" name="order-pay"><span class="checkbox-style"></span><span class="picon paybox"></span>
+                </label>
+                <label class="label--have-checkbox">
+                  <input class="checkbox" type="radio" name="order-pay"><span class="checkbox-style"></span><span class="picon zoodpay"></span>
+                </label>
+                <label class="label--have-checkbox">
+                  <input class="checkbox" type="radio" name="order-pay"><span class="checkbox-style"></span><span class="picon mastercard"></span><span class="picon visa"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="submit-order__submit submit-order__block">
+            <ul class="submit-order__submit-list">
+              <li class="submit-order__submit-item">Товаров на сумму: <span>62 990 ₸</span></li>
+              <li class="submit-order__submit-item">Доставка: <span>1500 ₸</span></li>
+              <li class="submit-order__submit-item">Итого: <span>64 490 ₸</span></li>
+            </ul>
+            <button class="btn btn--submit" type="submit">потверждение заказа</button>
           </div>
         </form>
       </div>

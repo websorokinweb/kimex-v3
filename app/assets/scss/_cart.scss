@@ -69,15 +69,28 @@
         margin-bottom: 24px;
     }
     &__promo{
+        position: relative;
         &-head{
-            padding: 22px 0;
+            padding: 22px 0 !important;
             max-height: 57px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 5;
         }
-        .accordion-wrapper{
-            &--active{
-                .accordion-head{
-                    padding: 20px 0 10px;
+    }
+    .accordion-body{
+        padding-top: 57px;
+    }
+    .accordion-wrapper{
+        &--active{
+            .accordion-head{
+                &:before{
+                    top: 53.5%;
                 }
+            }
+            .accordion-body{
+                padding-top: 46px !important;
             }
         }
     }
@@ -97,7 +110,7 @@
         width: 100%;
     }
     &__imgwrapper{
-        border: 2px solid $anothergray;
+        border: 1px solid $anothergray;
         max-width: 96px;
         width: 100%;
         min-height: 128px;
@@ -160,6 +173,8 @@
             width: 40px;
             height: 40px;
             text-align: center;
+            border-right: 0;
+            border-left: 0;
         }
         button{
             height: 40px;
@@ -176,7 +191,7 @@
     &__size{
         display: none;
         margin-right: 24px;
-        span{
+        input{
             color: $text-main;
             font-weight: 600;
             width: 40px;
@@ -186,6 +201,8 @@
             justify-content: center;
             align-items: center;
             margin-left: 9px;
+            padding: 0 5px;
+            text-align: center;
         }
     }
     &__price{
@@ -193,6 +210,7 @@
         flex-direction: column;
         align-items: flex-end;
         font-weight: 600;
+        min-width: 109px;
         &--curr{
             font-size: 20px;
             line-height: 20px;

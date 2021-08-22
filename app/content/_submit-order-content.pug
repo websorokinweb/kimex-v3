@@ -20,45 +20,89 @@ section.submit-order
                 .submit-tab__body
                     label.label.label--important
                         span Имя
-                        input.input.input--small(type='text')
+                        input.input.input--small(type='text' id='submit-name')
                     label.label.label--important 
                         span Фамилия
-                        input.input.input--small(type='text')
+                        input.input.input--small(type='text' id='submit-surname')
                     label.label.label--important
                         span Телефон
-                        input.input.input--small(type='text' data-phone-mask)
+                        input.input.input--small(type='text' id='submit-phone' data-phone-mask)
                     label.label.label--important 
                         span Эл. почта
-                        input.input.input--small(type='text')
+                        input.input.input--small(type='text' id='submit-email')
                     label.label.label--important
                         span Город
-                        input.input.input--small(type='text')
+                        input.input.input--small(type='text' id='submit-city')
                     label.label.label--important 
                         span Адрес
-                        input.input.input--small(type='text')
+                        input.input.input--small(type='text' id='submit-adress')
                     button.btn.btn--next(type='button') далее
+                .submit-tab__checked
+                    ul.submit-tab__checked-list
+                        li.submit-tab__checked-item(data-id='submit-name') Алексей Заморин
+                        li.submit-tab__checked-item(data-id='submit-phone') +7 965 443-33-33
+                        li.submit-tab__checked-item(data-id='submit-email') zamorin@gmail.com
+                        li.submit-tab__checked-item(data-id='submit-city') г. Астана, ул. Сивасова, д. 44, кв. 95
+                    button.submit-tab__checked-link.link(type='button') Изменить адрес доставки
             .submit-delivery.submit-order__block.submit-tab
                 button.submit-tab__head(type='button') способ доставки
                 .submit-tab__body
                     label.label--have-checkbox
-                        input.checkbox(type='radio' name='order-delivery')
+                        input.checkbox(type='radio' name='order-delivery' id='')
                         span.checkbox-style
                         span.submit-delivery__subtitle Доставка в пределах квадрата пр. Аль-Фараби – ул. Бузурбаева – пр. Рыскулова – ул. Яссауи 
                         | Стоимость: 
                         span.submit-delivery__price 1 000 ₸
                     label.label--have-checkbox
-                        input.checkbox(type='radio' name='order-delivery')
+                        input.checkbox(type='radio' name='order-delivery' id='')
                         span.checkbox-style
                         span.submit-delivery__subtitle Доставка вне указанного квадрата
                         | Стоимость: 
                         span.submit-delivery__price 1 500 ₸
                     label.label--have-checkbox
-                        input.checkbox(type='radio' name='order-delivery')
+                        input.checkbox(type='radio' name='order-delivery' id='')
                         span.checkbox-style
                         span.submit-delivery__subtitle Cамовывоз: г. Алматы, ул. Жибек Жолы 104 , магазин «Kimex»
                         | Стоимость: 
                         span.submit-delivery__price 0 ₸
                     button.btn.btn--next(type='button') далее
+                .submit-tab__checked
+                    ul.submit-tab__checked-list
+                        li.submit-tab__checked-item Доставка вне указанного квадрата
+                        li.submit-tab__checked-item Стоимость: 1 500 ₸
+                    button.submit-tab__checked-link.link(type='button') Изменить способ доставки
             .submit-pay.submit-order__block.submit-tab
                 button.submit-tab__head(type='button') способ оплаты
                 .submit-tab__body
+                    .submit-pay__top
+                        label.label--have-checkbox
+                            input.checkbox(type='radio' name='order-pay')
+                            span.checkbox-style
+                            span.submit-pay__title Наличными
+                        label.label--have-checkbox
+                            input.checkbox(type='radio' name='order-pay')
+                            span.checkbox-style
+                            span.submit-pay__title Оплата сертификатом
+                    .submit-pay__bottom
+                        label.label--have-checkbox
+                            input.checkbox(type='radio' name='order-pay')
+                            span.checkbox-style
+                            span.picon.paybox
+                        label.label--have-checkbox
+                            input.checkbox(type='radio' name='order-pay')
+                            span.checkbox-style
+                            span.picon.zoodpay
+                        label.label--have-checkbox
+                            input.checkbox(type='radio' name='order-pay')
+                            span.checkbox-style
+                            span.picon.mastercard
+                            span.picon.visa
+            .submit-order__submit.submit-order__block
+                ul.submit-order__submit-list
+                    li.submit-order__submit-item Товаров на сумму: 
+                        span 62 990 ₸
+                    li.submit-order__submit-item Доставка: 
+                        span 1500 ₸
+                    li.submit-order__submit-item Итого: 
+                        span 64 490 ₸
+                button.btn.btn--submit(type='submit') потверждение заказа
