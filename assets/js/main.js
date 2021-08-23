@@ -538,20 +538,6 @@ $('.reviews__close').on('click', function(){
 
 // Submit order
 
-$('.submit-order__form .input').on('input', function(){
-    let inputId = $(this).attr('id')
-    let inputValue = $(this).val()
-    let needItem = $(`[data-id='${inputId}'`)
-    needItem.text(inputValue)
-});
-
-$('.submit-order__form .checkbox').on('input', function(){
-    let inputId = $(this).attr('id')
-    let inputValue = $(this).val()
-    let needItem = $(`[data-id='${inputId}'`)
-    needItem.text(inputValue)
-});
-
 $('.submit-tab__head').on('click', function(){
     let tabParent = $(this).closest('.submit-tab')
     if (tabParent.hasClass('submit-tab--active')){
