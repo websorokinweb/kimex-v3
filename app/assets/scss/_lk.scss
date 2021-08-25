@@ -1,0 +1,110 @@
+.lk{
+    &__inner{
+        padding: 32px 0 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &.my-data{
+        .lk__inner{
+            justify-content: unset;
+        }
+        .lk-aside{
+            margin-right: 70px;
+        }
+    }
+    .subtitle{
+        text-align: left;
+        margin-bottom: 20px;
+    }
+}
+
+.lk-aside{
+    margin-top: 7px;
+    &__list{
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        color: $text-main;
+        text-transform: uppercase;
+    }
+    &__item{
+        & + &{
+            margin-top: 27px;
+        }
+    }
+    &__link{
+        &:before{
+            bottom: -6px;
+        }
+    }
+}
+
+.my-data{
+    &__form{
+        display: flex;
+        flex-direction: column;
+        max-width: 536px;
+        width: 100%;
+        .label{
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            font-weight: 600;
+            position: relative;
+            .input + .input{
+                margin-left: 16px;
+            }
+            &--show-password{
+                .icon-visible{
+                    opacity: 1;
+                }
+                .icon-hidden{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &__form-footer{
+        margin-top: 3px;
+    }
+    &__form-footer{
+        display: flex;
+        .label--have-checkbox{
+            input:checked + .checkbox-style{
+                border-color: $text-main;
+            }
+        }
+        .btn{
+            margin-right: 40px;
+        }
+    }
+    .icon{
+        position: absolute;
+        right: 16px;
+        fill: #c1c1c1;
+        &-check{
+            position: unset;
+            fill: $text-main;
+        }
+    }
+    .icon-calendar{
+        bottom: 9px;
+        font-size: 20px;
+        height: 21px;
+    }
+    .icon-password{
+        cursor: pointer;
+        bottom: 12px;
+        font-size: 20px;
+        height: 16px;
+        transition: opacity .4s;
+    }
+    .icon-hidden{
+        opacity: 1;
+    }
+    .icon-visible{
+        opacity: 0;
+    }
+}

@@ -31,6 +31,7 @@
         top: 0;
         border-color: #dfdfdf;
         border-radius: 50%;
+        transition: unset;
         &:after{
             content: '';
             position: absolute;

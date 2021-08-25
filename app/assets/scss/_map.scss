@@ -1,0 +1,106 @@
+.map{
+    .subtitle{
+        text-align: left;
+        margin: 32px 0 27px;
+    }
+    #map{
+        height: 512px;
+        width: 100%;
+        .ymaps-2-1-79-map{
+        }
+    }
+    .tabs-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+    .tabs{
+        .tab + .tab{
+            margin-left: 46px;
+        }
+    }
+    .tab{
+        font-size: 18px;
+        line-height: 18px;
+        transition: color .4s;
+        font-weight: 600;
+        padding-bottom: 12px;
+        transform: translateY(12px);
+        &--active{
+            color: $text-main;
+        }
+    }
+    .btn--white{
+        height: 40px;
+    }
+    &__places{
+        margin: 60px 0 78px;
+        font-size: 14px;
+        line-height: 14px;
+        color: $text-main;
+        counter-reset: section; 
+        display: flex;
+        justify-content: space-between;
+    }
+    &__places-list{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__places-item{
+        padding-left: 43px;
+        position: relative;
+        & + &{
+            margin-top: 40px;
+        }
+        &:before,
+        &:after{
+            position: absolute;
+        }
+        &:after{
+            counter-increment: section;
+            content: counter(section);
+            left: 11.7px;
+            top: 2.5px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 12px;
+            font-family: 'Monserrat', sans-serif;
+            font-weight: 500;
+        }
+        &:before{
+            content: '';
+            left: 0;
+            top: -7px;
+            width: 30px;
+            height: 30px;
+            border-radius: 0 50% 50% 50%;
+            background-color: $text-main;
+            border: 2px solid $text-main;
+            transform: rotate(225deg);
+        }
+    }
+    &__places-title{
+        margin-bottom: 18px;
+        font-size: 17px;
+        line-height: 17px;
+    }
+    &__places-phone{
+        margin-bottom: 22px;
+    }
+    &__places-time{
+
+    }
+    &__places-phone,
+    &__places-time{
+        display: flex;
+        align-items: center;
+    }
+    .icon{
+        font-size: 16px;
+        fill: $text-light;
+        margin-right: 7px;
+    }
+}

@@ -95,6 +95,9 @@ img{
     }
     &--have-checkbox{
         position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
         input{
             display: none;
         }
@@ -106,6 +109,7 @@ img{
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: border-color .2s;
         }
         .icon-check{
             font-size: 10px;
@@ -117,8 +121,46 @@ img{
                 opacity: 1;
             }
         }
+        .label-checkbox__title{
+            font-size: 14px;
+            line-height: 14px;
+            color: $text-main;
+        }
+        &.label--have-radio{
+            .label-checkbox__title{
+                font-size: 12px;
+                line-height: 12px;
+                font-weight: 500;
+            }
+        }
     }   
+    &--have-radio{
+        .checkbox-style{
+            border-radius: 50%;
+            position: relative;
+            transition: unset;
+            &:after{
+                content: '';
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 8px;
+                background-color: $text-main;
+                border-radius: 50%;
+            }
+        }
+        input:checked + .checkbox-style{
+            border-color: $text-main;
+            &:after{
+                opacity: 1;
+            }
+        }
+    }
     &--important{
+        position: relative;
         span{
             position: relative;
             &:before{
@@ -130,6 +172,22 @@ img{
                 line-height: 12px;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 500;
+            }
+        }
+    }
+    &--profile{
+        span{
+            color: $text-main;
+            width: 110px;
+            margin-right: 28px;
+            font-weight: 600;
+        }
+        .input{
+            margin-top: 0;
+            max-width: 400px;
+            &:disabled{
+                background-color: #f6f6f6;
+                color: $text-light;
             }
         }
     }
@@ -187,11 +245,18 @@ img{
     font-weight: 600;
     text-transform: uppercase;
     transition: background-color .4s;
+    &:hover{
+        background-color: #363636;
+    }
     &--white{
         text-transform: uppercase;
         background-color: #fff;
         color: $text-main;
         border: 1px solid $text-main;
+        &:hover{
+            color: #fff;
+            background-color: $text-main;
+        }
     }
     &--next{
         padding: 0 64px;
@@ -199,8 +264,8 @@ img{
     &--submit{
         padding: 0 40px;
     }
-    &:hover{
-        background-color: #363636;
+    &--update{
+        padding: 0 50px;
     }
 }
 
@@ -1629,7 +1694,6 @@ img{
     padding: 22px;
     pointer-events: none;
     background: transparent;
-    // transform: translateY(141px);
     &__inner{
         background-color: #fff;
         padding: 30px;
@@ -1777,11 +1841,6 @@ img{
             .icon-visible{
                 opacity: 0;
             }
-            // #register-data{
-            //     &:before{
-            //         display: none;
-            //     }
-            // }
         }
     }
 }

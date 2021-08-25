@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        title Контакт
+        include components/_styles.pug
+    
+    body
+    
+        include components/_header-lined.pug  
+    
+        include content/_contact-content.pug
+    
+        include components/_footer.pug
+
+        script(
+            src="https://api-maps.yandex.ru/2.1/?166d2631-958d-4714-b12e-08e217e1c4ea&lang=ru_RU" type="text/javascript" 
+        )
+        include components/_scripts.pug

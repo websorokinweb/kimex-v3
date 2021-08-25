@@ -20,47 +20,47 @@ section.submit-order
                 .submit-tab__body
                     label.label.label--important
                         span Имя
-                        input.input.input--small(type='text' id='submit-name')
+                        input.input.input--small(type='text')
                     label.label.label--important 
                         span Фамилия
-                        input.input.input--small(type='text' id='submit-surname')
+                        input.input.input--small(type='text')
                     label.label.label--important
                         span Телефон
-                        input.input.input--small(type='text' id='submit-phone' data-phone-mask)
+                        input.input.input--small(type='text' data-phone-mask)
                     label.label.label--important 
                         span Эл. почта
-                        input.input.input--small(type='text' id='submit-email')
+                        input.input.input--small(type='text')
                     label.label.label--important
                         span Город
-                        input.input.input--small(type='text' id='submit-city')
+                        input.input.input--small(type='text')
                     label.label.label--important 
                         span Адрес
-                        input.input.input--small(type='text' id='submit-adress')
+                        input.input.input--small(type='text')
                     button.btn.btn--next(type='button') далее
                 .submit-tab__checked
                     ul.submit-tab__checked-list
-                        li.submit-tab__checked-item(data-id='submit-name') Алексей Заморин
-                        li.submit-tab__checked-item(data-id='submit-phone') +7 965 443-33-33
-                        li.submit-tab__checked-item(data-id='submit-email') zamorin@gmail.com
-                        li.submit-tab__checked-item(data-id='submit-city') г. Астана, ул. Сивасова, д. 44, кв. 95
+                        li.submit-tab__checked-item Алексей Заморин
+                        li.submit-tab__checked-item +7 965 443-33-33
+                        li.submit-tab__checked-item zamorin@gmail.com
+                        li.submit-tab__checked-item г. Астана, ул. Сивасова, д. 44, кв. 95
                     button.submit-tab__checked-link.link(type='button') Изменить адрес доставки
             .submit-delivery.submit-order__block.submit-tab
                 button.submit-tab__head(type='button') способ доставки
                 .submit-tab__body
                     label.label--have-checkbox
-                        input.checkbox(type='radio' name='order-delivery' id='')
+                        input.checkbox(type='radio' name='order-delivery')
                         span.checkbox-style
                         span.submit-delivery__subtitle Доставка в пределах квадрата пр. Аль-Фараби – ул. Бузурбаева – пр. Рыскулова – ул. Яссауи 
                         | Стоимость: 
                         span.submit-delivery__price 1 000 ₸
                     label.label--have-checkbox
-                        input.checkbox(type='radio' name='order-delivery' id='')
+                        input.checkbox(type='radio' name='order-delivery')
                         span.checkbox-style
                         span.submit-delivery__subtitle Доставка вне указанного квадрата
                         | Стоимость: 
                         span.submit-delivery__price 1 500 ₸
                     label.label--have-checkbox
-                        input.checkbox(type='radio' name='order-delivery' id='')
+                        input.checkbox(type='radio' name='order-delivery')
                         span.checkbox-style
                         span.submit-delivery__subtitle Cамовывоз: г. Алматы, ул. Жибек Жолы 104 , магазин «Kimex»
                         | Стоимость: 

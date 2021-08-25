@@ -80,12 +80,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 15px;
             box-sizing: border-box;
             cursor: pointer;
             img{
+                padding: 15px;
                 width: 100%;
                 height: 100%;
+                max-height: 623px;
                 object-fit: cover;
             }
         }
@@ -189,9 +190,9 @@
             font-weight: 600;
             &:hover{
                 .icon{
-                    fill: $active;
+                    fill: $secondary;
                 }
-                color: $active;
+                color: $secondary;
             }
         }
     }
@@ -199,9 +200,9 @@
         margin: 0 16px;
     }
     span.reviews__item--marked{
-        color: $active;
+        color: $secondary;
         .icon{
-            fill: $active;
+            fill: $secondary;
         }
     }
     .tabs-wrapper{

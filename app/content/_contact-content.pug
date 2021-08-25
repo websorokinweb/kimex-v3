@@ -1,0 +1,15 @@
+section.map
+    .container
+        h1.subtitle контакты
+        .tabs-wrapper
+            .tabs
+                a.tab.tab--active.hover-line.line--thin.active-line(href='#map-1') Нур-Султан
+                a.tab.hover-line.line--thin(href='#map-2') Алматы
+                a.tab.hover-line.line--thin(href='#map-3') Актау
+            a.btn.btn--white обратная связь
+        .tabs-container
+            .tabs-content.tabs-content--active(id='map-1')
+                #map(height='512px' width='1216px')
+                include ../components/_map-places.pug
+            .tabs-content(id='map-2')
+            .tabs-content(id='map-3')

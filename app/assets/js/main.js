@@ -501,11 +501,17 @@ const cardUpNavigation = new Swiper('.card-up__navigation', {
     watchSlidesVisibility: true,
     mousewheel: true,
     allowTouchMove: false,
-    touchRatio: 5,
+    touchRatio: 0,
+    slideToClickedSlide: true,
 });
+
+$('.card-up__navigation .swiper-slide').on('click', function(){
+    
+})
 
 const cardUpMain = new Swiper('.card-up__big', {
     slidesPerView: 'auto',
+    spaceBetween: 16,
     navigation: {
         nextEl: '#card-up-navigation-next',
         prevEl: '#card-up-navigation-prev',
@@ -513,14 +519,16 @@ const cardUpMain = new Swiper('.card-up__big', {
     thumbs: {
         swiper: cardUpNavigation
     },
-    mousewheel: true,
-});
-
-cardUpMain.on('slideChange', function(){
-    cardUpNavigation.allowNext()
+    mousewheel: {
+        sensitivity: 1.4,
+    }
 });
 
 cardUpMain.controller.control = cardUpNavigation;
+
+$('.card-up .swiper-wrapper').on('mousewheel', function(e){
+    e.preventDefault()
+});
 
 $('.reviews__item-useful span').on('click', function(){
     $(this).siblings().removeClass('reviews__item--marked')
@@ -537,13 +545,6 @@ $('.reviews__close').on('click', function(){
 });
 
 // Submit order
-
-$('.submit-order__form .input').on('input', function(){
-    let inputId = $(this).attr('id')
-    let inputValue = $(this).val()
-    let needItem = $(`[data-id='${inputId}'`)
-    needItem.text(inputValue)
-});
 
 $('.submit-order__form .checkbox').on('input', function(){
     let inputId = $(this).attr('id')
@@ -588,8 +589,32 @@ $('.btn--next').on('click', function(){
     tabParent.addClass('submit-tab--checked')
 })
 
-// $('.submit-pay .submit-tab__head').on('click', function(){
-//     submitOrder.toggleClass('submit-order__submit--active')
-// })
-
 // Submit order
+
+// Map
+
+ymaps.ready(initMap);
+function initMap(){
+    // Создание карты.
+    var myMap = new ymaps.Map(document.querySelector('#map'), {
+        center: [51.17343339, 71.42483223],
+        zoom: 14
+    });
+
+    myMap.geoObjects
+        .add(new ymaps.Placemark([51.17343339, 71.42483223], {
+            balloonContent: 'цвет <strong>детской неожиданности</strong>'
+        }, {
+            preset: 'islands#circleDotIcon',
+            iconColor: '#000'
+        }))
+
+        .add(new ymaps.Placemark([51.17386339, 71.42783223], {
+            balloonContent: 'цвет <strong>детской неожиданности</strong>'
+        }, {
+            preset: 'islands#circleDotIcon',
+            iconColor: '#000'
+        }))
+}
+
+// Map

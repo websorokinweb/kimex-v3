@@ -1,0 +1,77 @@
+section.my-data.lk
+    .container
+        .lk__inner
+            aside.lk-aside
+                ul.lk-aside__list
+                    li.lk-aside__item
+                        a.lk-aside__link.hover-line.active-line(href='#') мои данные
+                    li.lk-aside__item
+                        a.lk-aside__link.hover-line(href='#') истории покупок
+                    li.lk-aside__item
+                        a.lk-aside__link.hover-line(href='#') программа лояльности
+                    li.lk-aside__item
+                        a.lk-aside__link.hover-line(href='#') избранное
+                    li.lk-aside__item
+                        a.lk-aside__link.hover-line(href='#') выйти
+            .my-data__inner
+                h1.subtitle мои данные
+                form.my-data__form
+                    label.label.label--profile
+                        span Телефон:
+                        input(type='text' disabled value='+ 7 975 340-23-22').input.input--small
+                    label.label.label--profile
+                        span E-mail:
+                        input(type='text' value='zamora@gmail.com').input.input--small
+                    label.label.label--profile
+                        span Имя и Фамилия:
+                        input(type='text' value='Алексей').input.input--small
+                        input(type='text' value='Заморин').input.input--small
+                    label.label.label--profile
+                        span Пол:
+                        label.label--have-checkbox.label--have-radio
+                            input(class="checkbox" type="radio" name='my-data-gender')
+                            span.checkbox-style
+                            span.label-checkbox__title Женский 
+                        label.label--have-checkbox.label--have-radio
+                            input(class="checkbox" type="radio" name='my-data-gender' checked)
+                            span.checkbox-style
+                            span.label-checkbox__title Мужской
+                    label.label.label--profile
+                        span Дата рождения:
+                        input(type='text').input.input--small
+                    label.label.label--profile
+                        span Адрес:
+                        input(type='text').input.input--small
+                    label.label.label--profile
+                        span Текущий пароль:
+                        input(type='password' value='hoslern76').input.input--small
+                    label.label.label--profile.label--show-password
+                        span Пароль
+                        input.input.input--small(required type='text')
+                        svg.icon.icon-password.icon-hidden
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#password-hidden"
+                            )
+                        svg.icon.icon-password.icon-visible
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#password-visible"
+                            )
+                    label.label.label--profile.label--show-password
+                        span Повторите пароль
+                        input.input.input--small(required type='text')
+                        svg.icon.icon-password.icon-hidden
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#password-hidden"
+                            )
+                        svg.icon.icon-password.icon-visible
+                            use(
+                                xlink:href="assets/sprites/sprite.svg#password-visible"
+                            )
+                    .my-data__form-footer
+                        button.btn.btn--update(type='submit') обновить профиль
+                        label.label--have-checkbox
+                            input(class="checkbox" type="checkbox" selected)
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.label-checkbox__title Подписаться на новости
