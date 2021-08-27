@@ -1,4 +1,4 @@
-.header
+.header.header--lined.header--logged
     .header__top
         .container
             .header__top-inner
@@ -31,22 +31,18 @@
                 a.logo(href='#')
                     img(src='assets/icons/logo.svg')
                 .header__buttons
-                    .header__join
+                    a.header__join
                         svg.icon.icon-middle.icon-join
                           use(xlink:href='assets/sprites/sprite.svg#join')
-                        a#login-trigger.hover-line.hover-line--thin.join-trigger(data-fancybox data-src='#join-modal')
-                          | Вход  
-                        |  / 
-                        a#register-trigger.hover-line.hover-line--thin.join-trigger(data-fancybox data-src='#join-modal')
-                          | Регистрация
+                        | Алексей Заморин
                     a.header__liked-btn(href='#')
                         svg.icon.icon-middle.icon-save
                           use(xlink:href='assets/sprites/sprite.svg#save')
                         |                          0
-                    a.header__basket-btn(href='#')
+                    a.header__basket-btn.header__basket-btn--not-empty(href='#')
                         svg.icon.icon-middle.icon-cart
                           use(xlink:href='assets/sprites/sprite.svg#cart')
-                        |                          0
+                        |                          2
     .header__bottom
         .container
             .header__bottom-inner

@@ -75,25 +75,6 @@ $('.select-color').select2({
     templateResult: formatStateColor,
 });
 
-// function formatStatePrice (state) {
-//     if (!state.id) {
-//       return state.text;
-//     }
-//     let $state = $(
-//       '<input type="text" class="page-filter__price">'
-//     );
-
-//     return $state;
-// };
-
-// $('.select-price').select2({
-//     dropdownAutoWidth : true,
-//     inputAutoWidth : true,
-//     minimumResultsForSearch: -1,
-//     closeOnSelect: false,
-//     templateResult: formatStatePrice,
-// });
-
 let inputFrom = $('.js-input-from');
 let inputTo = $('.js-input-to');
 let instance;
@@ -109,17 +90,6 @@ $('.filter-price__input').ionRangeSlider({
 instance = $('.filter-price__input').data("ionRangeSlider");
 
 function formatPriceView(value){
-    // let lenght = value.lenght
-    // let symbol = ' ₸'
-    // if (value < 1000){
-    //     return value + symbol
-    // } else if(value > 999 & value < 10000){
-    //     let firstPart = value.slice(0, -3)
-    //     let secondPart = value.slice(-3, -1)
-    //     return firstPart + ' ' + secondPart + symbol
-    // } else{
-    //     return value + symbol
-    // }
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
@@ -127,8 +97,6 @@ function updateInputs (data) {
 	from = data.from;
     to = data.to;
     
-    // inputFrom.prop("value", from + ' ₸');
-    // inputTo.prop("value", to + ' ₸');	
     inputFrom.prop("value", formatPriceView(from) + ' ₸');
     inputTo.prop("value", formatPriceView(to) + ' ₸');	
 }
@@ -136,7 +104,7 @@ function updateInputs (data) {
 inputFrom.on("input", function () {
     var val = $(this).prop("value");
     val = Number(val.slice(0, -2).split(' ').join(''))
-    // validate
+
     if (val < min) {
         val = min;
     } else if (val > to) {
@@ -152,7 +120,6 @@ inputTo.on("input", function () {
     var val = $(this).prop("value");
     val = Number(val.slice(0, -2).split(' ').join(''))
     
-    // validate
     if (val < from) {
         val = from;
     } else if (val > max) {
@@ -221,14 +188,13 @@ $(".header__join a[data-src='join-modal]'").fancybox({
     }
 });
 
-// const cardModalSlider = new Swiper('.slider--card-modal', {
-//     loop: true,
-//     navigation: {
-//         nextEl: '.arrow-next',
-//         prevEl: '.arrow-prev',
-//     },
-//     slidesPerView: 1,
-// });
+$(".card-up__big .swiper-slide[data-src]").fancybox({
+    smallBtn: true,
+    btnTpl: {
+        smallBtn: '<button data-fancybox-close class="fancybox-button fancybox-button--close"><svg class="icon icon-x"><use xlink:href="assets/sprites/sprite.svg#x"></use></svg></button>',
+    },
+    touch: false,
+});
 
 // baseClass
 
@@ -271,12 +237,6 @@ $('.icon-password').on('click', function(e){
 
 // Checkbox
 
-// $('.icheck').iCheck({
-//     checkboxClass: 'icheckbox_minimal',
-//     radioClass: 'iradio_minimal',
-//     increaseArea: '20%' // optional
-// });
-
 $('.label--have-checkbox').on('click', function(){
     $(this).toggleClass('label--checkbox-checked')
 });
@@ -295,19 +255,19 @@ $('.card__cart').on('click', function(e){
     $(this).toggleClass('card__cart--active')
 });
 
-$('.card-modal__colors-item').on('click', function(){
-    $('.card-modal__colors-item').removeClass('card-modal__colors-item--active');
-    $(this).addClass('card-modal__colors-item--active');
-});
+// $('.card-modal__colors-item').on('click', function(){
+//     $('.card-modal__colors-item').removeClass('card-modal__colors-item--active');
+//     $(this).addClass('card-modal__colors-item--active');
+// });
 
-$('.card-modal__size-item').on('click', function(){
-    if ($(this).hasClass('card-modal__size-item--not-available')){
-        return false
-    } else{
-        $('.card-modal__size-item').removeClass('card-modal__size-item--active');
-        $(this).addClass('card-modal__size-item--active');
-    }
-});
+// $('.card-modal__size-item').on('click', function(){
+//     if ($(this).hasClass('card-modal__size-item--not-available')){
+//         return false
+//     } else{
+//         $('.card-modal__size-item').removeClass('card-modal__size-item--active');
+//         $(this).addClass('card-modal__size-item--active');
+//     }
+// });
 
 $('.card-modal__buttons .card__like').on('click', function(){
     $(this).parent().toggleClass('card-modal__buttons--active')
@@ -325,15 +285,6 @@ const config = {
         prevEl: '.swiper-button-prev',
     },
 };
-
-// const config: SwiperOptions = {
-//     loop: true,
-//     spaceBetween: 32,
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-// };
 
 const defaultSlider = new Swiper('.default-slider', {
     loop: true,
@@ -376,14 +327,6 @@ const miniSlider = new Swiper('.slider--mini', {
     slidesPerView: 'auto',
 });
 
-// const cardModalSlider = new Swiper('.slider--card-modal', {
-//     loop: true,
-//     navigation: {
-//         nextEl: '.arrow-next',
-//         prevEl: '.arrow-prev',
-//     },
-//     slidesPerView: 1,
-// });
 
 const sliderAuto = new Swiper('.slider-auto', {
     loop: true,
@@ -414,10 +357,6 @@ $('.accordion-head').on('click', function(){
 });
 
 // Аккордеон
-
-
-
-
 
 // cart
 
@@ -505,10 +444,6 @@ const cardUpNavigation = new Swiper('.card-up__navigation', {
     slideToClickedSlide: true,
 });
 
-$('.card-up__navigation .swiper-slide').on('click', function(){
-    
-})
-
 const cardUpMain = new Swiper('.card-up__big', {
     slidesPerView: 'auto',
     spaceBetween: 16,
@@ -591,30 +526,96 @@ $('.btn--next').on('click', function(){
 
 // Submit order
 
+// Lk
+
+$('.my-data__select').select2({
+    minimumResultsForSearch: -1,
+    dropdownAutoWidth : true,
+    inputAutoWidth : true,
+    selectionCssClass: 'my-data__select--select',
+    dropdownCssClass: "my-data__select--dropdown",
+});
+
+$('.lk-history__item-btn').on('click', function(){
+    $(this).closest('.lk-history__item').siblings().removeClass('lk-history__item--opened')
+    $(this).closest('.lk-history__item').toggleClass('lk-history__item--opened')
+});
+
+// Lk
+
 // Map
 
-ymaps.ready(initMap);
-function initMap(){
-    // Создание карты.
-    var myMap = new ymaps.Map(document.querySelector('#map'), {
-        center: [51.17343339, 71.42483223],
-        zoom: 14
-    });
-
-    myMap.geoObjects
-        .add(new ymaps.Placemark([51.17343339, 71.42483223], {
-            balloonContent: 'цвет <strong>детской неожиданности</strong>'
-        }, {
-            preset: 'islands#circleDotIcon',
-            iconColor: '#000'
-        }))
-
-        .add(new ymaps.Placemark([51.17386339, 71.42783223], {
-            balloonContent: 'цвет <strong>детской неожиданности</strong>'
-        }, {
-            preset: 'islands#circleDotIcon',
-            iconColor: '#000'
-        }))
+if ($('#map')){
+    ymaps.ready(initMap);
+    function initMap(){
+        // Создание карты.
+        var myMap = new ymaps.Map(document.querySelector('#map'), {
+            center: [51.17343339, 71.42483223],
+            zoom: 14
+        });
+    
+        let MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #fff; font-size: 16px; line-height: 16px; font-family: "Monserrat"; font-weight: 600;">$[properties.iconContent]</div>'
+        );
+    
+        myMap.geoObjects
+            .add(new ymaps.Placemark([51.17343339, 71.42483223], {
+                iconContent: '1'
+            }, {
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#imageWithContent',
+                // Своё изображение иконки метки.
+                iconImageHref: 'assets/icons/pin-filled.svg',
+                // Размеры метки.
+                iconImageSize: [40, 48],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                // iconImageOffset: [-24, -24],
+                iconImageOffset: [0, 0],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 14],
+                // Макет содержимого.
+                iconContentLayout: MyIconContentLayout
+            }))
+    
+            .add(new ymaps.Placemark([51.17386339, 71.40783223], {
+                iconContent: '2'
+            }, {
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#imageWithContent',
+                // Своё изображение иконки метки.
+                iconImageHref: 'assets/icons/pin-filled.svg',
+                // Размеры метки.
+                iconImageSize: [40, 48],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                // iconImageOffset: [-24, -24],
+                iconImageOffset: [0, 0],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 14],
+                // Макет содержимого.
+                iconContentLayout: MyIconContentLayout
+            }))
+    
+            .add(new ymaps.Placemark([51.17386339, 71.46783999], {
+                iconContent: '5'
+            }, {
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#imageWithContent',
+                // Своё изображение иконки метки.
+                iconImageHref: 'assets/icons/pin-filled.svg',
+                // Размеры метки.
+                iconImageSize: [40, 48],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                // iconImageOffset: [-24, -24],
+                iconImageOffset: [0, 0],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 14],
+                // Макет содержимого.
+                iconContentLayout: MyIconContentLayout
+            }))
+    }
 }
 
 // Map

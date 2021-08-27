@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Корзина</title>
+    <title>Избранное</title>
     <link rel="stylesheet" type="text/css" href="assets/css/libs.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.min.css">
   </head>
@@ -266,396 +266,128 @@
         </div>
       </div>
     </div>
-    <section class="cart">
+    <section class="lk-history lk">
       <div class="container">
-        <h1 class="cart__title subtitle">корзина</h1>
-        <div class="cart__inner">
-          <div class="cart__left">
-            <div class="card-cart"><span class="card__like">
-                <svg>
-                  <use xlink:href="assets/sprites/sprite.svg#save"></use>
-                </svg></span><span class="card-cart__bin">
-                <svg>
-                  <use xlink:href="assets/sprites/sprite.svg#bin"></use>
-                </svg></span>
-              <div class="card-cart__left"><a class="card-cart__imgwrapper" href="#"><img src="temp/novelty-week-3.jpg"></a>
-                <div class="card-cart__info">
-                  <p class="card-cart__title">Valentino Garavani</p>
-                  <p class="card-cart__descr">Сумка на плечо</p>
-                  <p class="card-cart__vendor">Артикул: 255461</p>
-                  <p class="card-cart__color">Цвет: <span>Бежевый</span></p>
-                </div>
-              </div>
-              <div class="card-cart__right">
-                <p class="card-cart__size">Размер:
-                  <input class="input" type="text" value="43" maxlength="2">
-                </p>
-                <div class="card-cart__count">
-                  <button class="card-cart__count--minus">-</button>
-                  <input class="card-cart__count-input" type="number" value="1" min="1" max="100">
-                  <button class="card-cart__count--plus">+</button>
-                </div>
-                <div class="card-cart__price"><span class="card-cart__price--curr">29 995 ₸</span>
-                  <p>109 990 ₸ <span class="card-cart__price--discount">&nbsp; -50%</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="card-cart card-cart--show-size"><span class="card__like">
-                <svg>
-                  <use xlink:href="assets/sprites/sprite.svg#save"></use>
-                </svg></span><span class="card-cart__bin">
-                <svg>
-                  <use xlink:href="assets/sprites/sprite.svg#bin"></use>
-                </svg></span>
-              <div class="card-cart__left"><a class="card-cart__imgwrapper" href="#"><img src="temp/novelty-week-2.jpg"></a>
-                <div class="card-cart__info">
-                  <p class="card-cart__title">Valentino</p>
-                  <p class="card-cart__descr">Укороченные расклешенные брюки</p>
-                  <p class="card-cart__vendor">Артикул: 2441145</p>
-                  <p class="card-cart__color">Цвет: <span>Коричневый</span></p>
-                </div>
-              </div>
-              <div class="card-cart__right">
-                <p class="card-cart__size">Размер:
-                  <input class="input" type="text" value="43" maxlength="2">
-                </p>
-                <div class="card-cart__count">
-                  <button class="card-cart__count--minus">-</button>
-                  <input class="card-cart__count-input" type="number" value="1" min="1" max="100">
-                  <button class="card-cart__count--plus">+</button>
-                </div>
-                <div class="card-cart__price"><span class="card-cart__price--curr">32 995 ₸</span>
-                  <p>65 990 ₸ <span class="card-cart__price--discount">&nbsp; -64%</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="card-cart"><span class="card__like">
-                <svg>
-                  <use xlink:href="assets/sprites/sprite.svg#save"></use>
-                </svg></span><span class="card-cart__bin">
-                <svg>
-                  <use xlink:href="assets/sprites/sprite.svg#bin"></use>
-                </svg></span>
-              <div class="card-cart__left"><a class="card-cart__imgwrapper" href="#"><img src="temp/novelty-week-3.jpg"></a>
-                <div class="card-cart__info">
-                  <p class="card-cart__title">Valentino Garavani</p>
-                  <p class="card-cart__descr">Сумка на плечо</p>
-                  <p class="card-cart__vendor">Артикул: 255461</p>
-                  <p class="card-cart__color">Цвет: <span>Бежевый</span></p>
-                </div>
-              </div>
-              <div class="card-cart__right">
-                <p class="card-cart__size">Размер:
-                  <input class="input" type="text" value="43" maxlength="2">
-                </p>
-                <div class="card-cart__count">
-                  <button class="card-cart__count--minus">-</button>
-                  <input class="card-cart__count-input" type="number" value="1" min="1" max="100">
-                  <button class="card-cart__count--plus">+</button>
-                </div>
-                <div class="card-cart__price"><span class="card-cart__price--curr">29 995 ₸</span>
-                  <p>109 990 ₸ <span class="card-cart__price--discount">&nbsp; -50%</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart__right">
-            <h2 class="cart__right-title">итог заказа</h2>
-            <ul class="cart__right-list cart-list">
-              <li class="cart-list__item cart-list__item--price-goods">
-                <p>Товаров на сумму:</p><span>62 990 ₸</span>
-              </li>
-              <li class="cart-list__item cart-list__item--delivery">
-                <p>Доставка:</p><span>600 ₸</span>
-              </li>
-              <li class="cart-list__item cart__promo accordion-wrapper">
-                <button class="cart__promo-head accordion-head">Добавить промокод</button>
-                <div class="cart__promo-content accordion-body input-wrapper">
-                  <input class="input input--small" type="text" placeholder="Введите промокод">
-                </div>
-              </li>
-              <li class="cart-list__item cart-list__item--all">
-                <p>Итого:</p><span>48 990 ₸ </span>
-              </li>
+        <div class="lk__inner">
+          <aside class="lk-aside">
+            <ul class="lk-aside__list">
+              <li class="lk-aside__item"><a class="lk-aside__link hover-line" href="#">мои данные</a></li>
+              <li class="lk-aside__item"><a class="lk-aside__link hover-line active-line" href="#">истории покупок</a></li>
+              <li class="lk-aside__item"><a class="lk-aside__link hover-line" href="#">программа лояльности</a></li>
+              <li class="lk-aside__item"><a class="lk-aside__link hover-line" href="#">избранное</a></li>
+              <li class="lk-aside__item"><a class="lk-aside__link hover-line" href="#">выйти</a></li>
             </ul>
-            <p class="cart__economy">Вы экономите &nbsp;<span>14 000 ₸</span></p><a class="cart__btn btn">Перейти к оформлению заказа</a>
-            <ul class="partners__list">
-              <li class="partners__item"><a class="partners__link" href="#">
-                  <svg class="icon icon-denisov-logo">
-                    <use xlink:href="assets/sprites/sprite.svg#denisov-logo"></use>
-                  </svg></a></li>
-              <li class="partners__item picon mastercard"></li>
-              <li class="partners__item picon visa"></li>
-              <li class="partners__item picon paybox"></li>
-              <li class="partners__item picon zoodpay"></li>
+          </aside>
+          <div class="lk-history__inner">
+            <h1 class="subtitle">истории покупок</h1>
+            <ul class="lk-history__items">
+              <li class="lk-history__item">
+                <div class="lk-history__item-left">
+                  <div class="lk-history__item-number">
+                    <p class="lk-history__item-text">Номер заказа: <span>№ 233122</span></p>
+                    <p class="lk-history__item-text">Дата заказа: <span>03.11.2020</span></p>
+                  </div>
+                  <ul class="lk-history__item-added lk-added">
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-2.jpg"></a></li>
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-3.jpg"></a></li>
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-5.jpg"></a></li>
+                    <p class="lk-added__more">Ещё<br>2 товара</p>
+                  </ul>
+                  <div class="lk-history__item-delivery">
+                    <p class="lk-history__item-text">Адрес доставки: <span>Астана, Володарского , д. 157, 90</span></p>
+                    <p class="lk-history__item-text">Получатель: <span>Алексей Заморин, тел. +7 (924) 232-10-74</span></p>
+                  </div>
+                </div>
+                <div class="lk-history__item-right">
+                  <div class="lk-history__item-additional">
+                    <p class="lk-history__item-text">Статус заказа: <span class="lk-history__item-status lk-history__item-status--processing">Обрабатывается</span></p>
+                    <p class="lk-history__item-text">3 товара на сумму: <span>90 900 ₸</span></p>
+                  </div>
+                  <button class="lk-history__item-btn lk-history__item-btn--opened" type="button"></button>
+                </div>
+              </li>
+              <li class="lk-history__item">
+                <div class="lk-history__item-left">
+                  <div class="lk-history__item-number">
+                    <p class="lk-history__item-text">Номер заказа: <span>№ 233122</span></p>
+                    <p class="lk-history__item-text">Дата заказа: <span>03.11.2020</span></p>
+                  </div>
+                  <ul class="lk-history__item-added lk-added">
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-2.jpg"></a></li>
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-3.jpg"></a></li>
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-5.jpg"></a></li>
+                    <p class="lk-added__more">Ещё<br>2 товара</p>
+                  </ul>
+                  <div class="lk-history__item-delivery">
+                    <p class="lk-history__item-text">Адрес доставки: <span>Астана, Володарского , д. 157, 90</span></p>
+                    <p class="lk-history__item-text">Получатель: <span>Алексей Заморин, тел. +7 (924) 232-10-74</span></p>
+                  </div>
+                </div>
+                <div class="lk-history__item-right">
+                  <div class="lk-history__item-additional">
+                    <p class="lk-history__item-text">Статус заказа: <span class="lk-history__item-status lk-history__item-status--done">Доставлен</span></p>
+                    <p class="lk-history__item-text">3 товара на сумму: <span>90 900 ₸</span></p>
+                  </div>
+                  <button class="lk-history__item-btn lk-history__item-btn--opened" type="button"></button>
+                </div>
+              </li>
+              <li class="lk-history__item lk-history__item--more">
+                <div class="lk-history__item-left">
+                  <div class="lk-history__item-number">
+                    <p class="lk-history__item-text">Номер заказа: <span>№ 233122</span></p>
+                    <p class="lk-history__item-text">Дата заказа: <span>03.11.2020</span></p>
+                  </div>
+                  <ul class="lk-history__item-added lk-added">
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-2.jpg"></a></li>
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-3.jpg"></a></li>
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-5.jpg"></a></li>
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-3.jpg"></a></li>
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-5.jpg"></a></li>
+                    <p class="lk-added__more">Ещё<br>2 товара</p>
+                  </ul>
+                  <div class="lk-history__item-delivery">
+                    <p class="lk-history__item-text">Адрес доставки: <span>Астана, Володарского , д. 157, 90</span></p>
+                    <p class="lk-history__item-text">Получатель: <span>Алексей Заморин, тел. +7 (924) 232-10-74</span></p>
+                  </div>
+                </div>
+                <div class="lk-history__item-right">
+                  <div class="lk-history__item-additional">
+                    <p class="lk-history__item-text">Статус заказа: <span class="lk-history__item-status lk-history__item-status--deny">Отменен</span></p>
+                    <p class="lk-history__item-text">3 товара на сумму: <span>90 900 ₸</span></p>
+                  </div>
+                  <button class="lk-history__item-btn lk-history__item-btn--opened" type="button"></button>
+                </div>
+              </li>
+              <li class="lk-history__item">
+                <div class="lk-history__item-left">
+                  <div class="lk-history__item-number">
+                    <p class="lk-history__item-text">Номер заказа: <span>№ 233122</span></p>
+                    <p class="lk-history__item-text">Дата заказа: <span>03.11.2020</span></p>
+                  </div>
+                  <ul class="lk-history__item-added lk-added">
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-2.jpg"></a></li>
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-3.jpg"></a></li>
+                    <li class="lk-added__item"><a class="lk-added__link" href="#"><img src="temp/novelty-week-5.jpg"></a></li>
+                    <p class="lk-added__more">Ещё<br>2 товара</p>
+                  </ul>
+                  <div class="lk-history__item-delivery">
+                    <p class="lk-history__item-text">Адрес доставки: <span>Астана, Володарского , д. 157, 90</span></p>
+                    <p class="lk-history__item-text">Получатель: <span>Алексей Заморин, тел. +7 (924) 232-10-74</span></p>
+                  </div>
+                </div>
+                <div class="lk-history__item-right">
+                  <div class="lk-history__item-additional">
+                    <p class="lk-history__item-text">Статус заказа: <span class="lk-history__item-status lk-history__item-status--done">Доставлен</span></p>
+                    <p class="lk-history__item-text">3 товара на сумму: <span>90 900 ₸</span></p>
+                  </div>
+                  <button class="lk-history__item-btn lk-history__item-btn--opened" type="button"></button>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    <section class="slider slider--left">
-      <div class="container">
-        <h2 class="subtitle">c этими товарами покупают</h2>
-        <div class="slider-auto swiper-container">
-          <div class="swiper-wrapper"><a class="card card--haveDiscount swiper-slide" href="#"><span class="card__inner"><span class="card__top"><span class="card__discount">70%</span><span class="card__like">
-                    <svg>
-                      <use xlink:href="assets/sprites/sprite.svg#save"></use>
-                    </svg></span><img src="temp/novelty-week-1.jpg"></span><span class="card__title">Isabel Marant </span><span class="card__descr">Розовый комбинезон Etundra</span><span class="card__price"><span class="card__price--old">109 990 ₸</span>29 995 ₸</span><span class="card__hover-panel"><span class="card__cart">
-                    <svg class="icon icon-cart">
-                      <use xlink:href="assets/sprites/sprite.svg#cart"></use>
-                    </svg></span><span class="card__quick" data-fancybox data-src="#card-modal-1">Быстрый просмотр</span></span></span></a><a class="card card--haveDiscount swiper-slide" href="#"><span class="card__inner"><span class="card__top"><span class="card__discount">70%</span><span class="card__like">
-                    <svg>
-                      <use xlink:href="assets/sprites/sprite.svg#save"></use>
-                    </svg></span><img src="temp/novelty-week-2.jpg"></span><span class="card__title">Valentino</span><span class="card__descr">Укороченные расклешенные брюки</span><span class="card__price"><span class="card__price--old">65 990 ₸</span>32 995 ₸</span><span class="card__hover-panel"><span class="card__cart">
-                    <svg class="icon icon-cart">
-                      <use xlink:href="assets/sprites/sprite.svg#cart"></use>
-                    </svg></span><span class="card__quick" data-fancybox data-src="#card-modal-1">Быстрый просмотр</span></span></span></a><a class="card swiper-slide" href="#"><span class="card__inner"><span class="card__top"><span class="card__new"></span><span class="card__like">
-                    <svg>
-                      <use xlink:href="assets/sprites/sprite.svg#save"></use>
-                    </svg></span><img src="temp/novelty-week-3.jpg"></span><span class="card__title">Valentino Garavani</span><span class="card__descr">Сумка на плечо <br>VSling</span><span class="card__price">105 900 ₸</span><span class="card__hover-panel"><span class="card__cart">
-                    <svg class="icon icon-cart">
-                      <use xlink:href="assets/sprites/sprite.svg#cart"></use>
-                    </svg></span><span class="card__quick" data-fancybox data-src="#card-modal-2">Быстрый просмотр</span></span></span></a><a class="card card--haveDiscount swiper-slide" href="#"><span class="card__inner"><span class="card__top"><span class="card__discount">50%</span><span class="card__new"></span><span class="card__like">
-                    <svg>
-                      <use xlink:href="assets/sprites/sprite.svg#save"></use>
-                    </svg></span><img src="temp/novelty-week-4.jpg"></span><span class="card__title">Jordan</span><span class="card__descr">Кроссовки<br>Air Jordan Union</span><span class="card__price"><span class="card__price--old">125 900 ₸</span>90 900 ₸</span><span class="card__hover-panel"><span class="card__cart">
-                    <svg class="icon icon-cart">
-                      <use xlink:href="assets/sprites/sprite.svg#cart"></use>
-                    </svg></span><span class="card__quick" data-fancybox data-src="#card-modal-2">Быстрый просмотр</span></span></span></a><a class="card card--haveDiscount swiper-slide" href="#"><span class="card__inner"><span class="card__top"><span class="card__discount">75%</span><span class="card__like">
-                    <svg>
-                      <use xlink:href="assets/sprites/sprite.svg#save"></use>
-                    </svg></span><img src="temp/novelty-week-5.jpg"></span><span class="card__title">Acne Studios </span><span class="card__descr">Серое<br>худи</span><span class="card__price"><span class="card__price--old">77 990 ₸   </span>18 995 ₸</span><span class="card__hover-panel"><span class="card__cart">
-                    <svg class="icon icon-cart">
-                      <use xlink:href="assets/sprites/sprite.svg#cart"></use>
-                    </svg></span><span class="card__quick" data-fancybox data-src="#card-modal-1">Быстрый просмотр</span></span></span></a><a class="card card--haveDiscount swiper-slide" href="#"><span class="card__inner"><span class="card__top"><span class="card__new"></span><span class="card__like">
-                    <svg>
-                      <use xlink:href="assets/sprites/sprite.svg#save"></use>
-                    </svg></span><img src="temp/novelty-week-3.jpg"></span><span class="card__title">Valentino Garavani</span><span class="card__descr">Сумка на плечо <br>VSling</span><span class="card__price">105 900 ₸</span><span class="card__hover-panel"><span class="card__cart">
-                    <svg class="icon icon-cart">
-                      <use xlink:href="assets/sprites/sprite.svg#cart"></use>
-                    </svg></span><span class="card__quick" data-fancybox data-src="#card-modal-2">Быстрый просмотр</span></span></span></a></div>
-        </div>
-        <div class="arrow-prev arrow-prev--auto"></div>
-        <div class="arrow-next arrow-next--auto"></div>
-      </div>
-    </section>
-    <div class="card-modal card-modal--haveDiscount modal-parent" style="position:absolute; left:-5000px;" id="card-modal-1">
-      <div class="card-modal__inner modal-inner">
-        <div class="card-modal__left slider">
-          <div class="slider slider--card-modal swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="temp/preview-1.jpg"></div>
-              <div class="swiper-slide"><img src="temp/preview-1.jpg"></div>
-              <div class="swiper-slide"><img src="temp/preview-1.jpg"></div>
-            </div>
-          </div>
-          <div class="arrow-prev"></div>
-          <div class="arrow-next"></div>
-        </div>
-        <div class="card-modal__right">
-          <p class="card-modal__title">СВИТЕР УДЛИНЕННЫЙ MM6</p>
-          <div class="card-modal__descr-block">
-            <p class="card-modal__descr">Бежевый свитер</p>
-            <p class="card-modal__article">Артикул: 255461</p>
-          </div><span class="card__price"><span class="card__price--old">65 990 ₸</span>32 995 ₸</span>
-          <p class="card-modal__curr-color">Выберите цвет:<span>Светлобежевый</span></p>
-          <div class="card-modal__colors-list">
-            <label class="label--have-checkbox label--colorpick">
-              <input class="checkbox" type="radio" name="modal-1-colorpick" checked><span class="checkbox-style" style="background-color: #ddc5b9"></span>
-            </label>
-            <label class="label--have-checkbox label--colorpick">
-              <input class="checkbox" type="radio" name="modal-1-colorpick"><span class="checkbox-style" style="background-color: #5d5d62"></span>
-            </label>
-            <label class="label--have-checkbox label--colorpick">
-              <input class="checkbox" type="radio" name="modal-1-colorpick"><span class="checkbox-style" style="background-color: #c5c5c8"></span>
-            </label>
-          </div>
-          <p class="card-modal__curr-size">Выберите цвет:<a href="#">Таблица размеров</a></p>
-          <div class="card-modal__size-list">
-            <label class="label--have-checkbox label--sizepick">
-              <input class="checkbox" type="radio" name="modal-1-sizepick" checked><span class="checkbox-style">S</span>
-            </label>
-            <label class="label--have-checkbox label--sizepick">
-              <input class="checkbox" type="radio" name="modal-1-sizepick" disabled><span class="checkbox-style">M</span>
-            </label>
-            <label class="label--have-checkbox label--sizepick">
-              <input class="checkbox" type="radio" name="modal-1-sizepick"><span class="checkbox-style">L</span>
-            </label>
-            <label class="label--have-checkbox label--sizepick">
-              <input class="checkbox" type="radio" name="modal-1-sizepick"><span class="checkbox-style">XL</span>
-            </label>
-          </div>
-          <div class="card-modal__buttons">
-            <button class="card__cart-btn btn">добавить в корзину</button><span class="card__like">
-              <svg class="icon icon-save">
-                <use xlink:href="assets/sprites/sprite.svg#save"></use>
-              </svg></span>
-          </div><a class="card-modal__link" href="#">
-            <svg class="icon icon-box">
-              <use xlink:href="assets/sprites/sprite.svg#box"></use>
-            </svg><span class="link">Проверить наличие в магазине</span></a>
-        </div>
-      </div>
-    </div>
-    <div class="card-modal modal-parent" style="position:absolute; left:-5000px;" id="card-modal-2">
-      <div class="card-modal__inner modal-inner">
-        <div class="card-modal__left slider">
-          <div class="slider slider--card-modal swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="temp/preview-1.jpg"></div>
-              <div class="swiper-slide"><img src="temp/preview-1.jpg"></div>
-              <div class="swiper-slide"><img src="temp/preview-1.jpg"></div>
-            </div>
-          </div>
-          <div class="arrow-prev"></div>
-          <div class="arrow-next"></div>
-        </div>
-        <div class="card-modal__right">
-          <p class="card-modal__title">СВИТЕР УДЛИНЕННЫЙ MM6</p>
-          <div class="card-modal__descr-block">
-            <p class="card-modal__descr">Бежевый свитер</p>
-            <p class="card-modal__article">Артикул: 255461</p>
-          </div><span class="card__price"><span class="card__price--old">65 990 ₸</span>32 995 ₸</span>
-          <p class="card-modal__curr-color">Выберите цвет:<span>Светлобежевый</span></p>
-          <div class="card-modal__colors-list">
-            <label class="label--have-checkbox label--colorpick">
-              <input class="checkbox" type="radio" name="modal-2-colorpick" checked><span class="checkbox-style" style="background-color: #ddc5b9"></span>
-            </label>
-            <label class="label--have-checkbox label--colorpick">
-              <input class="checkbox" type="radio" name="modal-2-colorpick"><span class="checkbox-style" style="background-color: #5d5d62"></span>
-            </label>
-            <label class="label--have-checkbox label--colorpick">
-              <input class="checkbox" type="radio" name="modal-2-colorpick"><span class="checkbox-style" style="background-color: #c5c5c8"></span>
-            </label>
-          </div>
-          <p class="card-modal__curr-size">Выберите цвет:<a href="#">Таблица размеров</a></p>
-          <div class="card-modal__size-list">
-            <label class="label--have-checkbox label--sizepick">
-              <input class="checkbox" type="radio" name="modal-2-sizepick" checked><span class="checkbox-style">S</span>
-            </label>
-            <label class="label--have-checkbox label--sizepick">
-              <input class="checkbox" type="radio" name="modal-2-sizepick" disabled><span class="checkbox-style">M</span>
-            </label>
-            <label class="label--have-checkbox label--sizepick">
-              <input class="checkbox" type="radio" name="modal-2-sizepick"><span class="checkbox-style">L</span>
-            </label>
-            <label class="label--have-checkbox label--sizepick">
-              <input class="checkbox" type="radio" name="modal-2-sizepick"><span class="checkbox-style">XL</span>
-            </label>
-          </div>
-          <div class="card-modal__buttons">
-            <button class="card__cart-btn btn">добавить в корзину</button><span class="card__like">
-              <svg class="icon icon-save">
-                <use xlink:href="assets/sprites/sprite.svg#save"></use>
-              </svg></span>
-          </div><a class="card-modal__link" href="#">
-            <svg class="icon icon-box">
-              <use xlink:href="assets/sprites/sprite.svg#box"></use>
-            </svg><span class="link">Проверить наличие в магазине</span></a>
-        </div>
-      </div>
-    </div>
-    <div class="join-modal" style="display: none" id="join-modal">  
-      <div class="join-modal__inner">
-        <div class="tabs-wrapper">
-          <div class="tabs"><a class="tab tab--active active-line hover-line" href="#modal-login">Авторизация     </a><a class="tab hover-line" href="#modal-register">регистрация</a></div>
-        </div>
-        <div class="tabs-container">
-          <div class="tabs-content tabs-content--active" id="modal-login">
-            <p class="join-modal__descr">Войти через соцсети:</p>
-            <ul class="connect__list">
-              <li class="connect__item"><a class="connect__link" href="#">
-                  <svg class="icon icon-facebook">
-                    <use xlink:href="assets/sprites/sprite.svg#facebook"></use>
-                  </svg></a></li>
-              <li class="connect__item"><a class="connect__link" href="#">
-                  <svg class="icon icon-vk">
-                    <use xlink:href="assets/sprites/sprite.svg#vk"></use>
-                  </svg></a></li>
-              <li class="connect__item"><a class="connect__link" href="#">
-                  <svg class="icon icon-ok">
-                    <use xlink:href="assets/sprites/sprite.svg#ok"></use>
-                  </svg></a></li>
-              <li class="connect__item cant-login"><a class="connect__link" href="#">
-                  <svg class="icon icon-instagram">
-                    <use xlink:href="assets/sprites/sprite.svg#instagram"></use>
-                  </svg></a></li>
-              <li class="connect__item cant-login"><a class="connect__link" href="#">
-                  <svg class="icon icon-youtube">
-                    <use xlink:href="assets/sprites/sprite.svg#youtube"></use>
-                  </svg></a></li>
-              <li class="connect__item cant-login"><a class="connect__link" href="#">
-                  <svg class="icon icon-telegram">
-                    <use xlink:href="assets/sprites/sprite.svg#telegram"></use>
-                  </svg></a></li>
-              <li class="connect__item"><a class="connect__link" href="#">
-                  <svg class="icon icon-twitter">
-                    <use xlink:href="assets/sprites/sprite.svg#twitter"></use>
-                  </svg></a></li>
-            </ul>
-            <form class="join-modal__form">
-              <label class="label">
-                 Логин
-                <input class="input input--small">
-              </label>
-              <label class="label">
-                 Пароль
-                <input class="input input--small">
-              </label>
-              <div class="join-modal__actions">
-                <button class="btn" type="submit">войти</button><a class="link" href="#">Забыли пароль?</a>
-              </div>
-            </form>
-          </div>
-          <div class="tabs-content" id="modal-register">
-            <form class="join-modal__form">
-              <label class="label label--important"><span>Имя</span>
-                <input class="input input--small" required type="text">
-              </label>
-              <label class="label"> <span>Фамилия</span>
-                <input class="input input--small" type="text">
-              </label>
-              <label class="label label--important"> <span>Дата рождения</span>
-                <input class="input input--small datepicker-here" id="register-data" type="text" required data-language="ru">
-                <svg class="icon icon-calendar">
-                  <use xlink:href="assets/sprites/sprite.svg#calendar"></use>
-                </svg>
-              </label>
-              <label class="label label--important"> <span>Город</span>
-                <input class="input input--small" required type="text">
-              </label>
-              <label class="label label--important"> <span>E-mail</span>
-                <input class="input input--small" type="email" required>
-              </label>
-              <label class="label label--important"><span>Телефон</span>
-                <input class="input input--small" required type="text" data-phone-mask>
-              </label>
-              <label class="label label--important"> <span>Пароль</span>
-                <input class="input input--small" required type="password">
-                <svg class="icon icon-password icon-hidden">
-                  <use xlink:href="assets/sprites/sprite.svg#password-hidden"></use>
-                </svg>
-                <svg class="icon icon-password icon-visible">
-                  <use xlink:href="assets/sprites/sprite.svg#password-visible"></use>
-                </svg>
-              </label>
-              <label class="label label--important"> <span>Повторите пароль</span>
-                <input class="input input--small" required type="password">
-                <svg class="icon icon-password icon-hidden">
-                  <use xlink:href="assets/sprites/sprite.svg#password-hidden"></use>
-                </svg>
-                <svg class="icon icon-password icon-visible">
-                  <use xlink:href="assets/sprites/sprite.svg#password-visible"></use>
-                </svg>
-              </label>
-              <div class="join-modal__actions">
-                <button class="btn" type="submit">зарегистрироваться</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <footer class="footer">
       <div class="container">
         <div class="footer__top">
@@ -755,7 +487,7 @@
         </div>
       </div>
     </footer>
+    <script src="assets/js/libs.min.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
-  <script src="assets/js/libs.min.js"></script>
-  <script src="assets/js/main.js"></script>
 </html>

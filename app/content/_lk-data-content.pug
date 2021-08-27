@@ -22,11 +22,11 @@ section.my-data.lk
                     label.label.label--profile
                         span E-mail:
                         input(type='text' value='zamora@gmail.com').input.input--small
-                    label.label.label--profile
+                    label.label.label--profile#data-name-surname
                         span Имя и Фамилия:
                         input(type='text' value='Алексей').input.input--small
                         input(type='text' value='Заморин').input.input--small
-                    label.label.label--profile
+                    label.label.label--profile#data-gender
                         span Пол:
                         label.label--have-checkbox.label--have-radio
                             input(class="checkbox" type="radio" name='my-data-gender')
@@ -36,15 +36,24 @@ section.my-data.lk
                             input(class="checkbox" type="radio" name='my-data-gender' checked)
                             span.checkbox-style
                             span.label-checkbox__title Мужской
-                    label.label.label--profile
+                    label.label.label--profile#data-born
                         span Дата рождения:
-                        input(type='text').input.input--small
+                        .data-born__inner
+                            select.my-data__select(data-placeholder='День')
+                                each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+                                    option=val
+                            select.my-data__select(data-placeholder='Месяц')
+                                each val in ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+                                    option=val
+                            select.my-data__select(data-placeholder='Год')
+                                each val in [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006]
+                                    option=val
                     label.label.label--profile
                         span Адрес:
                         input(type='text').input.input--small
                     label.label.label--profile
                         span Текущий пароль:
-                        input(type='password' value='hoslern76').input.input--small
+                        input(type='password' disabled value='hoslern76').input.input--small
                     label.label.label--profile.label--show-password
                         span Пароль
                         input.input.input--small(required type='text')
@@ -70,7 +79,7 @@ section.my-data.lk
                     .my-data__form-footer
                         button.btn.btn--update(type='submit') обновить профиль
                         label.label--have-checkbox
-                            input(class="checkbox" type="checkbox" selected)
+                            input(class="checkbox" type="checkbox" checked)
                             span.checkbox-style
                                 svg.icon.icon-check
                                     use(xlink:href="assets/sprites/sprite.svg#check")

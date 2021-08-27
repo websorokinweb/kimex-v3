@@ -147,10 +147,16 @@
     &__head{
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__leave{
         font-size: 14px;
         line-height: 14px;
+    }
+    &__list{
+        opacity: 1;
+        max-height: unset;
+        transition: opacity .3s ease max-height .4s ease;
     }
     &__item{
         border-bottom: 1px solid $anothergray;
@@ -169,6 +175,7 @@
     &__item-text{
         color: $text-main;
         margin-bottom: 15px;
+        line-height: 20px;
     }
     &__item-useful{
         display: flex;
@@ -205,12 +212,9 @@
             fill: $secondary;
         }
     }
-    .tabs-wrapper{
-        display: inline-block;
-        width: 42%;
-    }
     .pagination__list{
         margin-bottom: 0;
+        display: inline-flex;
         justify-content: flex-start;
     }
     .pagination__descr{
@@ -221,18 +225,18 @@
         margin-left: 15px !important;
     }
     &__footer{
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 39px 0 52px;
-        width: 57%;
-        margin-right: 0;
+        position: relative;
         .link{
             font-weight: 600;
             cursor: pointer;
         }
     }
     .tab{
+        cursor: pointer;
         .pagination__link:after {
             content: "";
             position: absolute;
@@ -267,7 +271,9 @@
         text-decoration: unset;
         border-bottom: 1px dotted $text-main;
         padding: 0;
-        position: relative;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         &:after{
             content: '';
             position: absolute;
@@ -280,28 +286,74 @@
             border-color: transparent transparent $text-main transparent;
         }
     }
-    .tabs-container,
-    .tabs-wrapper{
-        opacity: 1;
-        max-height: unset;
-        transition: opacity .3s ease max-height .4s ease;
-    }
     &--hidden{
-        .tabs-container,
-        .tabs-wrapper{
+        .reviews__list{
             max-height: 0;
             opacity: 0;
         }
         .reviews__item{
             padding-top: 0;
         }
-        .tabs-wrapper{
-            display: none;
-        }
         .reviews__footer{
             margin: 20px 0 52px;
             width: 100%;
         }
+    }
+}
+
+.fancybox-button--close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: -28px;
+    padding: 0;
+    background: transparent;
+    right: 16px;
+    width: unset;
+    height: unset;
+    pointer-events: all;
+    svg {
+        display: block;
+        height: 1em;
+        overflow: visible;
+        position: relative;
+        width: 1em;
+    }
+    .icon-x{
+        font-size: 14px;
+        fill: #fff;
+    }
+}
+
+.fancybox-container{
+    // transition: unset !important;
+}
+
+.fancybox-slide:not(.fancybox-slide--html){
+    .fancybox-content{
+        transform: translate(0, 0) !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: 0;
+        pointer-events: none !important;
+        cursor: unset !important;
+    }
+    .fancybox-slide{
+        width: 100% !important;
+        height: 100% !important;
+        transform: translateX(-29%);
+        right: 0;
+        object-fit: contain;
+    }
+    .fancybox-image{
+        object-fit: contain;
     }
 }
 
@@ -315,19 +367,33 @@
         font-weight: 600;
         margin-right: 12px;
     }
-    .icon-star{
-        font-size: 19px;
-        height: 18px;
-        fill: #d7d7d7;
+    &__list,
+    &__list--active{
+        display: inline-flex;
+        align-items: center;
+    }
+    &__list{
+        position: relative;
+        width: 111px;
+        .icon-star{
+            font-size: 19px;
+            height: 18px;
+            fill: #d7d7d7;
+        }
+    }
+    &__list--active{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        overflow: hidden;
+        .icon-star{
+            fill: #ff9806;
+        }
     }
     &__item{
         & + &{
             margin-left: 4px;
-        }
-        &--full{
-            .icon-star{
-                fill: $yellow;
-            }
         }
     }
     &__all{

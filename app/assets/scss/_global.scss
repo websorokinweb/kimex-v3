@@ -3,7 +3,7 @@
 
 html{
     box-sizing: border-box;
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 *, *:before, *:after{
     box-sizing: inherit;
@@ -178,16 +178,94 @@ img{
     &--profile{
         span{
             color: $text-main;
-            width: 110px;
+            max-width: 110px;
+            width: 100%;
             margin-right: 28px;
             font-weight: 600;
         }
-        .input{
+        .input--small{
             margin-top: 0;
+            min-width: 400px;
             max-width: 400px;
+            width: 100%;
+            border: 1px solid $anothergray;
             &:disabled{
                 background-color: #f6f6f6;
                 color: $text-light;
+            }
+        }
+    }
+    &--colorpick{
+        padding: 8px;
+        .checkbox-style{
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            position: relative;
+            transition: border .2s;
+            &:after{
+                content: '';
+                position: absolute;
+                left: -8.8px;
+                top: -8.8px;
+                width: 40px;
+                height: 40px;
+                border: 1px solid $anothergray;
+                border-radius: 50%;
+                transition: border .2s;
+            }
+        }
+        &:hover{
+            .checkbox-style{
+                &:after{
+                    border-width: 2px;
+                    border-color: $text-main;
+                }
+            }
+        }
+        input:checked + .checkbox-style{
+            &:after{
+                border-color: $text-main;
+                border-width: 2px;
+            }
+        }
+    }
+    &--sizepick{
+        .checkbox-style{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $text-main;
+            border: 1px solid $anothergray;
+            cursor: pointer;
+            font-weight: 600;
+            transition: border .2s;
+        }
+        &:hover{
+            .checkbox-style{
+                border-width: 2px;
+                border-color: $text-main;
+            }
+        }
+        input:checked + .checkbox-style{
+            border-color: $text-main;
+            border-width: 2px;
+        }
+        input:disabled + .checkbox-style{
+            color: $anothergray;
+            position: relative;
+            border: 1px solid $anothergray !important;
+            &:before{
+                content: '';
+                position: absolute;
+                top: -9px;
+                left: 18px;
+                width: 1px;
+                height: 54px;
+                transform: rotate(-45deg);
+                background-color: $anothergray;
             }
         }
     }
@@ -701,6 +779,14 @@ img{
         .header__bottom{
             border-bottom: 1px solid $anothergray;
             padding-bottom: 15px;
+        }
+    }
+    &--logged{
+        .header__join{
+            margin-right: 40px;
+        }
+        .header__basket-btn--not-empty{
+            color: $text-main;
         }
     }
 }
@@ -1457,6 +1543,7 @@ img{
         height: 32px;
         .icon-x{
             font-size: 14px;
+            fill: $text-main;
         }
     }
     &__title{
@@ -1484,7 +1571,7 @@ img{
         }
     }
     &__curr-color{
-        margin: 21px 0;
+        margin: 21px 0 13px;
         color: $text-main;
         span{
             color: $text-light;
@@ -1494,40 +1581,8 @@ img{
     &__colors-list{
         display: flex;
     }
-    &__colors-item{
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        position: relative;
-        transform: translateX(8px);
-        cursor: pointer;
-        transition: all .4s;
-        &:before{
-            content: '';
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            width: 40px;
-            height: 40px;
-            border: 1px solid $anothergray;
-            border-radius: 50%;
-        }
-        & + &{
-            margin-left: 24px;
-        }
-        &:hover{
-            &:before{
-                border: 1px solid $text-main;
-            }
-        }
-        &--active{
-            &:before{
-                border: 2px solid $text-main !important;
-            }
-        }
-    }
     &__curr-size{
-        margin-top: 29px;
+        margin-top: 21px;
         color: $text-main;
         margin-bottom: 13px;
         a{
@@ -1541,46 +1596,11 @@ img{
         display: flex;
         margin-bottom: 24px;
     }
-    &__size-item{
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $text-main;
-        border: 1px solid $anothergray;
-        cursor: pointer;
-        font-weight: 600;
-        transition: all .4s;
-        & + &{
-            margin-left: 8px;
-        }
-        &:hover{
-            border: 1px solid $text-main;
-        }
-        &--active{
-            border: 2px solid $text-main !important;
-        }
-        &--not-available{
-            color: $anothergray;
-            position: relative;
-            border: 1px solid $anothergray !important;
-            &:before{
-                content: '';
-                position: absolute;
-                top: -9px;
-                left: 18px;
-                width: 1px;
-                height: 54px;
-                transform: rotate(-45deg);
-                background-color: $anothergray;
-            }
-        }
-    }
     &__buttons{
         position: relative;
         display: flex;
         margin-bottom: 17px;
+        transition: all .2s;
         .card__like{
             position: static;
             height: 48px;
@@ -1590,19 +1610,20 @@ img{
             align-items: center;
             justify-content: center;
             margin-left: 16px;
-            transition: all .4s;
+            transition: border-color .2s;
             cursor: pointer;
             .icon-save{
                 fill: $text-main;
-                transition: fill .4s;
+                transition: fill .2s;
             }
             &:hover{
-                border: 2px solid $text-main;
+                border-width: 2px;
             }
         }
         &--active{
             .card__like{
-                border: 2px solid $active !important;
+                border-width: 2px !important;
+                border-color: $active;
                 .icon-save{
                     fill: $active;
                 }
@@ -1690,13 +1711,17 @@ img{
     vertical-align: top;
 }
 
+.fancybox-infobar{
+    display: none !important;
+}
+
 .join-modal{
     padding: 22px;
     pointer-events: none;
     background: transparent;
     &__inner{
         background-color: #fff;
-        padding: 30px;
+        padding: 60px 30px 30px;
         max-width: 464px;
         min-width: 464px;
         color: $text-main;

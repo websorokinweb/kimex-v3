@@ -113,180 +113,205 @@
         </form>
       </div>
     </section>
-    <footer class="footer footer--light">
-       <div class="container">
-           <div class="footer__top">
-               <div class="footer__mailing mailing">
-                   <h5 class="mailing__title footer-subtitle">
-                       Подписаться на рассылку
-                   </h5>
-                   <p class="mailing__descr">
-                       Скидки, новинки, акции и полезные статьи каждую неделю
-                   </p>
-                   <form class="mailing__form input-merge-btn input-wrapper--mailing">
-                       <input class="mailing__input input" type="text" placeholder="Введите ваш E-mail...">
-                       <button class="mailing__btn btn" type='submit'>
-                           Подписаться
-                       </button>
-                   </form>
-                   <p class="mailing__policy">
-                       Нажимая кнопку «Подписаться», вы соглашаетесь с 
-                       <a class="mailing__policy-link link" href="#">
-                           Политикой конфиденциальности
-                       </a>
-                        и получением информации о товарах на электронную почту.
-                   </p>
-               </div>
-               <nav class="footer__info">
-                   <ul class="footer__info-list">
-                       <li class="footer__list-item">
-                           <h6 class='footer-subtitle'>
-                               Пoкупателям
-                           </h6>
-                       </li>
-                       <li class="footer__info-item">
-                           <a class="footer__info-link" href="#">
-                               Вопрос-ответ
-                           </a>
-                       </li>
-                       <li class="footer__info-item">
-                           <a class="footer__info-link" href="#">
-                               Достaвка
-                           </a>
-                       </li>
-                       <li class="footer__info-item">
-                           <a class="footer__info-link" href="#">
-                               Самовывоз
-                           </a>
-                       </li>
-                       <li class="footer__info-item">
-                           <a class="footer__info-link" href="#">
-                               Оплата
-                           </a>
-                       </li>
-                       <li class="footer__info-item">
-                           <a class="footer__info-link" href="#">
-                               Возврат и обмен
-                           </a>
-                       </li>
-                   </ul>
-                   <ul class="footer__info-list">
-                       <li class="footer__list-item">
-                           <h6 class='footer-subtitle'>
-                               Компания
-                           </h6>
-                       </li>
-                       <li class="footer__info-item">
-                           <a class="footer__info-link" href="#">
-                               О нас
-                           </a>
-                       </li>
-                       <li class="footer__info-item">
-                           <a class="footer__info-link" href="#">
-                               Контакты
-                           </a>
-                       </li>
-                       <li class="footer__info-item">
-                           <a class="footer__info-link" href="#">
-                               Сотрудничество
-                           </a>
-                       </li>
-                   </ul>
-                   <ul class="footer__info-list">
-                       <li class="footer__list-item">
-                           <h6 class='footer-subtitle'>
-                               Правовая информация
-                           </h6>
-                       </li>
-                       <li class="footer__info-item">
-                           <a class="footer__info-link" href="#">
-                               Политика конфиденциальности
-                           </a>
-                       </li>
-                       <li class="footer__info-item">
-                           <a class="footer__info-link" href="#">
-                               Оферта
-                           </a>
-                       </li>
-                   </ul>
-               </nav>
-           </div>
-           <div class="footer__bottom">
-               <div class="footer__partners partners">
-                   <p class="footer__copyright">
-                       © 2021 ООО «АЙЗЕЛ.РУ»
-                   </p>
-    <ul class="partners__list">
-        <li class="partners__item">
-            <a class="partners__link" href="#">
-                <svg class='icon icon-denisov-logo'>
-                    <use xlink:href="assets/sprites/sprite.svg#denisov-logo"></use>
+    <div class="join-modal" style="display: none" id="join-modal">  
+      <div class="join-modal__inner">
+        <div class="tabs-wrapper">
+          <div class="tabs"><a class="tab tab--active active-line hover-line" href="#modal-login">Авторизация     </a><a class="tab hover-line" href="#modal-register">регистрация</a></div>
+        </div>
+        <div class="tabs-container">
+          <div class="tabs-content tabs-content--active" id="modal-login">
+            <p class="join-modal__descr">Войти через соцсети:</p>
+            <ul class="connect__list">
+              <li class="connect__item"><a class="connect__link" href="#">
+                  <svg class="icon icon-facebook">
+                    <use xlink:href="assets/sprites/sprite.svg#facebook"></use>
+                  </svg></a></li>
+              <li class="connect__item"><a class="connect__link" href="#">
+                  <svg class="icon icon-vk">
+                    <use xlink:href="assets/sprites/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="connect__item"><a class="connect__link" href="#">
+                  <svg class="icon icon-ok">
+                    <use xlink:href="assets/sprites/sprite.svg#ok"></use>
+                  </svg></a></li>
+              <li class="connect__item cant-login"><a class="connect__link" href="#">
+                  <svg class="icon icon-instagram">
+                    <use xlink:href="assets/sprites/sprite.svg#instagram"></use>
+                  </svg></a></li>
+              <li class="connect__item cant-login"><a class="connect__link" href="#">
+                  <svg class="icon icon-youtube">
+                    <use xlink:href="assets/sprites/sprite.svg#youtube"></use>
+                  </svg></a></li>
+              <li class="connect__item cant-login"><a class="connect__link" href="#">
+                  <svg class="icon icon-telegram">
+                    <use xlink:href="assets/sprites/sprite.svg#telegram"></use>
+                  </svg></a></li>
+              <li class="connect__item"><a class="connect__link" href="#">
+                  <svg class="icon icon-twitter">
+                    <use xlink:href="assets/sprites/sprite.svg#twitter"></use>
+                  </svg></a></li>
+            </ul>
+            <form class="join-modal__form">
+              <label class="label">
+                 Логин
+                <input class="input input--small">
+              </label>
+              <label class="label">
+                 Пароль
+                <input class="input input--small">
+              </label>
+              <div class="join-modal__actions">
+                <button class="btn" type="submit">войти</button><a class="link" href="#">Забыли пароль?</a>
+              </div>
+            </form>
+          </div>
+          <div class="tabs-content" id="modal-register">
+            <form class="join-modal__form">
+              <label class="label label--important"><span>Имя</span>
+                <input class="input input--small" required type="text">
+              </label>
+              <label class="label"> <span>Фамилия</span>
+                <input class="input input--small" type="text">
+              </label>
+              <label class="label label--important"> <span>Дата рождения</span>
+                <input class="input input--small datepicker-here" id="register-data" type="text" required data-language="ru">
+                <svg class="icon icon-calendar">
+                  <use xlink:href="assets/sprites/sprite.svg#calendar"></use>
                 </svg>
-            </a>
-        </li>
-        <li class="partners__item picon mastercard"></li>
-        <li class="partners__item picon visa"></li>
-        <li class="partners__item picon paybox"></li>
-        <li class="partners__item picon zoodpay"></li>
-    </ul>           </div>
-               <nav class="footer__connect connect">
-                   <h6 class="connect-title footer-subtitle">
-                       Мы в соцсетях
-                   </h6>
-    <ul class="connect__list">
-      <li class="connect__item"><a class="connect__link" href="#">
-          <svg class="icon icon-facebook">
-            <use xlink:href="assets/sprites/sprite.svg#facebook"></use>
-          </svg></a></li>
-      <li class="connect__item"><a class="connect__link" href="#">
-          <svg class="icon icon-vk">
-            <use xlink:href="assets/sprites/sprite.svg#vk"></use>
-          </svg></a></li>
-      <li class="connect__item"><a class="connect__link" href="#">
-          <svg class="icon icon-ok">
-            <use xlink:href="assets/sprites/sprite.svg#ok"></use>
-          </svg></a></li>
-      <li class="connect__item cant-login"><a class="connect__link" href="#">
-          <svg class="icon icon-instagram">
-            <use xlink:href="assets/sprites/sprite.svg#instagram"></use>
-          </svg></a></li>
-      <li class="connect__item cant-login"><a class="connect__link" href="#">
-          <svg class="icon icon-youtube">
-            <use xlink:href="assets/sprites/sprite.svg#youtube"></use>
-          </svg></a></li>
-      <li class="connect__item cant-login"><a class="connect__link" href="#">
-          <svg class="icon icon-telegram">
-            <use xlink:href="assets/sprites/sprite.svg#telegram"></use>
-          </svg></a></li>
-      <li class="connect__item"><a class="connect__link" href="#">
-          <svg class="icon icon-twitter">
-            <use xlink:href="assets/sprites/sprite.svg#twitter"></use>
-          </svg></a></li>
-    </ul>           </nav>
-               <div class="footer__contacts">
-                   <h6 class="footer__contacts-title footer-subtitle">
-                       Связаться с нами
-                   </h6>
-                   <ul class="footer__contacts-list">
-                       <li class="footer__contacts-item">
-                           <a class="footer__contacts-link" href="tel:+88001002828">
-                               Казахстан: 8 (800) 100 28 28
-                           </a>
-                       </li>
-                       <li class="footer__contacts-item">
-                           <a class="footer__contacts-link" href="tel:+84952878555">
-                               Астана: 8 (495) 287 85 55
-                           </a>
-                       </li>
-                       <li class="footer__contacts-item">
-                           <a class="footer__contacts-link link" href="mailto:nfo@kimex.kz">
-                               nfo@kimex.kz
-                           </a>
-                       </li>
-                   </ul>
-               </div>
-           </div>
-       </div>
+              </label>
+              <label class="label label--important"> <span>Город</span>
+                <input class="input input--small" required type="text">
+              </label>
+              <label class="label label--important"> <span>E-mail</span>
+                <input class="input input--small" type="email" required>
+              </label>
+              <label class="label label--important"><span>Телефон</span>
+                <input class="input input--small" required type="text" data-phone-mask>
+              </label>
+              <label class="label label--important"> <span>Пароль</span>
+                <input class="input input--small" required type="password">
+                <svg class="icon icon-password icon-hidden">
+                  <use xlink:href="assets/sprites/sprite.svg#password-hidden"></use>
+                </svg>
+                <svg class="icon icon-password icon-visible">
+                  <use xlink:href="assets/sprites/sprite.svg#password-visible"></use>
+                </svg>
+              </label>
+              <label class="label label--important"> <span>Повторите пароль</span>
+                <input class="input input--small" required type="password">
+                <svg class="icon icon-password icon-hidden">
+                  <use xlink:href="assets/sprites/sprite.svg#password-hidden"></use>
+                </svg>
+                <svg class="icon icon-password icon-visible">
+                  <use xlink:href="assets/sprites/sprite.svg#password-visible"></use>
+                </svg>
+              </label>
+              <div class="join-modal__actions">
+                <button class="btn" type="submit">зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer footer--light">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__mailing mailing">
+            <h5 class="mailing__title footer-subtitle">Подписаться на рассылку</h5>
+            <p class="mailing__descr">Скидки, новинки, акции и полезные статьи каждую неделю</p>
+            <form class="mailing__form input-merge-btn input-wrapper--mailing">
+              <input class="mailing__input input" type="text" placeholder="Введите ваш E-mail...">
+              <button class="mailing__btn btn" type="submit">Подписаться</button>
+            </form>
+            <p class="mailing__policy">Нажимая кнопку «Подписаться», вы соглашаетесь с <a class="mailing__policy-link link" href="#">Политикой конфиденциальности</a> и получением информации о товарах на электронную почту.</p>
+          </div>
+          <nav class="footer__info">
+            <ul class="footer__info-list">
+              <li class="footer__list-item">
+                <h6 class="footer-subtitle">Пoкупателям</h6>
+              </li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">Вопрос-ответ</a></li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">Достaвка</a></li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">Самовывоз</a></li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">Оплата</a></li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">Возврат и обмен</a></li>
+            </ul>
+            <ul class="footer__info-list">
+              <li class="footer__list-item">
+                <h6 class="footer-subtitle">Компания</h6>
+              </li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">О нас</a></li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">Контакты</a></li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">Сотрудничество</a></li>
+            </ul>
+            <ul class="footer__info-list">
+              <li class="footer__list-item">
+                <h6 class="footer-subtitle">Правовая информация</h6>
+              </li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">Вопрос-ответ</a></li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">Политика конфиденциальности</a></li>
+              <li class="footer__info-item"><a class="footer__info-link" href="#">Оферта</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__partners partners">
+            <p class="footer__copyright">© 2021 ООО «АЙЗЕЛ.РУ»</p>
+            <ul class="partners__list">
+              <li class="partners__item"><a class="partners__link" href="#">
+                  <svg class="icon icon-denisov-logo">
+                    <use xlink:href="assets/sprites/sprite.svg#denisov-logo"></use>
+                  </svg></a></li>
+              <li class="partners__item picon mastercard"></li>
+              <li class="partners__item picon visa"></li>
+              <li class="partners__item picon paybox"></li>
+              <li class="partners__item picon zoodpay"></li>
+            </ul>
+          </div>
+          <nav class="footer__connect connect">
+            <h6 class="connect-title footer-subtitle">Мы в соцсетях</h6>
+            <ul class="connect__list">
+              <li class="connect__item"><a class="connect__link" href="#">
+                  <svg class="icon icon-facebook">
+                    <use xlink:href="assets/sprites/sprite.svg#facebook"></use>
+                  </svg></a></li>
+              <li class="connect__item"><a class="connect__link" href="#">
+                  <svg class="icon icon-vk">
+                    <use xlink:href="assets/sprites/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="connect__item"><a class="connect__link" href="#">
+                  <svg class="icon icon-ok">
+                    <use xlink:href="assets/sprites/sprite.svg#ok"></use>
+                  </svg></a></li>
+              <li class="connect__item cant-login"><a class="connect__link" href="#">
+                  <svg class="icon icon-instagram">
+                    <use xlink:href="assets/sprites/sprite.svg#instagram"></use>
+                  </svg></a></li>
+              <li class="connect__item cant-login"><a class="connect__link" href="#">
+                  <svg class="icon icon-youtube">
+                    <use xlink:href="assets/sprites/sprite.svg#youtube"></use>
+                  </svg></a></li>
+              <li class="connect__item cant-login"><a class="connect__link" href="#">
+                  <svg class="icon icon-telegram">
+                    <use xlink:href="assets/sprites/sprite.svg#telegram"></use>
+                  </svg></a></li>
+              <li class="connect__item"><a class="connect__link" href="#">
+                  <svg class="icon icon-twitter">
+                    <use xlink:href="assets/sprites/sprite.svg#twitter"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+          <div class="footer__contacts">
+            <h6 class="footer__contacts-title footer-subtitle">Связаться с нами</h6>
+            <ul class="footer__contacts-list">
+              <li class="footer__contacts-item"><a class="footer__contacts-link" href="tel:+88001002828">Казахстан: 8 (800) 100 28 28</a></li>
+              <li class="footer__contacts-item"><a class="footer__contacts-link" href="tel:+84952878555">Астана: 8 (495) 287 85 55</a></li>
+              <li class="footer__contacts-item"><a class="footer__contacts-link link" href="mailto:nfo@kimex.kz">nfo@kimex.kz</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="assets/js/libs.min.js"></script>
     <script src="assets/js/main.js"></script>

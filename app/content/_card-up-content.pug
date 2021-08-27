@@ -29,611 +29,298 @@ section.card-up
                                 img(src='temp/card-up-navigation-4.jpg')
                             a.swiper-slide(data-fancybox="gallery" data-src="temp/preview-1.jpg")
                                 img(src='temp/preview-1.jpg')
+                            svg.icon.icon-resize
+                                use(
+                                    xlink:href="assets/sprites/sprite.svg#star"
+                                )
                 .card-up__reviews.reviews
                     .reviews__head
                         h2.subtitle отзывы
-                        ul.stars
+                        div.stars
                             li.stars__number 4,8
-                            li.stars__item.stars__item--full
-                                svg.icon.icon-star
-                                    use(
-                                        xlink:href="assets/sprites/sprite.svg#star"
-                                    )
-                            li.stars__item.stars__item--full
-                                svg.icon.icon-star
-                                    use(
-                                        xlink:href="assets/sprites/sprite.svg#star"
-                                    )
-                            li.stars__item.stars__item--full
-                                svg.icon.icon-star
-                                    use(
-                                        xlink:href="assets/sprites/sprite.svg#star"
-                                    )                                  
-                            li.stars__item.stars__item--full
-                                svg.icon.icon-star
-                                    use(
-                                        xlink:href="assets/sprites/sprite.svg#star"
-                                    )                             
-                            li.stars__item.stars__item--half
-                                svg.icon.icon-star
-                                    use(
-                                        xlink:href="assets/sprites/sprite.svg#star"
-                                    )
+                            ul.stars__list
+                                li.stars__item
+                                    svg.icon.icon-star
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#star"
+                                        )
+                                li.stars__item
+                                    svg.icon.icon-star
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#star"
+                                        )
+                                li.stars__item
+                                    svg.icon.icon-star
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#star"
+                                        )                                  
+                                li.stars__item
+                                    svg.icon.icon-star
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#star"
+                                        )                             
+                                li.stars__item
+                                    svg.icon.icon-star
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#star"
+                                        )
+                                ul.stars__list--active(style='max-width: 96%')
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )                                  
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )                             
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )
                             li.stars__all 14 человек
                         a.reviews__leave.link(href='#') Оставить отзыв
-                    .reviews__list-wrapper.tabs-container
-                        ul.reviews__list.tabs-content.tabs-content--active(id='review-page-1')
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
+                    ul.reviews__list
+                        li.reviews__item
+                            .reviews__item-head
+                                ul.stars__list
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )                                  
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )                             
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )
+                                    ul.stars__list--active(style='max-width: 100%')
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )                                  
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )                             
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )
-                                    p.reviews__item-owner Анна, г. Астана, 18 декабря 2020
-                                p.reviews__item-text
-                                    | Вообще с платьями у меня сложные отношения. Не всегда удается найти что-то на большую грудь. Ну и чего уж там, и на немаленький живот. При этом я не очень люблю платья-мешки.
-                                    | Встретила это платье - и не смогла устоять. Сначала меня подкупила цена! Всего 500 руб! 
-                                    | У нас за такие деньги можно купить только футболку, и то, сомнительного качества.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
+                                p.reviews__item-owner Анна, г. Астана, 18 декабря 2020
+                            p.reviews__item-text
+                                | Вообще с платьями у меня сложные отношения. Не всегда удается найти что-то на большую грудь. Ну и чего уж там, и на немаленький живот. При этом я не очень люблю платья-мешки.
+                                | Встретила это платье - и не смогла устоять. Сначала меня подкупила цена! Всего 500 руб! 
+                                | У нас за такие деньги можно купить только футболку, и то, сомнительного качества.
+                            p.reviews__item-useful
+                                | Полезный отзыв?
+                                span.reviews__item-like
+                                    svg.icon.icon-like
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#like"
+                                        )
+                                    | 1
+                                span.reviews__item-dislike
+                                    svg.icon.icon-dislike
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#dislike"
+                                        )
+                                    | 0
+                        li.reviews__item
+                            .reviews__item-head
+                                ul.stars__list
+                                    li.stars__item
+                                        svg.icon.icon-star
                                             use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
+                                                xlink:href="assets/sprites/sprite.svg#star"
                                             )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
+                                    li.stars__item
+                                        svg.icon.icon-star
                                             use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
+                                                xlink:href="assets/sprites/sprite.svg#star"
                                             )
-                                        | 0
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )                                  
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )                             
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )
+                                    ul.stars__list--active(style='max-width: calc(90% + 1.6px)')
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )                                  
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )                             
-                                        li.stars__item.stars__item--half
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )
-                                    p.reviews__item-owner Валентина, г. Астана, 14 марта 2021
-                                p.reviews__item-text
-                                    | Заказ пришёл из интернет-магазина быстро. Сначала я хотела поменять на размер побольше, потому что показалось, что немного тянет в груди. Но потом я всё-таки решила померить его ещё и дома и не стала ничего менять.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
+                                p.reviews__item-owner Валентина, г. Астана, 14 марта 2021
+                            p.reviews__item-text
+                                | Заказ пришёл из интернет-магазина быстро. Сначала я хотела поменять на размер побольше, потому что показалось, что немного тянет в груди. Но потом я всё-таки решила померить его ещё и дома и не стала ничего менять.
+                            p.reviews__item-useful
+                                | Полезный отзыв?
+                                span.reviews__item-like
+                                    svg.icon.icon-like
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#like"
+                                        )
+                                    | 1
+                                span.reviews__item-dislike
+                                    svg.icon.icon-dislike
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#dislike"
+                                        )
+                                    | 0
+                        li.reviews__item
+                            .reviews__item-head
+                                ul.stars__list
+                                    li.stars__item
+                                        svg.icon.icon-star
                                             use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
+                                                xlink:href="assets/sprites/sprite.svg#star"
                                             )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
+                                    li.stars__item
+                                        svg.icon.icon-star
                                             use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
+                                                xlink:href="assets/sprites/sprite.svg#star"
                                             )
-                                        | 0
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )                                  
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )                             
+                                    li.stars__item
+                                        svg.icon.icon-star
+                                            use(
+                                                xlink:href="assets/sprites/sprite.svg#star"
+                                            )
+                                    ul.stars__list--active(style='max-width: 100%')
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )                                  
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )                             
-                                        li.stars__item.stars__item--full
+                                        li.stars__item
                                             svg.icon.icon-star
                                                 use(
                                                     xlink:href="assets/sprites/sprite.svg#star"
                                                 )
-                                    p.reviews__item-owner Анна, г. Астана, 18 декабря 2020
-                                p.reviews__item-text
-                                    | Вообще с платьями у меня сложные отношения. Не всегда удается найти что-то на большую грудь. Ну и чего уж там, и на немаленький живот. При этом я не очень люблю платья-мешки.
-                                    | Встретила это платье - и не смогла устоять. Сначала меня подкупила цена! Всего 500 руб! 
-                                    | У нас за такие деньги можно купить только футболку, и то, сомнительного качества.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
-                                            )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
-                                            )
-                                        | 0
-                        ul.reviews__list.tabs-content(id='review-page-2')
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                                  
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                             
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                    p.reviews__item-owner Валентина, г. Астана, 14 марта 2021
-                                p.reviews__item-text
-                                    | Вообще с платьями у меня сложные отношения. Не всегда удается найти что-то на большую грудь. Ну и чего уж там, и на немаленький живот. При этом я не очень люблю платья-мешки.
-                                    | Встретила это платье - и не смогла устоять. Сначала меня подкупила цена! Всего 500 руб! 
-                                    | У нас за такие деньги можно купить только футболку, и то, сомнительного качества.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
-                                            )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
-                                            )
-                                        | 0
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                                  
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                             
-                                        li.stars__item.stars__item--half
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                    p.reviews__item-owner Валентина, г. Астана, 14 марта 2021
-                                p.reviews__item-text
-                                    | Заказ пришёл из интернет-магазина быстро. Сначала я хотела поменять на размер побольше, потому что показалось, что немного тянет в груди. Но потом я всё-таки решила померить его ещё и дома и не стала ничего менять.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
-                                            )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
-                                            )
-                                        | 0
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                                  
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                             
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                    p.reviews__item-owner Анна, г. Астана, 18 декабря 2020
-                                p.reviews__item-text
-                                    | Вообще с платьями у меня сложные отношения. Не всегда удается найти что-то на большую грудь. Ну и чего уж там, и на немаленький живот. При этом я не очень люблю платья-мешки.
-                                    | Встретила это платье - и не смогла устоять. Сначала меня подкупила цена! Всего 500 руб! 
-                                    | У нас за такие деньги можно купить только футболку, и то, сомнительного качества.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
-                                            )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
-                                            )
-                                        | 0
-                        ul.reviews__list.tabs-content(id='review-page-3')
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                                  
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                             
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                    p.reviews__item-owner Анна, г. Астана, 18 декабря 2020
-                                p.reviews__item-text
-                                    | Вообще с платьями у меня сложные отношения. Не всегда удается найти что-то на большую грудь. Ну и чего уж там, и на немаленький живот. При этом я не очень люблю платья-мешки.
-                                    | Встретила это платье - и не смогла устоять. Сначала меня подкупила цена! Всего 500 руб! 
-                                    | У нас за такие деньги можно купить только футболку, и то, сомнительного качества.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
-                                            )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
-                                            )
-                                        | 0
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                                  
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                             
-                                        li.stars__item.stars__item--half
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                    p.reviews__item-owner Валентина, г. Астана, 14 марта 2021
-                                p.reviews__item-text
-                                    | Заказ пришёл из интернет-магазина быстро. Сначала я хотела поменять на размер побольше, потому что показалось, что немного тянет в груди. Но потом я всё-таки решила померить его ещё и дома и не стала ничего менять.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
-                                            )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
-                                            )
-                                        | 0
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                                  
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                             
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                    p.reviews__item-owner Анна, г. Астана, 18 декабря 2020
-                                p.reviews__item-text
-                                    | Вообще с платьями у меня сложные отношения. Не всегда удается найти что-то на большую грудь. Ну и чего уж там, и на немаленький живот. При этом я не очень люблю платья-мешки.
-                                    | Встретила это платье - и не смогла устоять. Сначала меня подкупила цена! Всего 500 руб! 
-                                    | У нас за такие деньги можно купить только футболку, и то, сомнительного качества.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
-                                            )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
-                                            )
-                                        | 0
-                        ul.reviews__list.tabs-content(id='review-page-4')
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                                  
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                             
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                    p.reviews__item-owner Анна, г. Астана, 18 декабря 2020
-                                p.reviews__item-text
-                                    | Вообще с платьями у меня сложные отношения. Не всегда удается найти что-то на большую грудь. Ну и чего уж там, и на немаленький живот. При этом я не очень люблю платья-мешки.
-                                    | Встретила это платье - и не смогла устоять. Сначала меня подкупила цена! Всего 500 руб! 
-                                    | У нас за такие деньги можно купить только футболку, и то, сомнительного качества.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
-                                            )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
-                                            )
-                                        | 0
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                                  
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                             
-                                        li.stars__item.stars__item--half
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                    p.reviews__item-owner Валентина, г. Астана, 14 марта 2021
-                                p.reviews__item-text
-                                    | Заказ пришёл из интернет-магазина быстро. Сначала я хотела поменять на размер побольше, потому что показалось, что немного тянет в груди. Но потом я всё-таки решила померить его ещё и дома и не стала ничего менять.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
-                                            )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
-                                            )
-                                        | 0
-                            li.reviews__item
-                                .reviews__item-head
-                                    ul.stars
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                                  
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )                             
-                                        li.stars__item.stars__item--full
-                                            svg.icon.icon-star
-                                                use(
-                                                    xlink:href="assets/sprites/sprite.svg#star"
-                                                )
-                                    p.reviews__item-owner Анна, г. Астана, 18 декабря 2020
-                                p.reviews__item-text
-                                    | Вообще с платьями у меня сложные отношения. Не всегда удается найти что-то на большую грудь. Ну и чего уж там, и на немаленький живот. При этом я не очень люблю платья-мешки.
-                                    | Встретила это платье - и не смогла устоять. Сначала меня подкупила цена! Всего 500 руб! 
-                                    | У нас за такие деньги можно купить только футболку, и то, сомнительного качества.
-                                p.reviews__item-useful
-                                    | Полезный отзыв?
-                                    span.reviews__item-like
-                                        svg.icon.icon-like
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#like"
-                                            )
-                                        | 1
-                                    span.reviews__item-dislike
-                                        svg.icon.icon-dislike
-                                            use(
-                                                xlink:href="assets/sprites/sprite.svg#dislike"
-                                            )
-                                        | 0
-                    .tabs-wrapper
+                                p.reviews__item-owner Анна, г. Астана, 18 декабря 2020
+                            p.reviews__item-text
+                                | Вообще с платьями у меня сложные отношения. Не всегда удается найти что-то на большую грудь. Ну и чего уж там, и на немаленький живот. При этом я не очень люблю платья-мешки.
+                                | Встретила это платье - и не смогла устоять. Сначала меня подкупила цена! Всего 500 руб! 
+                                | У нас за такие деньги можно купить только футболку, и то, сомнительного качества.
+                            p.reviews__item-useful
+                                | Полезный отзыв?
+                                span.reviews__item-like
+                                    svg.icon.icon-like
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#like"
+                                        )
+                                    | 1
+                                span.reviews__item-dislike
+                                    svg.icon.icon-dislike
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#dislike"
+                                        )
+                                    | 0
+                    .reviews__footer 
                         .tabs.pagination__list
                             p.pagination__descr Страницы: &nbsp;
-                            a.tab.pagination__item.hover-line.hover-line--thin.tab--active(href='#review-page-1')
+                            a.tab.pagination__item.hover-line.hover-line--thin.tab--active
                                 span.pagination__link 1
-                            a.tab.pagination__item.hover-line.hover-line--thin(href='#review-page-2')
+                            a.tab.pagination__item.hover-line.hover-line--thin
                                 span.pagination__link 2
-                            a.tab.pagination__item.hover-line.hover-line--thin(href='#review-page-3')
+                            a.tab.pagination__item.hover-line.hover-line--thin
                                 span.pagination__link 3
-                            a.tab.pagination__item.hover-line.hover-line--thin(href='#review-page-4') 
+                            a.tab.pagination__item.hover-line.hover-line--thin 
                                 span.pagination__link 4
-                    .reviews__footer 
                         button.reviews__close.link Свернуть все отзывы
                         a.reviews__all.link(href='#') Все отзывы
             .card-up__right.card-modal--haveDiscount
@@ -655,17 +342,31 @@ section.card-up
                     | 32 995 ₸
                 p.card-modal__curr-color Выберите цвет:
                     span Светлобежевый
-                ul.card-modal__colors-list
-                    li.card-modal__colors-item.card-modal__colors-item--active(style='background-color: #ddc5b9')
-                    li.card-modal__colors-item(style='background-color: #5d5d62')
-                    li.card-modal__colors-item(style='background-color: #c5c5c8')
+                .card-modal__colors-list
+                    label.label--have-checkbox.label--colorpick
+                        input.checkbox(type="radio" name='card-colorpick' checked)
+                        span.checkbox-style(style='background-color: #ddc5b9')
+                    label.label--have-checkbox.label--colorpick
+                        input.checkbox(type="radio" name='card-colorpick')
+                        span.checkbox-style(style='background-color: #5d5d62')
+                    label.label--have-checkbox.label--colorpick
+                        input.checkbox(type="radio" name='card-colorpick')
+                        span.checkbox-style(style='background-color: #c5c5c8')
                 p.card-modal__curr-size Выберите цвет:
                     a(href='#') Таблица размеров
-                ul.card-modal__size-list
-                    li.card-modal__size-item.card-modal__size-item--active S
-                    li.card-modal__size-item.card-modal__size-item--not-available M
-                    li.card-modal__size-item L
-                    li.card-modal__size-item XL
+                .card-modal__size-list
+                    label.label--have-checkbox.label--sizepick
+                        input.checkbox(type="radio" name='card-sizepick' checked)
+                        span.checkbox-style S
+                    label.label--have-checkbox.label--sizepick
+                        input.checkbox(type="radio" name='card-sizepick' disabled)
+                        span.checkbox-style M
+                    label.label--have-checkbox.label--sizepick
+                        input.checkbox(type="radio" name='card-sizepick')
+                        span.checkbox-style L
+                    label.label--have-checkbox.label--sizepick
+                        input.checkbox(type="radio" name='card-sizepick')
+                        span.checkbox-style XL
                 .card-modal__buttons
                     button.card__cart-btn.btn добавить в корзину
                     span.card__like
@@ -683,58 +384,33 @@ section.card-up
                     li.accordion-wrapper
                         button.accordion-head Детали
                         .accordion-body
+                            ul.card-up__details-list
+                                each val in ['Бренд', 'Страна производства' , 'Состав', 'Цвет', 'Штрих-код', 'Параметры модели']   
+                                    li.card-up__details-listitem=val 
                             ul.card-up__details-list   
-                                li.card-up__details-listitem Бренд
-                                li.card-up__details-listitem Страна производства
-                                li.card-up__details-listitem Состав
-                                li.card-up__details-listitem Цвет
-                                li.card-up__details-listitem Штрих-код
-                                li.card-up__details-listitem Параметры модели
-                            ul.card-up__details-list   
-                                li.card-up__details-listitem.link MM6
-                                li.card-up__details-listitem РУМЫНИЯ
-                                li.card-up__details-listitem 70% вискоза, 30% полиэстер
-                                li.card-up__details-listitem Бежевый
-                                li.card-up__details-listitem S52HA0160 121
-                                li.card-up__details-listitem 3226163
-                                li.card-up__details-listitem 176/80/60/86, размер на модели – 42RU
+                                li.card-up__details-listitem.link MM6 
+                                each val in ['РУМЫНИЯ' , '70% вискоза, 30% полиэстер', 'Бежевый', 'S52HA0160 121', '3226163', '176/80/60/86, размер на модели – 42RU']   
+                                    li.card-up__details-listitem=val 
                     li.accordion-wrapper
                         button.accordion-head Оплата
                         .accordion-body
+                            ul.card-up__details-list
+                                each val in ['Бренд', 'Страна производства' , 'Состав', 'Цвет', 'Штрих-код', 'Параметры модели']   
+                                    li.card-up__details-listitem=val 
                             ul.card-up__details-list   
-                                li.card-up__details-listitem Бренд
-                                li.card-up__details-listitem Страна производства
-                                li.card-up__details-listitem Состав
-                                li.card-up__details-listitem Цвет
-                                li.card-up__details-listitem Штрих-код
-                                li.card-up__details-listitem Параметры модели
-                            ul.card-up__details-list   
-                                li.card-up__details-listitem.link MM6
-                                li.card-up__details-listitem РУМЫНИЯ
-                                li.card-up__details-listitem 70% вискоза, 30% полиэстер
-                                li.card-up__details-listitem Бежевый
-                                li.card-up__details-listitem S52HA0160 121
-                                li.card-up__details-listitem 3226163
-                                li.card-up__details-listitem 176/80/60/86, размер на модели – 42RU
+                                li.card-up__details-listitem.link MM6 
+                                each val in ['РУМЫНИЯ' , '70% вискоза, 30% полиэстер', 'Бежевый', 'S52HA0160 121', '3226163', '176/80/60/86, размер на модели – 42RU']   
+                                    li.card-up__details-listitem=val 
                     li.accordion-wrapper
                         button.accordion-head Доставка и возврат
                         .accordion-body
+                            ul.card-up__details-list
+                                each val in ['Бренд', 'Страна производства' , 'Состав', 'Цвет', 'Штрих-код', 'Параметры модели']   
+                                    li.card-up__details-listitem=val 
                             ul.card-up__details-list   
-                                li.card-up__details-listitem Бренд
-                                li.card-up__details-listitem Страна производства
-                                li.card-up__details-listitem Состав
-                                li.card-up__details-listitem Цвет
-                                li.card-up__details-listitem Штрих-код
-                                li.card-up__details-listitem Параметры модели
-                            ul.card-up__details-list   
-                                li.card-up__details-listitem.link MM6
-                                li.card-up__details-listitem РУМЫНИЯ
-                                li.card-up__details-listitem 70% вискоза, 30% полиэстер
-                                li.card-up__details-listitem Бежевый
-                                li.card-up__details-listitem S52HA0160 121
-                                li.card-up__details-listitem 3226163
-                                li.card-up__details-listitem 176/80/60/86, размер на модели – 42RU
-
+                                li.card-up__details-listitem.link MM6 
+                                each val in ['РУМЫНИЯ' , '70% вискоза, 30% полиэстер', 'Бежевый', 'S52HA0160 121', '3226163', '176/80/60/86, размер на модели – 42RU']   
+                                    li.card-up__details-listitem=val 
 hr.line.line--card-up(noshade)
 
 section.slider.slider--left

@@ -1,136 +1,47 @@
-|<footer class="footer">
-|    <div class="container">
-|        <div class="footer__top">
-|            <div class="footer__mailing mailing">
-|                <h5 class="mailing__title footer-subtitle">
-|                    Подписаться на рассылку
-|                </h5>
-|                <p class="mailing__descr">
-|                    Скидки, новинки, акции и полезные статьи каждую неделю
-|                </p>
-|                <form class="mailing__form input-merge-btn input-wrapper--mailing">
-|                    <input class="mailing__input input" type="text" placeholder="Введите ваш E-mail...">
-|                    <button class="mailing__btn btn" type='submit'>
-|                        Подписаться
-|                    </button>
-|                </form>
-|                <p class="mailing__policy">
-|                    Нажимая кнопку «Подписаться», вы соглашаетесь с 
-|                    <a class="mailing__policy-link link" href="#">
-|                        Политикой конфиденциальности
-|                    </a>
-|                     и получением информации о товарах на электронную почту.
-|                </p>
-|            </div>
-|            <nav class="footer__info">
-|                <ul class="footer__info-list">
-|                    <li class="footer__list-item">
-|                        <h6 class='footer-subtitle'>
-|                            Пoкупателям
-|                        </h6>
-|                    </li>
-|                    <li class="footer__info-item">
-|                        <a class="footer__info-link" href="#">
-|                            Вопрос-ответ
-|                        </a>
-|                    </li>
-|                    <li class="footer__info-item">
-|                        <a class="footer__info-link" href="#">
-|                            Достaвка
-|                        </a>
-|                    </li>
-|                    <li class="footer__info-item">
-|                        <a class="footer__info-link" href="#">
-|                            Самовывоз
-|                        </a>
-|                    </li>
-|                    <li class="footer__info-item">
-|                        <a class="footer__info-link" href="#">
-|                            Оплата
-|                        </a>
-|                    </li>
-|                    <li class="footer__info-item">
-|                        <a class="footer__info-link" href="#">
-|                            Возврат и обмен
-|                        </a>
-|                    </li>
-|                </ul>
-|                <ul class="footer__info-list">
-|                    <li class="footer__list-item">
-|                        <h6 class='footer-subtitle'>
-|                            Компания
-|                        </h6>
-|                    </li>
-|                    <li class="footer__info-item">
-|                        <a class="footer__info-link" href="#">
-|                            О нас
-|                        </a>
-|                    </li>
-|                    <li class="footer__info-item">
-|                        <a class="footer__info-link" href="#">
-|                            Контакты
-|                        </a>
-|                    </li>
-|                    <li class="footer__info-item">
-|                        <a class="footer__info-link" href="#">
-|                            Сотрудничество
-|                        </a>
-|                    </li>
-|                </ul>
-|                <ul class="footer__info-list">
-|                    <li class="footer__list-item">
-|                        <h6 class='footer-subtitle'>
-|                            Правовая информация
-|                        </h6>
-|                    </li>
-|                    <li class="footer__info-item">
-|                        <a class="footer__info-link" href="#">
-|                            Политика конфиденциальности
-|                        </a>
-|                    </li>
-|                    <li class="footer__info-item">
-|                        <a class="footer__info-link" href="#">
-|                            Оферта
-|                        </a>
-|                    </li>
-|                </ul>
-|            </nav>
-|        </div>
-|        <div class="footer__bottom">
-|            <div class="footer__partners partners">
-|                <p class="footer__copyright">
-|                    © 2021 ООО «АЙЗЕЛ.РУ»
-|                </p>
-include _pay-partners.pug
-|            </div>
-|            <nav class="footer__connect connect">
-|                <h6 class="connect-title footer-subtitle">
-|                    Мы в соцсетях
-|                </h6>
-include _connect-list.pug
-|            </nav>
-|            <div class="footer__contacts">
-|                <h6 class="footer__contacts-title footer-subtitle">
-|                    Связаться с нами
-|                </h6>
-|                <ul class="footer__contacts-list">
-|                    <li class="footer__contacts-item">
-|                        <a class="footer__contacts-link" href="tel:+88001002828">
-|                            Казахстан: 8 (800) 100 28 28
-|                        </a>
-|                    </li>
-|                    <li class="footer__contacts-item">
-|                        <a class="footer__contacts-link" href="tel:+84952878555">
-|                            Астана: 8 (495) 287 85 55
-|                        </a>
-|                    </li>
-|                    <li class="footer__contacts-item">
-|                        <a class="footer__contacts-link link" href="mailto:nfo@kimex.kz">
-|                            nfo@kimex.kz
-|                        </a>
-|                    </li>
-|                </ul>
-|            </div>
-|        </div>
-|    </div>
-|</footer>
+footer.footer
+    .container
+        .footer__top
+            .footer__mailing.mailing
+                h5.mailing__title.footer-subtitle Подписаться на рассылку
+                p.mailing__descr Скидки, новинки, акции и полезные статьи каждую неделю
+                form.mailing__form.input-merge-btn.input-wrapper--mailing
+                    input.mailing__input.input(type='text' placeholder='Введите ваш E-mail...')
+                    button.mailing__btn.btn(type='submit') Подписаться
+                p.mailing__policy Нажимая кнопку «Подписаться», вы соглашаетесь с 
+                    a.mailing__policy-link.link(href='#') Политикой конфиденциальности
+                    |  и получением информации о товарах на электронную почту.
+            nav.footer__info
+                ul.footer__info-list
+                    li.footer__list-item
+                        h6.footer-subtitle Пoкупателям
+                    each val in ['Вопрос-ответ', 'Достaвка', 'Самовывоз', 'Оплата', 'Возврат и обмен']
+                        li.footer__info-item
+                            a.footer__info-link(href='#')=val
+                ul.footer__info-list
+                    li.footer__list-item
+                        h6.footer-subtitle Компания
+                    each val in ['О нас', 'Контакты', 'Сотрудничество']
+                        li.footer__info-item
+                            a.footer__info-link(href='#')=val
+                ul.footer__info-list
+                    li.footer__list-item
+                        h6.footer-subtitle Правовая информация
+                    each val in ['Вопрос-ответ', 'Политика конфиденциальности', 'Оферта']
+                        li.footer__info-item
+                            a.footer__info-link(href='#')=val
+        .footer__bottom
+            .footer__partners.partners
+                p.footer__copyright © 2021 ООО «АЙЗЕЛ.РУ»
+                include _pay-partners.pug
+            nav.footer__connect.connect
+                h6.connect-title.footer-subtitle Мы в соцсетях
+                include _connect-list.pug
+            .footer__contacts
+                h6.footer__contacts-title.footer-subtitle Связаться с нами
+                ul.footer__contacts-list
+                    li.footer__contacts-item
+                        a.footer__contacts-link(href='tel:+88001002828') Казахстан: 8 (800) 100 28 28
+                    li.footer__contacts-item
+                        a.footer__contacts-link(href='tel:+84952878555') Астана: 8 (495) 287 85 55
+                    li.footer__contacts-item
+                        a.footer__contacts-link.link(href='mailto:nfo@kimex.kz') nfo@kimex.kz

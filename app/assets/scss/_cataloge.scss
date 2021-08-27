@@ -175,7 +175,8 @@
     }
 }
 
-.select-dropdown__filter--multiple{
+.select-dropdown__filter--multiple,
+.my-data__select--dropdown{
     max-height: 284px !important;
     overflow-y: auto;
     padding-right: 16px;
@@ -243,6 +244,23 @@
         }
         .icon-check{
             opacity: 1;
+        }
+    }
+}
+
+.select2-container--below,
+.select2-container--above{
+    .my-data__select--select{
+        .select2-selection__rendered{
+            color: $text-main;
+        }
+    }
+}
+
+.my-data__select--dropdown{
+    .select2-results__options{
+        .select2-results__option:first-child{
+            display: none;
         }
     }
 }

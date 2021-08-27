@@ -12,12 +12,25 @@
     .tabs-wrapper{
         display: flex;
         justify-content: space-between;
-        align-items: center;
         margin-bottom: 24px;
+        &--more-margin{
+            margin-bottom: 36px;
+        }
     }
     .tabs{
         .tab + .tab{
             margin-left: 46px;
+        }
+    }
+    .tabs-content{
+        width: 100%;
+        position: relative;
+        padding-top: 512px;
+        #map{
+            position: absolute;
+            left: calc((100vw - 1236px) / -2);
+            top: 0;
+            width: calc(100vw - 15px);
         }
     }
     .tab{
