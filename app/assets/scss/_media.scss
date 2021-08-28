@@ -1,4 +1,6 @@
 @media screen and (max-width: 1200px){
+    // Lk
+
     .lk-history__item-number{
         .lk-history__item-text + .lk-history__item-text{
             margin-left: 20px;
@@ -13,9 +15,13 @@
     .lk-added__more{
         margin-left: 15px;
     }
+
+    // Lk
 }
 
 @media screen and (max-width: 1100px){
+    // Lk
+
     .lk-history{
         .lk__inner{
             flex-direction: column;
@@ -56,9 +62,13 @@
     .lk-added__more{
         margin-left: 20px;
     }
+
+    // Lk
 }
 
 @media screen and (max-width: 950px){
+    // Lk
+
     .lk-history__item-number{
         .lk-history__item-text + .lk-history__item-text{
             margin-left: 20px;
@@ -69,7 +79,7 @@
         transition: all .2s;
     }
     .lk-history__item-btn{
-        margin-left: 55px;
+        margin-left: 70px;
     }
     .lk-added__more{
         margin-left: 15px;
@@ -77,9 +87,13 @@
     .lk-history__item{
         padding: 16px;
     }
+
+    // Lk
 }
 
 @media screen and (max-width: 800px){
+    // Lk
+
     .lk-added{
         display: none;
     }
@@ -147,7 +161,14 @@
                 }
             }
         }
+        .lk-history__item-delivery{
+            .lk-history__item-text--mobile{
+                display: none;
+            }
+        }
     }
+
+    // Lk
 }
 
 @media screen and (max-width: 768px){
@@ -277,10 +298,15 @@
 
     // Submit-order
 
+
+    // Lk
+
     .lk-aside__link{
         font-size: 11px;
         line-height: 11px;
     }
+
+    // Lk
 }
 
 @media screen and (max-width: 600px){
@@ -373,10 +399,69 @@
 
     // Submit-order
 
-    .lk-aside__cabinet--mobile{
-        .link{
+
+    // Lk
+
+    .lk-history{
+        .lk-aside__cabinet--mobile{
+            .link{
+                font-size: 11px;
+                line-height: 11px;
+            }
+        }
+    
+        .lk-aside__list{
+            overflow-x: scroll;
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .lk-history__item-text{
             font-size: 11px;
             line-height: 11px;
+            span{
+                font-size: 12px;
+            }
+        }
+
+        .lk-history__item-text--mobile{
+            font-size: 11px;
+        }
+
+        .lk-history__item-delivery{
+            .lk-history__item-text--mobile{
+                display: block;
+                margin-top: 3px;
+                span{
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: $text-main;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .lk-history__item-additional{
+            .lk-history__item-text{
+                display: none;
+            }
+        }
+
+        .lk-history__item--opened{
+            .lk-history__item-additional{
+                .lk-history__item-text{
+                    display: none;
+                }
+            }
+            .lk-added{
+
+            }
+        }
+
+        .lk-history__item-btn{
+            margin-left: 0;
         }
     }
+
+    // Lk
 }

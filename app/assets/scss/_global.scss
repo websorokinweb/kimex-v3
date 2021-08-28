@@ -1502,6 +1502,8 @@ img{
 .card-modal{
     background-color: transparent;
     min-width: 824px;
+    position: absolute;
+    top: -100px;
     .arrow-prev, .arrow-next{
         top: 50%;
     }
@@ -1646,6 +1648,12 @@ img{
         .card__price--old{
             display: unset;
         }
+    }
+}
+
+.fancybox-slide{
+    .card-modal{
+        top: unset;
     }
 }
 
