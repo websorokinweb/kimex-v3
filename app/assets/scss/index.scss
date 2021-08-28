@@ -49,7 +49,6 @@
             }
         }
     }
-
     &__gender {
         font-size: 22px;
         line-height: 22px;
@@ -57,16 +56,17 @@
         text-transform: uppercase;
         padding: 15px 0 45px;
         color: $text-main;
-        // &:before{
-        //     bottom: -18px;
-        // }
+    }
+    .picon{
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
 .home-banners{
     &__inner{
-    padding: 0 0 80px;
-    display: flex;
+        margin: 0 0 80px;
+        display: flex;
     }
     &__imgwrapper{
         img{
@@ -152,3 +152,4 @@
 @import '_submit.scss';
 @import '_map.scss';
 @import '_lk.scss';
+@import '_media.scss';

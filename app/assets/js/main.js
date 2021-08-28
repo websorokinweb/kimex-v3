@@ -497,7 +497,8 @@ $('.submit-tab__head').on('click', function(){
         tabParent.siblings('.submit-tab').removeClass('submit-tab--active')
         tabParent.addClass('submit-tab--active')
         tabParent.siblings().addClass('submit-tab--checked')
-        tabParent.addClass('submit-tab--checked')
+        $('.submit-order__submit').removeClass('submit-tab--checked')
+        tabParent.removeClass('submit-tab--checked')
     }
 
     if ($(tabParent).hasClass('submit-pay')){

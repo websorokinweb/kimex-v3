@@ -38,6 +38,18 @@
             bottom: -6px;
         }
     }
+    &__cabinet--mobile{
+        justify-content: space-between;
+        display: none;
+        margin-bottom: 24px;
+    }
+    &__cabinet-title{
+        font-size: 14px;
+        line-height: 14px;
+        color: $text-main;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
 }
 
 .my-data{
@@ -406,6 +418,9 @@
             font-size: 14px;
             line-height: 24px;
         }
+        &--mobile{
+            display: none;
+        }
     }
 
     &__item-delivery{
@@ -442,7 +457,7 @@
         &:before{
             content: '';
             position: absolute;
-            left: 0;
+            left: 1.5px;
             top: 50%;
             transform: translateY(-50%);
             height: 7px;

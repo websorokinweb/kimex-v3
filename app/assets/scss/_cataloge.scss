@@ -651,37 +651,9 @@
         .swiper-pagination-bullet{
             height: 100%;
             width: 100%;
-            // border-top: 2px solid $anothergray;
             opacity: 1;
             border-radius: unset;
             background: transparent;
-            // &:after{
-            //     content: '';
-            //     position: absolute;
-            //     left: 50%;
-            //     top: 8px;
-            //     transform: translateX(-50%);
-            //     width: 24px;
-            //     height: 2px;
-            //     background-color: $anothergray;
-            // }
-            // &-active{
-            //     &:after{
-            //         background-color: $text-main !important;
-            //     }
-            // }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-@import '_media.scss';
