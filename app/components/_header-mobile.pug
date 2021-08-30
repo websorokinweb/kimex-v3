@@ -1,0 +1,88 @@
+.header.header--mobile
+    .header__top
+        .container
+            .header__top-inner
+                .header__left
+                    .header__menu-wrapper
+                        button.header__menu-trigger
+                            span
+                            span
+                            span
+                        .header__menu
+                            .container
+                                .header__join
+                                    svg.icon.icon-middle.icon-join
+                                      use(xlink:href='assets/sprites/sprite.svg#join')
+                                    a#login-trigger.hover-line.hover-line--thin.join-trigger(data-fancybox data-src='#join-modal')
+                                      | Вход  
+                                    |  / 
+                                    a#register-trigger.hover-line.hover-line--thin.join-trigger(data-fancybox data-src='#join-modal')
+                                      | Регистрация
+                                .tabs-wrapper
+                                    .tabs.header__navigation-list
+                                        span.header__navigation-item.header__navigation-link.tab.tab--active.hover-line.active-line(href='#mobile-category-1') женское
+                                        span.header__navigation-item.header__navigation-link.tab.hover-line(href='#mobile-category-2') мужское
+                                        span.header__navigation-item.header__navigation-link.tab.hover-line(href='#mobile-category-3') детское
+                                .tabs-container
+                                    .tabs-content.tabs-content--active#mobile-category-1
+                                        ul.subnavigation__list
+                                            each val in ['НОВИНКИ', 'ДИЗАЙНЕРЫ', 'ОДЕЖДА', 'ОБУВЬ', 'СУМКИ', 'АКСЕССУАРЫ', 'ПОДАРКИ', 'SALE']
+                                                li.subnavigation__item
+                                                    a.subnavigation__link.hover-line(href='#')=val
+                                    .tabs-content#mobile-category-2
+                                        ul.subnavigation__list
+                                            each val in ['НОВИНКИ', 'ДИЗАЙНЕРЫ', 'ОДЕЖДА', 'ОБУВЬ', 'СУМКИ', 'АКСЕССУАРЫ', 'ПОДАРКИ', 'SALE']
+                                                li.subnavigation__item
+                                                    a.subnavigation__link.hover-line(href='#')=val
+                                    .tabs-content#mobile-category-3
+                                .header__location-wrapper
+                                    svg.icon.icon-middle.icon-pin
+                                        use(xlink:href='assets/sprites/sprite.svg#pin')
+                                    select.header__location.select.select--language
+                                        option(value='astana') Астана
+                                        option(value='karaganda') Караганда
+                                        option(value='pavlodar') Павлодар
+                                .header__contact
+                                    svg.icon.icon-middle.icon-phone
+                                        use(xlink:href='assets/sprites/sprite.svg#phone')
+                                    a.hover-line.hover-line--thin(href='tel:+84954525622')
+                                        | 8 495 452-56-22 
+                                    |  / 
+                                    a.hover-line.hover-line--thin(href='tel:+88003580000')
+                                        | 8 800 358-00-00
+                                include _connect-list.pug
+                    .header__search-wrapper.header__search-wrapper--mobile
+                        .header__search.input-wrapper.input-wrapper--search
+                            button.header__search-trigger(type='button')
+                                svg.icon.icon-middle.icon-search
+                                    use(xlink:href='assets/sprites/sprite.svg#search')
+                        .header__search-background
+                        .header__searched
+                            .header__search.input-wrapper.input-wrapper--search
+                                svg.icon.icon-middle.icon-search
+                                    use(xlink:href='assets/sprites/sprite.svg#search')
+                                input.header__search-input.header__top-search--mobile.input.input--small(type='text' placeholder='Более 10 000 товаров для Вас')
+                            include _card-search.pug
+                            include _card-search.pug
+                            include _card-search.pug
+                            include _card-search.pug
+                            include _white-btn.pug
+                a.logo(href='#')
+                    img(src='assets/icons/logo.svg')
+                .header__right.header__buttons
+                    a.header__liked-btn(href='#')
+                        svg.icon.icon-middle.icon-save
+                          use(xlink:href='assets/sprites/sprite.svg#save')
+                    a.header__basket-btn(href='#')
+                        svg.icon.icon-middle.icon-cart
+                          use(xlink:href='assets/sprites/sprite.svg#cart')
+    .header__bottom
+        .container
+            nav.header__navigation
+                ul.header__navigation-list
+                    li.header__navigation-item
+                        a.header__navigation-link.hover-line.header__navigation-link--active(href='#') женское
+                    li.header__navigation-item
+                        a.header__navigation-link.hover-line(href='#') мужское
+                    li.header__navigation-item
+                        a.header__navigation-link.hover-line(href='#') детское

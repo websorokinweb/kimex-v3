@@ -121,6 +121,13 @@
         opacity: 0;
     }
     #data-name-surname{
+        span{
+            margin-right: 26px;
+        }
+        .label--profile__inner{
+            display: flex;
+            width: 100%;
+        }
         .input--small{
             min-width: unset;
         }
@@ -448,7 +455,8 @@
             }
         }
     }
-    &__item-status{
+    &__item-status,
+    &__item-text--mobile-status{
         position: absolute;
         padding-left: 14px;
         font-size: 13px !important;
@@ -475,6 +483,10 @@
                 background-color: #c8c8c8;
             }
         }
+    }
+    &__item-text--mobile-status{
+        display: none;
+        position: relative;
     }
     &__item-btn{
         margin-left: 116px;

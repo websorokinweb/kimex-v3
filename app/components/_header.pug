@@ -3,18 +3,34 @@
         .container
             .header__top-inner
                 .header__location-wrapper
-                  svg.icon.icon-middle.icon-pin
-                    use(xlink:href='assets/sprites/sprite.svg#pin')
-                  select.header__location.select.select--language
-                    option(value='astana') Астана
-                    option(value='karaganda') Караганда
-                    option(value='pavlodar') Павлодар
+                    svg.icon.icon-middle.icon-pin
+                        use(xlink:href='assets/sprites/sprite.svg#pin')
+                    select.header__location.select.select--language
+                        option(value='astana') Астана
+                        option(value='karaganda') Караганда
+                        option(value='pavlodar') Павлодар
+                    .header__search-wrapper.header__search-wrapper--mobile
+                        .header__search.input-wrapper.input-wrapper--search
+                            button.header__search-trigger(type='button')
+                                svg.icon.icon-middle.icon-search
+                                    use(xlink:href='assets/sprites/sprite.svg#search')
+                        .header__search-background
+                        .header__searched
+                            .header__search.input-wrapper.input-wrapper--search
+                                svg.icon.icon-middle.icon-search
+                                    use(xlink:href='assets/sprites/sprite.svg#search')
+                                input.header__search-input.header__top-search--mobile.input.input--small(type='text' placeholder='Более 10 000 товаров для Вас')
+                            include _card-search.pug
+                            include _card-search.pug
+                            include _card-search.pug
+                            include _card-search.pug
+                            include _white-btn.pug
                 .header__contact
                   svg.icon.icon-middle.icon-phone
                     use(xlink:href='assets/sprites/sprite.svg#phone')
                   a.hover-line.hover-line--thin(href='tel:+84954525622')
-                    | 8 495 452-56-22
-                  | / 
+                    | 8 495 452-56-22 
+                  |  / 
                   a.hover-line.hover-line--thin(href='tel:+88003580000')
                     | 8 800 358-00-00
     .header__middle
@@ -133,3 +149,4 @@
                         include _card-search.pug
                         include _card-search.pug
                         include _white-btn.pug
+include _header-mobile.pug

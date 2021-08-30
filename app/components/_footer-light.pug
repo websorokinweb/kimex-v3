@@ -29,19 +29,53 @@ footer.footer.footer--light
                     each val in ['Вопрос-ответ', 'Политика конфиденциальности', 'Оферта']
                         li.footer__info-item
                             a.footer__info-link(href='#')=val
+            .footer__dropdown-wrapper.footer__dropdown-wrapper--mobile
+                .footer__dropdown-list
+                    .footer__dropdown-item
+                        button.footer__dropdown-head Пoкупателям
+                        ul.footer__info-list.footer__dropdown-content
+                            each val in ['Вопрос-ответ', 'Достaвка', 'Самовывоз', 'Оплата', 'Возврат и обмен']
+                                li.footer__info-item
+                                    a.footer__info-link(href='#')=val
+                    .footer__dropdown-item
+                        button.footer__dropdown-head Компания
+                        ul.footer__info-list.footer__dropdown-content
+                            each val in ['О нас', 'Контакты', 'Сотрудничество']
+                                li.footer__info-item
+                                    a.footer__info-link(href='#')=val
+                    .footer__dropdown-item
+                        button.footer__dropdown-head Правовая информация
+                        ul.footer__info-list.footer__dropdown-content
+                            each val in ['Вопрос-ответ', 'Политика конфиденциальности', 'Оферта']
+                                li.footer__info-item
+                                    a.footer__info-link(href='#')=val
+                    .footer__dropdown-item
+                        button.footer__dropdown-head Мы в соцсетях
+                        nav.footer__connect.connect.footer__dropdown-content
+                            include _connect-list.pug
+                    .footer__dropdown-item
+                        button.footer__dropdown-head Связаться с нами
+                        ul.footer__contacts-list.footer__dropdown-content
+                            li.footer__contacts-item
+                                a.footer__contacts-link(href='tel:+88001002828') Казахстан: 8 (800) 100 28 28
+                            li.footer__contacts-item
+                                a.footer__contacts-link(href='tel:+84952878555') Астана: 8 (495) 287 85 55
+                            li.footer__contacts-item
+                                a.footer__contacts-link.link(href='mailto:nfo@kimex.kz') nfo@kimex.kz
         .footer__bottom
             .footer__partners.partners
                 p.footer__copyright © 2021 ООО «АЙЗЕЛ.РУ»
                 include _pay-partners.pug
-            nav.footer__connect.connect
-                h6.connect-title.footer-subtitle Мы в соцсетях
-                include _connect-list.pug
-            .footer__contacts
-                h6.footer__contacts-title.footer-subtitle Связаться с нами
-                ul.footer__contacts-list
-                    li.footer__contacts-item
-                        a.footer__contacts-link(href='tel:+88001002828') Казахстан: 8 (800) 100 28 28
-                    li.footer__contacts-item
-                        a.footer__contacts-link(href='tel:+84952878555') Астана: 8 (495) 287 85 55
-                    li.footer__contacts-item
-                        a.footer__contacts-link.link(href='mailto:nfo@kimex.kz') nfo@kimex.kz
+            .footer__bottom-right
+                nav.footer__connect.connect
+                    h6.connect-title.footer-subtitle Мы в соцсетях
+                    include _connect-list.pug
+                .footer__contacts
+                    h6.footer__contacts-title.footer-subtitle Связаться с нами
+                    ul.footer__contacts-list
+                        li.footer__contacts-item
+                            a.footer__contacts-link(href='tel:+88001002828') Казахстан: 8 (800) 100 28 28
+                        li.footer__contacts-item
+                            a.footer__contacts-link(href='tel:+84952878555') Астана: 8 (495) 287 85 55
+                        li.footer__contacts-item
+                            a.footer__contacts-link.link(href='mailto:nfo@kimex.kz') nfo@kimex.kz

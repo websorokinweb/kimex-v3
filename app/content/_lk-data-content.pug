@@ -2,6 +2,9 @@ section.my-data.lk
     .container
         .lk__inner
             aside.lk-aside
+                .lk-aside__cabinet--mobile
+                    h1.lk-aside__cabinet-title личный кабинет
+                    a.link Выйти
                 ul.lk-aside__list
                     li.lk-aside__item
                         a.lk-aside__link.hover-line.active-line(href='#') мои данные
@@ -24,8 +27,9 @@ section.my-data.lk
                         input(type='text' value='zamora@gmail.com').input.input--small
                     label.label.label--profile#data-name-surname
                         span Имя и Фамилия:
-                        input(type='text' value='Алексей').input.input--small
-                        input(type='text' value='Заморин').input.input--small
+                        .label--profile__inner
+                            input(type='text' value='Алексей').input.input--small
+                            input(type='text' value='Заморин').input.input--small
                     label.label.label--profile#data-gender
                         span Пол:
                         label.label--have-checkbox.label--have-radio

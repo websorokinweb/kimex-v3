@@ -21,6 +21,7 @@
         padding: 18px 48px 0;
         min-height: 552px;
         width: 50%;
+        overflow: hidden;
         &:first-child{
             justify-content: flex-end;
             margin-right: 32px;
@@ -33,7 +34,7 @@
         }
         &:last-child{
             justify-content: flex-start;
-            background-color: #d7d9e5;
+            background-color: #D2D4DF;
             .picon{
                 position: absolute;
                 bottom: 0;
@@ -58,7 +59,7 @@
         color: $text-main;
     }
     .picon{
-        max-width: 100%;
+        max-width: 110%;
         max-height: 100%;
     }
 }

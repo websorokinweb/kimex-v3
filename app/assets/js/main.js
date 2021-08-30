@@ -148,11 +148,29 @@ $('.filter-price__select').on('click', function(){
     $('.filter-price').toggleClass('filter-price--open')
 });
 
-$('.header__search-input').on('keyup', function(){
+$('.header__bottom .header__search-input').on('keyup', function(){
     $('.header__search-wrapper').addClass('header__search-wrapper--active')
 });
 
-$('.header__search-input').on('blur', function(){
+$('.header__search-trigger').on('click', function(){
+    $('.header__search-wrapper').toggleClass('header__search-wrapper--active')
+    if($('.header__search-wrapper').hasClass('header__search-wrapper--active')){
+        $('html').css('overflow-y', 'hidden')
+    } else{
+        $('html').css('overflow-y', 'visible')
+    }
+});
+
+$('.header__menu-trigger').on('click', function(){
+    $(this).parent().toggleClass('header__menu-wrapper--active')
+});
+
+$('.header__search-background').on('click', function(){
+    $('.header__search-wrapper').toggleClass('header__search-wrapper--active')
+    $('html').css('overflow-y', 'unset')
+});
+
+$('.header__bottom .header__search-input').on('blur', function(){
     $('.header__search-wrapper').removeClass('header__search-wrapper--active')
 });
 
@@ -235,6 +253,15 @@ $('.icon-password').on('click', function(e){
 
 // Хедер
 
+// Footer
+
+$('.footer__dropdown-head').on('click', function(){
+    $(this).parent().siblings().removeClass('footer__dropdown-item--active')
+    $(this).parent().toggleClass('footer__dropdown-item--active')
+});
+
+// Footer
+
 // Checkbox
 
 $('.label--have-checkbox').on('click', function(){
@@ -255,20 +282,6 @@ $('.card__cart').on('click', function(e){
     $(this).toggleClass('card__cart--active')
 });
 
-// $('.card-modal__colors-item').on('click', function(){
-//     $('.card-modal__colors-item').removeClass('card-modal__colors-item--active');
-//     $(this).addClass('card-modal__colors-item--active');
-// });
-
-// $('.card-modal__size-item').on('click', function(){
-//     if ($(this).hasClass('card-modal__size-item--not-available')){
-//         return false
-//     } else{
-//         $('.card-modal__size-item').removeClass('card-modal__size-item--active');
-//         $(this).addClass('card-modal__size-item--active');
-//     }
-// });
-
 $('.card-modal__buttons .card__like').on('click', function(){
     $(this).parent().toggleClass('card-modal__buttons--active')
 });
@@ -276,15 +289,6 @@ $('.card-modal__buttons .card__like').on('click', function(){
 // Карточка товара
 
 // Слайдеры
-
-const config = {
-    loop: true,
-    spaceBetween: 32,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-};
 
 const defaultSlider = new Swiper('.default-slider', {
     loop: true,
@@ -305,6 +309,21 @@ const instagram = new Swiper('.slider--instagram', {
         prevEl: '.arrow-prev',
     },
     slidesPerView: 3,
+    breakpoints: {
+        320: {
+            slidesPerView: 2.2,
+            spaceBetween: 8,
+            variableWidth : true,
+        },
+        768: {
+            spaceBetween: 32,
+            slidesPerView: 3,
+            variableWidth : false,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+    }
 });
 
 const bigSlides = new Swiper('.slider--big-slides', {
@@ -314,7 +333,24 @@ const bigSlides = new Swiper('.slider--big-slides', {
         nextEl: '.arrow-next',
         prevEl: '.arrow-prev',
     },
-    slidesPerView: 4,
+    breakpoints: {
+        320: {
+            slidesPerView: 2.4,
+            variableWidth: true,
+            spaceBetween: 8,
+        },
+        545: {
+            slidesPerView: 3,
+            spaceBetween: 8,
+        },
+        768: {
+            spaceBetween: 32,
+            slidesPerView: 4,
+        },
+        950: {
+            slidesPerView: 4,
+        },
+    }
 });
 
 const miniSlider = new Swiper('.slider--mini', {
