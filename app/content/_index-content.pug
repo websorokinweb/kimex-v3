@@ -17,7 +17,7 @@ section.home-choose
                             li.subnavigation__item
                                 a.subnavigation__link.hover-line(href='#')=val
                     a.home-choose__gender.hover-line(href='#') Мужчинам
-section.index-slider-auto.slider.slider--have-cards
+section.slider-auto-wrapper.slider.slider--have-cards
     .container
         h3.subtitle новинки недели
         include ../components/_slider-auto.pug
@@ -48,9 +48,9 @@ section.actually.slider
                 a.card-big.swiper-slide(href='#')
                     img(src='temp/actually-4.jpg' alt='')
                     span.card-big__title Юбка
-        .arrow-prev
-        .arrow-next
-section.mini-cataloge
+        .arrow-prev.arrow-prev--big-slides
+        .arrow-next.arrow-next--big-slides
+section.mini-cataloge.slider-auto-wrapper
     .container
         .tabs-wrapper
             .tabs.mobile-overflow
@@ -65,14 +65,17 @@ section.mini-cataloge
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
+                include ../components/_slider-auto.pug
             #tab-2.tabs-content.cataloge-wrapper
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
+                include ../components/_slider-auto.pug
             #tab-3.tabs-content.cataloge-wrapper
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
+                include ../components/_slider-auto.pug
 section.instagram.slider
     .container
         h3.subtitle
@@ -88,5 +91,5 @@ section.instagram.slider
                     img(src='temp/instagram-2.jpg' alt='')
                 a.card-big.swiper-slide(href='#')
                     img(src='temp/instagram-3.jpg' alt='')
-        .arrow-prev
-        .arrow-next
+        .arrow-prev.arrow-prev--instagram
+        .arrow-next.arrow-next--instagram

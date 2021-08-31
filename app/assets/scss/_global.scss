@@ -1528,9 +1528,9 @@ img{
 }
 
 .slider-auto{
+    width: calc(100% + 53px);
     .card{
         width: calc(20% - 32px);
-        max-width: unset;
     }
 }
 

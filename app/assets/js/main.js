@@ -305,8 +305,8 @@ const instagram = new Swiper('.slider--instagram', {
     loop: true,
     spaceBetween: 32,
     navigation: {
-        nextEl: '.arrow-next',
-        prevEl: '.arrow-prev',
+        nextEl: '.arrow-next--instagram',
+        prevEl: '.arrow-prev--instagram',
     },
     slidesPerView: 3,
     breakpoints: {
@@ -330,8 +330,8 @@ const bigSlides = new Swiper('.slider--big-slides', {
     loop: true,
     spaceBetween: 32,
     navigation: {
-        nextEl: '.arrow-next',
-        prevEl: '.arrow-prev',
+        nextEl: '.arrow-next.arrow-next--big-slides',
+        prevEl: '.arrow-prev.arrow-prev--big-slides',
     },
     breakpoints: {
         320: {
@@ -372,17 +372,56 @@ const sliderAuto = new Swiper('.slider-auto', {
         prevEl: '.arrow-prev--auto',
     },
     slidesPerView: 'auto',
+    observer: true,
+    observeSlideChildren: false,
+    observeParents: true,
     breakpoints: {
         320: {
             spaceBetween: 8,
+            slidesPerView: 2,
         },
         545: {
             spaceBetween: 8,
+            slidesPerView: 3,
         },
         768: {
             spaceBetween: 32,
+            slidesPerView: 'auto',
         },
     }
+});
+
+$('.mini-cataloge .tab').on('click', function(){
+    const sliderAuto = new Swiper('.mini-cataloge .slider-auto', {
+        loop: true,
+        spaceBetween: 32,
+        allowTouchMove: true,
+        observer: true,
+        observeSlideChildren: false,
+        observeParents: true,
+        navigation: {
+            nextEl: '.arrow-next--auto',
+            prevEl: '.arrow-prev--auto',
+        },
+        slidesPerView: 'auto',
+        observer: true,
+        observeSlideChildren: false,
+        observeParents: true,
+        breakpoints: {
+            320: {
+                spaceBetween: 8,
+                slidesPerView: 2,
+            },
+            545: {
+                spaceBetween: 8,
+                slidesPerView: 3,
+            },
+            768: {
+                spaceBetween: 32,
+                slidesPerView: 'auto',
+            },
+        }
+    });
 });
 
 // Слайдеры

@@ -4,6 +4,23 @@
     }
 }
 
+@media screen and (max-width: 1248px){
+    // Global
+
+    .slider{
+        .slider-auto{
+            width: 100vw;
+            transform: translate(-26px, -25px);
+        }
+    }
+    .card{
+        width: calc(20% - 32px);
+        max-width: unset;
+    }
+
+    // Global
+}
+
 @media screen and (max-width: 1200px){
     // Lk
 
@@ -365,8 +382,9 @@
 
     .slider-auto{
         .card{
-            width: calc(33.3% - 32px);
-            max-width: unset;
+            min-width: calc(33vw - 32px);
+            max-width: calc(33vw - 32px);
+            width: calc(33vw - 32px);
         }
         .card__top img{
             object-fit: contain;
@@ -395,19 +413,10 @@
     }
 
     // Modal
-
-    // Index
-
-    .mini-cataloge{
-        .card{
-            // width: calc(33% - 32px);
-        }
-    }
-
-    // Index
 }
 
 @media screen and (max-width: 815px){
+
     // Lk
 
     .lk.my-data{
@@ -544,13 +553,90 @@
 @media screen and (max-width: 768px){
     // Global
 
-    .slider-auto{
-        .swiper-wrapper{
-            transform: translate3d(-1415.8px, 0px, 0px) !important;
+    .slider{
+        .subtitle{
+            margin-bottom: 8px;
         }
     }
-    
-    .index-slider-auto{
+
+    .slider-auto-wrapper{
+        .slider-auto{
+            position: relative;
+            width: 100vw;
+            .swiper-wrapper{
+                margin-left: 31px !important;
+            }
+            .card{
+                width: 100%;
+                max-width: 32.15%;
+                min-width: unset;
+            }
+        }
+    }
+
+    .card{
+        min-height: 379px !important;
+        &:hover{
+            .card__inner{
+                &::before{
+                    display: none;
+                }
+            }
+            .card__hover-panel{
+                display: none;
+            }
+        }
+        .card__title{
+            font-size: 12px;
+            line-height: 12px;
+            margin-bottom: 7px;
+        }
+        .card__descr{
+            font-size: 11px;
+            line-height: 14px;
+            margin-bottom: 9px;
+            max-width: 173px;
+        }
+        .card__price{
+            font-size: 12px;
+            line-height: 12px;
+        }
+        .card__price--old{
+            font-size: 11px;
+            line-height: 11px;
+        }
+        .card__discount{
+            width: 28px;
+            height: 28px;
+            font-size: 8px;
+            line-height: 8px;
+        }
+        .card__like{
+            top: 12px;
+            svg{
+                height: 14px;
+                font-size: 15px;
+                fill: #8a8a8a;
+            }
+            &--active{
+                svg{
+                    fill: $active;
+                }
+            }
+        }
+    }
+
+    .card__top{
+        min-height: 230px;
+        border: none;
+        margin-bottom: 8px;
+        img{
+            max-height: 225px;
+            margin: 0 auto;
+        }
+    }
+
+    .slider-auto-wrapper{
         .arrow-next,
         .arrow-prev{
             opacity: .3;
@@ -638,7 +724,7 @@
     }
 
     .actually{
-        margin-bottom: 33px;
+        margin-bottom: 30px;
     }
 
     .instagram{
@@ -652,10 +738,28 @@
     }
 
     .mini-cataloge{
-        margin: 24px 16px 38px;
+        margin: 24px 0 38px;
+        z-index: 30;
+        .slider-auto{
+            display: unset;
+            .card{
+                display: flex;
+                max-width: 29.5vw;
+                min-width: unset;
+            }
+        }
         .card{
-            width: calc(33.3% - 8px);
-            margin: 0 4px 8px;
+            display: none;
+            min-height: 295px !important;
+        }
+        .tabs{
+            margin-bottom: 0;
+        }
+        .tab{
+            padding: 6px 0;
+        }
+        .card__like{
+            top: 5px;
         }
     }
 
@@ -876,10 +980,21 @@
         }
     }
 
+    .mini-cataloge{
+        .slider-auto{
+            .swiper-wrapper{
+                z-index: 20;
+                margin-left: 0 !important;
+            }
+        }
+    }
+
     // Index
 }
 
 @media screen and (max-width: 650px){
+    // Modals
+
     .card-modal__inner{
         flex-direction: column;
     }
@@ -887,6 +1002,18 @@
         margin-left: 0;
         width: 100%;
         margin-top: 21px;
+    }
+
+    // Modals
+
+    .slider{
+        .slider-auto{
+            transform: translate(-16px, -25px);
+            .card{
+                max-width: calc(34% - 16px);
+                min-width: calc(34% - 16px);
+            }
+        }
     }
 }
 
@@ -1249,6 +1376,31 @@
 }
 
 @media screen and (max-width: 545px){
+    // Global
+    
+    .slider-auto{
+        transform: translate(-0.5px, -25px);
+        width: 100%;
+        .card{
+            max-width: calc(50vw - 8px) !important;
+            min-width: calc(50vw - 8px) !important;
+        }
+    }
+
+    .mini-cataloge{
+        margin: 24px 0 -36px;
+        .slider-auto{
+            padding-top: 18px;
+            transform: translate(-9.5px, -25px);
+            .card{
+                max-width: calc(50vw - 20px) !important;
+                min-width: calc(50vw - 20px) !important;
+            }
+        }
+    }
+
+    // Global
+
     // Modals
 
     .join-modal{
@@ -1386,6 +1538,8 @@
 }
 
 @media screen and (max-width: 460px){
+    // Modals
+
     .fancybox-content{
         margin-top: 0;
     }
@@ -1393,6 +1547,8 @@
         width: 100vw;
         min-width: unset;
     }
+
+    // Modals
 }
 
 @media screen and (max-width: 425px){
@@ -1441,6 +1597,21 @@
     .home-choose .home-choose__item{
         .picon{
             max-width: 400%;
+        }
+    }
+
+    .mini-cataloge{
+        .tabs{
+            overflow-x: scroll;
+            width: auto;
+            min-width: calc(100vw - 32px);
+            white-space: nowrap;
+            transform: translateX(-16px);
+            text-align: left;
+            margin-left: 16px;
+            .tab + .tab{
+                margin-left: 20px;
+            }
         }
     }
 
@@ -1505,4 +1676,42 @@
     }
 
     // Lk
+}
+
+@media screen and (max-width: 390px) {
+    // Global
+
+    .slider-auto{
+        .subtitle{
+            margin-bottom: 0;
+        }
+    }
+
+    .card{
+        min-height: 346px !important;
+        .card__top{
+            min-height: 197px;
+            img{
+                max-height: 186px;
+                height: 100%;
+                // max-width: unset;
+            }
+        }
+    }
+
+    .mini-cataloge{
+        .slider-auto{
+            .card{
+                min-height: 259px !important;
+            }
+            .card__top{
+                img{
+                    width: 100%;
+                    min-height: 186px;
+                }
+            }
+        }
+    } 
+
+    // Global
 }
