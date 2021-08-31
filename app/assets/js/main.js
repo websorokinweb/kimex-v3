@@ -372,6 +372,17 @@ const sliderAuto = new Swiper('.slider-auto', {
         prevEl: '.arrow-prev--auto',
     },
     slidesPerView: 'auto',
+    breakpoints: {
+        320: {
+            spaceBetween: 8,
+        },
+        545: {
+            spaceBetween: 8,
+        },
+        768: {
+            spaceBetween: 32,
+        },
+    }
 });
 
 // Слайдеры

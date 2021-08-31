@@ -74,11 +74,11 @@
     &__big{
         max-height: 656px;
         height: 100%;
+        border: 1px solid $anothergray;
         .swiper-wrapper{
             align-items: center;
         }
         .swiper-slide{
-            border: 1px solid $anothergray;
             max-width: 472px;
             min-height: 656px;
             display: flex;
@@ -336,10 +336,6 @@
     }
 }
 
-.fancybox-container{
-    // transition: unset !important;
-}
-
 .fancybox-slide:not(.fancybox-slide--html){
     .fancybox-content{
         transform: translate(0, 0) !important;
@@ -401,6 +397,9 @@
         }
     }
     &__all{
-        margin-left: 20px;
+        margin-left: 11px;
+        font-family: "Circe", sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
     }
 }

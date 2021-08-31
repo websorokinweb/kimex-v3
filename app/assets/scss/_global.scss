@@ -1526,7 +1526,14 @@ img{
         }
     }
 }
-    
+
+.slider-auto{
+    .card{
+        width: calc(20% - 32px);
+        max-width: unset;
+    }
+}
+
 .card {
     position: relative;
     min-height: 400px;
@@ -1841,7 +1848,6 @@ img{
         right: 16px;
     }
     .swiper-slide{
-        border: 1px solid $anothergray;
         min-height: 376px;
         max-height: 376px;
         display: flex;
@@ -1975,6 +1981,9 @@ img{
         .card__price--old{
             display: unset;
         }
+    }
+    .slider{
+        border: 1px solid $anothergray;
     }
 }
 
@@ -2241,31 +2250,6 @@ img{
     }
 }
 
-// .icheckbox_minimal{
-//     width: 16px !important;
-//     height: 16px !important;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     margin-right: 9px;
-//     &.hover{
-//         .iCheck-helper{
-//             border: 1px solid $text-main !important;
-//         }
-//     }
-// }
-// .icheck{
-//     pointer-events: none;
-// }
-// .iCheck-helper{
-//     opacity: 1 !important;
-//     width: 16px !important;
-//     height: 16px !important;
-//     border: 1px solid $anothergray !important;
-//     position: static !important;
-//     transition: all .4s;
-// }
-
 .accordion{
     &-wrapper{
         border-top: 1px solid $anothergray;
@@ -2284,14 +2268,14 @@ img{
             .accordion-body{
                 opacity: 1;
                 height: unset;
-                margin-bottom: 10px;
+                margin-bottom: 24px;
             }
         }
     }
     &-head{
         display: flex;
         justify-content: space-between;
-        max-height: 50px;
+        max-height: 48px;
         height: 100%;
         width: 100%;
         position: relative;
@@ -2299,7 +2283,9 @@ img{
         text-align: left;
         border: none;
         cursor: pointer;
-        padding: 20px 0;
+        padding: 16px 0;
+        font-size: 16px;
+        line-height: 16px;
         &:before{ 
             content: '';
             position: absolute;
