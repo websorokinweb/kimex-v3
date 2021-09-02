@@ -255,9 +255,9 @@ $('.icon-password').on('click', function(e){
 
 // Footer
 
-$('.footer__dropdown-head').on('click', function(){
-    $(this).parent().siblings().removeClass('footer__dropdown-item--active')
-    $(this).parent().toggleClass('footer__dropdown-item--active')
+$('.mobile-dropdown__head').on('click', function(){
+    $(this).parent().siblings().removeClass('mobile-dropdown__item--active')
+    $(this).parent().toggleClass('mobile-dropdown__item--active')
 });
 
 // Footer
@@ -484,33 +484,42 @@ function clonePagination(currSlider){
 
 let currCardSlider = null
 $('.slider-card').on('mouseenter', function(){
-    if ($(this).hasClass('swiper-container-initialized') === false){
-        const sliderCard = new Swiper(this, {
-            init: true,
-            loop: true,
-            slidesPerView: 1,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            on: {
-                afterInit: function(){
-                    clonePagination(this)
-                },
-                slideChange: function(){
-                    clonePagination(this)
-                }
-            }
-        });
-        currCardSlider = sliderCard
+    if ($(window).width() <= 768){
+        return false;
     }
-    $('.card .swiper-pagination-bullet').hover(function() {
-        $(this).trigger( "click" );
-    });
+    else{
+        if ($(this).hasClass('swiper-container-initialized') === false){
+            const sliderCard = new Swiper(this, {
+                init: true,
+                loop: true,
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                on: {
+                    afterInit: function(){
+                        clonePagination(this)
+                    },
+                    slideChange: function(){
+                        clonePagination(this)
+                    }
+                }
+            });
+            currCardSlider = sliderCard
+        }
+        $('.card .swiper-pagination-bullet').hover(function() {
+            $(this).trigger( "click" );
+        });
+    }
 })
 $('.slider-card').on('mouseleave', function(){
-    $(this).find('.swiper-pagination--clone').remove()
-    currCardSlider.destroy()
+    if ($(window).width() <= 768){
+        return false;
+    } else{
+        $(this).find('.swiper-pagination--clone').remove()
+        currCardSlider.destroy()
+    }
 })
 
 // Card-up
@@ -527,11 +536,12 @@ const cardUpNavigation = new Swiper('.card-up__navigation', {
     mousewheel: true,
     allowTouchMove: false,
     touchRatio: 0,
+    updateOnWindowResize: false,
     slideToClickedSlide: true,
 });
 
 const cardUpMain = new Swiper('.card-up__big', {
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     spaceBetween: 16,
     navigation: {
         nextEl: '#card-up-navigation-next',
@@ -542,7 +552,7 @@ const cardUpMain = new Swiper('.card-up__big', {
     },
     mousewheel: {
         sensitivity: 1.4,
-    }
+    },
 });
 
 cardUpMain.controller.control = cardUpNavigation;

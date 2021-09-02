@@ -442,7 +442,7 @@
                     <li class="breadcrumbs__item"><a class="breadcrumbs__content" href="#">Женская </a></li>
                     <li class="breadcrumbs__item"><span class="breadcrumbs__content">Одежда</span></li>
                   </ul>
-                  <h1 class="page-filter__title">Одежда</h1>
+                  <h1 class="page-filter__title">Одежда<span>3256</span></h1>
                 </div>
                 <div class="page-filter__top-right">
                   <p class="page-filter__results">Всего 3256 предложений</p>
@@ -528,6 +528,17 @@
                     </svg></span><span class="page-filter__label-name">Новая коллекция</span>
                 </label>
                 <button class="page-filter__clear link" type="button">Очистить фильтры</button>
+              </form>
+              <form class="page-filter__bottom page-filter__bottom--mobile">
+                <select class="page-filter__order select select--no-search" data-dropdown-css-class="select--relative" data-minimum-results-for-search="-1">
+                  <option>Цена по возрастанию</option>
+                  <option>Цена по убыванию</option>
+                  <option>Со скидками</option>
+                  <option>По новизне</option>
+                </select><a class="page-filter__trigger" data-fancybox data-src="#filter-modal">
+                  <svg class="icon icon-filter">
+                    <use xlink:href="assets/sprites/sprite.svg#filter"></use>
+                  </svg>Фильтры</a>
               </form>
             </div>
             <div class="cataloge__cards"><a class="card card--haveDiscount" href="#"><span class="card__inner"><span class="card__top"><span class="card__discount">70%</span>
@@ -953,6 +964,255 @@
         </div>
       </div>
     </div>
+    <div class="filter-modal" style="position:absolute; left:-5000px;" id="filter-modal">  
+      <div class="filter-modal__inner">
+        <p class="subtitle">фильтры</p>
+        <form class="filter-modal__form">
+          <div class="accordion-wrapper">
+            <button class="accordion-head" type="button">Цена</button>
+            <ul class="accordion-body filter-price">
+              <div class="extra-controls">
+                <label class="filter-price__label"><span>от</span>
+                  <input class="js-input-from" type="text" value="0">
+                </label>
+                <label class="filter-price__label"><span>до</span>
+                  <input class="js-input-to" type="text" value="0">
+                </label>
+              </div>
+              <input class="filter-price__input" type="text" data-type="double" data-min="0" data-max="135000" data-from="10000" data-to="125000">
+            </ul>
+          </div>
+          <div class="accordion-wrapper">
+            <button class="accordion-head" type="button">Цвет</button>
+            <ul class="accordion-body filter-modal__list">
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label"><span class="page-filter__select-option--color" style="background-color: #e5d8d2"></span>
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">Бежевый</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label"><span class="page-filter__select-option--color" style="background-color: #ae8979"></span>
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">Персиковый</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label"><span class="page-filter__select-option--color" style="background-color: #9d9f9e"></span>
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">Серый</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label"><span class="page-filter__select-option--color" style="background-color: #6c685a"></span>
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">Хаки</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label"><span class="page-filter__select-option--color" style="background-color: #6e6872"></span>
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">Фиолетовый</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label"><span class="page-filter__select-option--color" style="background-color: #a9adb8"></span>
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">Светлосерый</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label"><span class="page-filter__select-option--color" style="background-color: #e5d8d2"></span>
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">Бежевый</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="accordion-wrapper">
+            <button class="accordion-head" type="button">Бренд</button>
+            <ul class="accordion-body filter-modal__list">
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BALENCIAGA</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BALMAIN</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BOTTEGA</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">VENETA</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BRUNELLO</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">CUCINELLI</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="accordion-wrapper">
+            <button class="accordion-head" type="button">Размер</button>
+            <ul class="accordion-body filter-modal__list">
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BALENCIAGA</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BALMAIN</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BOTTEGA</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">VENETA</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BRUNELLO</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">CUCINELLI</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="accordion-wrapper">
+            <button class="accordion-head" type="button">Тип</button>
+            <ul class="accordion-body filter-modal__list">
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BALENCIAGA</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BALMAIN</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BOTTEGA</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">VENETA</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">BRUNELLO</span>
+                </label>
+              </li>
+              <li class="filter-modal__item">
+                <label class="label--have-checkbox page-filter__label">
+                  <input class="checkbox" type="checkbox"><span class="checkbox-style">
+                    <svg class="icon icon-check">
+                      <use xlink:href="assets/sprites/sprite.svg#check"></use>
+                    </svg></span><span class="page-filter__label-name">CUCINELLI</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <label class="label--have-checkbox page-filter__label">
+            <input class="checkbox" type="checkbox"><span class="checkbox-style">
+              <svg class="icon icon-check">
+                <use xlink:href="assets/sprites/sprite.svg#check"></use>
+              </svg></span><span class="page-filter__label-name">Новая коллекция</span>
+          </label>
+          <button class="filter-modal__btn btn filter-modal__btn--submit" type="submit">применить фильтры</button>
+          <button class="filter-modal__btn btn btn--white" type="button">очистить фильтры</button>
+        </form>
+      </div>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="footer__top">
@@ -993,11 +1253,11 @@
               <li class="footer__info-item"><a class="footer__info-link" href="#">Оферта</a></li>
             </ul>
           </nav>
-          <div class="footer__dropdown-wrapper footer__dropdown-wrapper--mobile">
-            <div class="footer__dropdown-list">
-              <div class="footer__dropdown-item">
-                <button class="footer__dropdown-head">Пoкупателям</button>
-                <ul class="footer__info-list footer__dropdown-content">
+          <div class="footer__dropdown-wrapper footer__dropdown-wrapper--mobile mobile-dropdown__wrapper">
+            <div class="footer__dropdown-list mobile-dropdown__list">
+              <div class="footer__dropdown-item mobile-dropdown__item">
+                <button class="footer__dropdown-head mobile-dropdown__head">Пoкупателям</button>
+                <ul class="footer__info-list footer__dropdown-content mobile-dropdown__content">
                   <li class="footer__info-item"><a class="footer__info-link" href="#">Вопрос-ответ</a></li>
                   <li class="footer__info-item"><a class="footer__info-link" href="#">Достaвка</a></li>
                   <li class="footer__info-item"><a class="footer__info-link" href="#">Самовывоз</a></li>
@@ -1005,25 +1265,25 @@
                   <li class="footer__info-item"><a class="footer__info-link" href="#">Возврат и обмен</a></li>
                 </ul>
               </div>
-              <div class="footer__dropdown-item">
-                <button class="footer__dropdown-head">Компания</button>
-                <ul class="footer__info-list footer__dropdown-content">
+              <div class="footer__dropdown-item mobile-dropdown__item">
+                <button class="footer__dropdown-head mobile-dropdown__head">Компания</button>
+                <ul class="footer__info-list footer__dropdown-content mobile-dropdown__content">
                   <li class="footer__info-item"><a class="footer__info-link" href="#">О нас</a></li>
                   <li class="footer__info-item"><a class="footer__info-link" href="#">Контакты</a></li>
                   <li class="footer__info-item"><a class="footer__info-link" href="#">Сотрудничество</a></li>
                 </ul>
               </div>
-              <div class="footer__dropdown-item">
-                <button class="footer__dropdown-head">Правовая информация</button>
-                <ul class="footer__info-list footer__dropdown-content">
+              <div class="footer__dropdown-item mobile-dropdown__item">
+                <button class="footer__dropdown-head mobile-dropdown__head">Правовая информация</button>
+                <ul class="footer__info-list footer__dropdown-content mobile-dropdown__content">
                   <li class="footer__info-item"><a class="footer__info-link" href="#">Вопрос-ответ</a></li>
                   <li class="footer__info-item"><a class="footer__info-link" href="#">Политика конфиденциальности</a></li>
                   <li class="footer__info-item"><a class="footer__info-link" href="#">Оферта</a></li>
                 </ul>
               </div>
-              <div class="footer__dropdown-item">
-                <button class="footer__dropdown-head">Мы в соцсетях</button>
-                <nav class="footer__connect connect footer__dropdown-content">
+              <div class="footer__dropdown-item mobile-dropdown__item">
+                <button class="footer__dropdown-head mobile-dropdown__head">Мы в соцсетях</button>
+                <nav class="footer__connect connect footer__dropdown-content mobile-dropdown__content">
                   <ul class="connect__list">
                     <li class="connect__item"><a class="connect__link" href="#">
                         <svg class="icon icon-facebook">
@@ -1056,9 +1316,9 @@
                   </ul>
                 </nav>
               </div>
-              <div class="footer__dropdown-item">
-                <button class="footer__dropdown-head">Связаться с нами</button>
-                <ul class="footer__contacts-list footer__dropdown-content">
+              <div class="footer__dropdown-item mobile-dropdown__item">
+                <button class="footer__dropdown-head mobile-dropdown__head">Связаться с нами</button>
+                <ul class="footer__contacts-list footer__dropdown-content mobile-dropdown__content">
                   <li class="footer__contacts-item"><a class="footer__contacts-link" href="tel:+88001002828">Казахстан: 8 (800) 100 28 28</a></li>
                   <li class="footer__contacts-item"><a class="footer__contacts-link" href="tel:+84952878555">Астана: 8 (495) 287 85 55</a></li>
                   <li class="footer__contacts-item"><a class="footer__contacts-link link" href="mailto:nfo@kimex.kz">nfo@kimex.kz</a></li>
