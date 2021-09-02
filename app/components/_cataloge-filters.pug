@@ -7,6 +7,7 @@
                 li.breadcrumbs__item
                     span.breadcrumbs__content Одежда
             h1.page-filter__title Одежда
+                span 3256
         .page-filter__top-right
             p.page-filter__results Всего 3256 предложений
             select.page-filter__order.select.select--no-search(data-dropdown-css-class='select--relative' data-minimum-results-for-search='-1')
@@ -98,5 +99,13 @@
             span.page-filter__label-name
                 | Новая коллекция
         button.page-filter__clear.link(type='button') Очистить фильтры
-
-
+    form.page-filter__bottom.page-filter__bottom--mobile
+        select.page-filter__order.select.select--no-search(data-dropdown-css-class='select--relative' data-minimum-results-for-search='-1')
+            option Цена по возрастанию
+            option Цена по убыванию
+            option Со скидками
+            option По новизне
+        a.page-filter__trigger(data-fancybox data-src='#filter-modal')
+            svg.icon.icon-filter
+                use(xlink:href="assets/sprites/sprite.svg#filter")
+            | Фильтры

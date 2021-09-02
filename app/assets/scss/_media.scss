@@ -18,10 +18,44 @@
         max-width: unset;
     }
 
+    .line{
+        width: calc(100% - 32px);
+    }
+
     // Global
 }
 
 @media screen and (max-width: 1200px){
+    // Card-up
+
+    .card-up__gallery{
+        min-height: unset;
+        .arrow-next,
+        .arrow-prev{
+            // left: 6%;
+        }
+    }
+    
+    .card-up__navigation{
+        margin: 25px 16px 25px 0;
+        min-width: unset;
+        .swiper-slide{
+            
+        }
+    }
+    
+    .card-up__left{
+        min-width: unset;
+        max-width: 50vw;
+    }
+
+    .card-up__big{
+        min-height: 100%;
+        max-height: none;
+    }
+
+    // Card-up
+
     // Lk
 
     .lk-history__item-number{
@@ -63,24 +97,6 @@
     }
 
     // Footer
-
-    // Cataloge
-
-    .cataloge__page{
-        // max-width: 800px;
-    }
-
-    .cataloge__cards{
-        .card{
-            width: calc(33% - 32px);
-            text-align: center;
-            .swiper-slide{
-                justify-content: center;
-            }
-        }
-    }
-
-    // Cataloge
 }
 
 @media screen and (max-width: 1100px){
@@ -264,13 +280,67 @@
     }
 
     // Global
+
+    // Cataloge
+
+    .cataloge__cards{
+        margin-bottom: 20px;
+        .card{
+            width: calc(33.3% - 32px);
+            text-align: center;
+            .swiper-slide{
+                justify-content: center;
+            }
+        }
+    }
+    .pagination__list{
+        margin-bottom: 18px;
+    }
+    
+    .page-filter__label{
+        margin-left: 24px;
+    }
+
+    // Cataloge 
+
+    // Card-up
+
+    // .card-up__top{
+    //     flex-direction: column;
+    //     justify-content: center;
+    // }
+
+    // .card-up__left{
+    //     justify-content: center;
+    //     width: unset;
+    //     margin: 0 auto 10px;
+    //     max-width: 592px;
+    //     .breadcrumbs{
+    //         display: flex;
+    //         margin-bottom: 16px;
+    //     }
+    // }
+
+    // .card-up__gallery{
+    //     // flex-direction: row-reverse;
+    // }
+
+    // .card-up__right{
+    //     margin-left: 0;
+    //     margin-bottom: 22px;
+    //     .breadcrumbs{
+    //         display: none;
+    //     }
+    // }
+    
+
+    // Card-up
 }
 
 @media screen and (max-width: 950px){
     // Modals
 
     .card-modal{
-        // min-width: unset;
         padding: 0;
         .card-modal__inner{
             padding: 16px;
@@ -392,6 +462,26 @@
     }
 
     // Global
+
+    // Cataloge
+
+    .cataloge__aside{
+        display: none;
+    }
+
+    .cataloge__cards{
+        margin-bottom: 20px;
+        .card{
+            width: calc(25% - 32px);
+            margin: 0 16px 32px;
+            min-height: 430px;
+            .swiper-slide{
+                justify-content: center;
+            }
+        }
+    }
+
+    // Cataloge
 }
 
 @media screen and (max-width: 850px){
@@ -413,6 +503,17 @@
     }
 
     // Modal
+
+    // Cataloge
+
+    .cataloge__cards{
+        .card{
+            width: calc(33.3% - 16px);
+            margin: 0 8px 22px;
+        }
+    }
+
+    // Cataloge
 }
 
 @media screen and (max-width: 815px){
@@ -457,6 +558,116 @@
 
 
 @media screen and (max-width: 800px){
+    // Cataloge
+
+    .page-filter__title{
+        font-size: 14px;
+        line-height: 14px;
+        margin-top: 13px;
+        span{
+            display: unset;
+        }
+    }
+
+    .page-filter__top-right,
+    .page-filter__bottom{
+        display: none;
+    }
+    
+    .page-filter__bottom--mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        border: none;
+        .select2{
+            font-size: 11px;
+            line-height: 11px;
+            border: 1px solid $anothergray;
+            min-height: 32px;
+            .select2-selection__arrow{
+                right: 0;
+                b{
+                    margin-right: 10px;
+                    margin-left: 0;
+                    margin-top: 2.2px;
+                }
+            }
+        }
+        .select2-container--default .select2-selection--single{
+            min-height: 32px;
+            .select2-selection__rendered{
+                text-align: left;
+                min-width: 192px;
+                padding-left: 12px;
+                min-height: 32px;
+                line-height: 32px;
+            }
+        } 
+    }
+
+    .select--relative{
+        margin-top: -1px;
+    }
+
+    .page-filter__top{
+        margin-bottom: 13px;
+        .breadcrumbs{
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+
+    .cataloge__inner{
+        margin-top: 14px;
+    }
+
+    .cataloge-page__all-goods{
+        margin-bottom: 33px;
+    }
+
+    .page-filter__select-option--color{
+        width: 16px;
+        height: 16px;
+        margin: 0 9px 0 0;
+    }
+    .filter-modal{
+        .accordion-head{
+            font-size: 14px;
+            line-height: 14px;
+            padding: 22px 0 20px;
+            max-height: 55px;
+        }
+        .accordion-wrapper--active{
+            .accordion-head{
+                padding: 22px 0 10px;
+            }
+            .accordion-body{
+                margin-bottom: 10px;
+            }
+        }
+        .extra-controls{
+            justify-content: space-between;
+            margin-top: 11px;
+        }
+        .subtitle{
+            text-align: left;
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 20px;
+        }
+        .fancybox-button{
+            top: 20px;
+            right: 24px;
+            .icon-x{
+                fill: $text-main;
+                font-size: 12px;
+            }
+        }
+    }
+    
+    // Cataloge
+
     // Lk
 
     .lk-added{
@@ -504,8 +715,6 @@
         }
         .lk-history__item-left{
             position: relative;
-        }
-        .lk-added__wrapper{
         }
         .lk-added{
             overflow-x: scroll;
@@ -605,14 +814,19 @@
             font-size: 11px;
             line-height: 11px;
         }
-        .card__discount{
+        .card__discount,
+        .card__new{
             width: 28px;
             height: 28px;
             font-size: 8px;
             line-height: 8px;
+            &::before{
+                font-size: 8px;
+                line-height: 8px;
+            }
         }
         .card__like{
-            top: 12px;
+            top: 6px;
             svg{
                 height: 14px;
                 font-size: 15px;
@@ -765,6 +979,28 @@
 
     // Index
 
+    // Cataloge
+
+    .filter-modal{
+        min-height: 100vh;
+        margin-top: 0;
+    }
+
+    // .cataloge__cards{
+    //     margin-bottom: 20px;
+    //     .card{
+    //         width: calc(33% - 32px);
+    //         margin: 0 16px 32px;
+    //         min-height: 379px !important;
+    //         .swiper-slide,
+    //         .swiper-wrapper,
+    //         .slider-card{
+    //             min-height: 100px;
+    //         }
+    //     }
+    // }
+
+    // Cataloge 
 
     // Submit-order
 
@@ -1005,6 +1241,40 @@
     }
 
     // Modals
+
+    // Cataloge
+
+    .filter-modal__btn{
+        width: 100%;
+        font-size: 10px;
+        line-height: 10px;
+        height: 40px;
+    }
+
+    .filter-modal .filter-modal__btn:last-child{
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .cataloge__cards{
+        .card{
+            width: calc(50% - 16px);
+            margin: 0 8px 22px;
+            min-height: 305px !important;
+            .slider-card,
+            .swiper-wrapper,
+            .swiper-slide{
+                min-height: 100px;
+                max-height: 200px;
+                img{
+                    object-fit: contain;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+
+    // Cataloge
 
     .slider{
         .slider-auto{
@@ -1693,10 +1963,14 @@
             min-height: 197px;
             img{
                 max-height: 186px;
-                height: 100%;
+                max-height: 100%;
                 // max-width: unset;
             }
         }
+    }
+
+    .cataloge__cards .card{
+        min-height: 300px !important;
     }
 
     .mini-cataloge{

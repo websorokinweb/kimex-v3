@@ -1245,18 +1245,101 @@ img{
     &__dropdown-wrapper--mobile{
         display: none;
     }
-    &__dropdown-wrapper{
+    // &__dropdown-wrapper{
+    //     margin-top: 23px;
+    //     width: 100%;
+    // }
+    // &__dropdown-list{
+    //     display: flex;
+    //     flex-direction: column;
+    //     .footer__info-list:nth-child(2){
+    //         transform: unset;
+    //     }
+    // }
+    // &__dropdown-head{
+    //     width: 100%;
+    //     text-align: left;
+    //     padding: 20px 16px 16px;
+    //     position: relative;
+    //     font-weight: 600;
+    //     background-color: transparent;
+    //     border: none;
+    //     border-top: 1px solid $anothergray;
+    //     &:after,
+    //     &:before{
+    //         content: '';
+    //         position: absolute;
+    //         right: 16px;
+    //         top: 24px;
+    //         height: 2px;
+    //         width: 17px;
+    //         background-color: #bababa;
+    //         transition: transform .4s;
+    //     }
+    //     &:after{
+    //         transform: rotate(90deg);
+    //     }
+    // }
+    // &__dropdown-content{
+    //     height: 0;
+    //     opacity: 0;
+    //     transition: height .4s;
+    //     pointer-events: none;
+    //     padding: 0 16px;
+    // }
+    // &__dropdown-item{
+    //     border-bottom: 1px solid $anothergray;
+    //     &--active{
+    //         .footer__dropdown-head{
+    //             &:after{
+    //                 transform: unset;
+    //             }
+    //         }
+    //         .footer__dropdown-content{
+    //             height: unset;
+    //             opacity: 1;
+    //             margin: 5px 0 15px;
+    //             pointer-events: all;
+    //         }
+    //     }
+    // }
+    // &__dropdown-list{
+    //     width: 100vw;
+    //     transform: translateX(-16px);
+    //     position: relative;
+    //     &:before,
+    //     &:after{
+    //         content: '';
+    //         position: absolute;
+    //         background-color: $anothergray;
+    //         height: 2px;
+    //         width: 100vw;
+    //         left: 0;
+    //         top: 0;
+    //     }
+    //     &:after{
+    //         top: unset;
+    //         bottom: 0;
+    //     }
+    // }
+}
+
+.mobile-dropdown{
+    &__wrapper--mobile{
+        display: none;
+    }
+    &__wrapper{
         margin-top: 23px;
         width: 100%;
     }
-    &__dropdown-list{
+    &__list{
         display: flex;
         flex-direction: column;
         .footer__info-list:nth-child(2){
             transform: unset;
         }
     }
-    &__dropdown-head{
+    &__head{
         width: 100%;
         text-align: left;
         padding: 20px 16px 16px;
@@ -1280,14 +1363,14 @@ img{
             transform: rotate(90deg);
         }
     }
-    &__dropdown-content{
+    &__content{
         height: 0;
         opacity: 0;
         transition: height .4s;
         pointer-events: none;
         padding: 0 16px;
     }
-    &__dropdown-item{
+    &__item{
         border-bottom: 1px solid $anothergray;
         &--active{
             .footer__dropdown-head{
@@ -1303,7 +1386,7 @@ img{
             }
         }
     }
-    &__dropdown-list{
+    &__list{
         width: 100vw;
         transform: translateX(-16px);
         position: relative;
@@ -1323,6 +1406,50 @@ img{
         }
     }
 }
+
+.filter-modal{
+    padding: 21px 24px 26px;
+    .mobile-dropdown__list{
+        width: 100%;
+        &:before,
+        &:after{
+            width: 100%;
+        }
+    }
+    .filter-price{
+        margin-left: 0;
+    }
+    .label--have-checkbox{
+        margin: 24px 0;
+        color: $text-main;
+        .checkbox-style{
+            border: 1px solid #d7d7d7;
+        }
+    }
+    .mobile-dropdown__list{
+        transform: unset;
+    }
+    .filter-modal__btn{
+        min-width: 280px;
+        margin-right: auto;
+        display: inline-block;
+        &:last-child{
+            margin-left: 16px;
+        }
+    }
+    .mobile-dropdown__head{
+        padding-left: 0;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .filter-modal__item{
+    
+        .label--have-checkbox{
+            margin: 5px 0;
+        }
+    } 
+}
+
 .mailing {
 
     &__title {
@@ -2268,6 +2395,7 @@ img{
             .accordion-body{
                 opacity: 1;
                 height: unset;
+                pointer-events: all;
                 margin-bottom: 24px;
             }
         }
@@ -2304,6 +2432,7 @@ img{
         height: 0;
         opacity: 0;
         transition: opacity .3s height .4s ;
+        pointer-events: none;
     }
 }
 

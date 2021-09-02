@@ -29,33 +29,33 @@ footer.footer
                     each val in ['Вопрос-ответ', 'Политика конфиденциальности', 'Оферта']
                         li.footer__info-item
                             a.footer__info-link(href='#')=val
-            .footer__dropdown-wrapper.footer__dropdown-wrapper--mobile
-                .footer__dropdown-list
-                    .footer__dropdown-item
-                        button.footer__dropdown-head Пoкупателям
-                        ul.footer__info-list.footer__dropdown-content
+            .footer__dropdown-wrapper.footer__dropdown-wrapper--mobile.mobile-dropdown__wrapper
+                .footer__dropdown-list.mobile-dropdown__list
+                    .footer__dropdown-item.mobile-dropdown__item
+                        button.footer__dropdown-head.mobile-dropdown__head Пoкупателям
+                        ul.footer__info-list.footer__dropdown-content.mobile-dropdown__content
                             each val in ['Вопрос-ответ', 'Достaвка', 'Самовывоз', 'Оплата', 'Возврат и обмен']
                                 li.footer__info-item
                                     a.footer__info-link(href='#')=val
-                    .footer__dropdown-item
-                        button.footer__dropdown-head Компания
-                        ul.footer__info-list.footer__dropdown-content
+                    .footer__dropdown-item.mobile-dropdown__item
+                        button.footer__dropdown-head.mobile-dropdown__head Компания
+                        ul.footer__info-list.footer__dropdown-content.mobile-dropdown__content
                             each val in ['О нас', 'Контакты', 'Сотрудничество']
                                 li.footer__info-item
                                     a.footer__info-link(href='#')=val
-                    .footer__dropdown-item
-                        button.footer__dropdown-head Правовая информация
-                        ul.footer__info-list.footer__dropdown-content
+                    .footer__dropdown-item.mobile-dropdown__item
+                        button.footer__dropdown-head.mobile-dropdown__head Правовая информация
+                        ul.footer__info-list.footer__dropdown-content.mobile-dropdown__content
                             each val in ['Вопрос-ответ', 'Политика конфиденциальности', 'Оферта']
                                 li.footer__info-item
                                     a.footer__info-link(href='#')=val
-                    .footer__dropdown-item
-                        button.footer__dropdown-head Мы в соцсетях
-                        nav.footer__connect.connect.footer__dropdown-content
+                    .footer__dropdown-item.mobile-dropdown__item
+                        button.footer__dropdown-head.mobile-dropdown__head Мы в соцсетях
+                        nav.footer__connect.connect.footer__dropdown-content.mobile-dropdown__content
                             include _connect-list.pug
-                    .footer__dropdown-item
-                        button.footer__dropdown-head Связаться с нами
-                        ul.footer__contacts-list.footer__dropdown-content
+                    .footer__dropdown-item.mobile-dropdown__item
+                        button.footer__dropdown-head.mobile-dropdown__head Связаться с нами
+                        ul.footer__contacts-list.footer__dropdown-content.mobile-dropdown__content
                             li.footer__contacts-item
                                 a.footer__contacts-link(href='tel:+88001002828') Казахстан: 8 (800) 100 28 28
                             li.footer__contacts-item

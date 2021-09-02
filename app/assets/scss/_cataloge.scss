@@ -29,6 +29,7 @@
     font-weight: 600;
     color: $text-main;
     margin-bottom: 50px;
+    margin-right: 32px;
     &__item{
         & + &{
             margin-top: 18px;
@@ -37,6 +38,7 @@
     &__link{
         padding-bottom: 8px;
         text-transform: uppercase;
+        white-space: nowrap;
         &--sale{
             color: $active;
             &:before{
@@ -87,6 +89,9 @@
     .select2-results__options{
         padding: 8px 0;
         border-top: 1px solid $anothergray;
+    }
+    .select2-results__option{
+        padding: 8px 12px;
     }
 }
 
@@ -279,9 +284,6 @@
     .select-dropdown__filter--multiple{
         transform: translateY(23px);
         .select2-results{
-            // overflow-y: auto;
-            // margin-top: 23px !important;
-            // max-height: 248px !important;
             width: 232px;
         }
         .select2-selection__choice .select2-selection__choice__display:after{
@@ -299,7 +301,6 @@
     margin: 0 12px 0 -3px;
 }
 
-// select-dropdown__filter--multiple
 .filter-price{
     margin-left: 15px;
     &__select{
@@ -460,6 +461,15 @@
         margin-top: 23px;
         text-align: left;
         text-transform: uppercase;
+        span{
+            font-size: 8px;
+            line-height: 12px;
+            color: $text-light;
+            font-weight: 500;
+            margin-left: 4px;
+            vertical-align: top;
+            display: none;
+        }
     }
     &__top-right{
         text-align: right;
@@ -530,6 +540,9 @@
         .select2 .selection .select2-selection--single .select2-selection__rendered {
             color: #000 !important;
         }
+        &--mobile{
+            display: none;
+        }
     }
     &__list{
         display: flex;
@@ -573,6 +586,19 @@
         transition: color .4s;
         &:hover{
             color: $text-main;
+        }
+    }
+    &__trigger{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 600;
+        .icon{
+            font-size: 15px;
+            height: 14px;
+            margin-right: 6px;
         }
     }
 }

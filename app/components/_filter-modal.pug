@@ -1,0 +1,228 @@
+div.filter-modal(
+    style="position:absolute; left:-5000px;"
+    id='filter-modal'
+)   
+    .filter-modal__inner
+        p.subtitle фильтры
+        form.filter-modal__form
+            .accordion-wrapper
+                button.accordion-head(type='button') Цена
+                ul.accordion-body.filter-price
+                    .extra-controls
+                        label.filter-price__label
+                            span от
+                            input.js-input-from(type='text' value='0')
+                        label.filter-price__label
+                            span до
+                            input.js-input-to(type='text' value='0')
+                    input.filter-price__input(
+                        type='text'
+                        data-type='double'
+                        data-min='0'
+                        data-max='135000'
+                        data-from='10000'
+                        data-to='125000'
+                    )
+            .accordion-wrapper
+                button.accordion-head(type='button') Цвет
+                ul.accordion-body.filter-modal__list
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            span.page-filter__select-option--color(style='background-color: #e5d8d2')
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name Бежевый
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            span.page-filter__select-option--color(style='background-color: #ae8979')
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name Персиковый
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            span.page-filter__select-option--color(style='background-color: #9d9f9e')
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name Серый
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            span.page-filter__select-option--color(style='background-color: #6c685a')
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name Хаки
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            span.page-filter__select-option--color(style='background-color: #6e6872')
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name Фиолетовый
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            span.page-filter__select-option--color(style='background-color: #a9adb8')
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name Светлосерый
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            span.page-filter__select-option--color(style='background-color: #e5d8d2')
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name Бежевый
+            .accordion-wrapper
+                button.accordion-head(type='button') Бренд
+                ul.accordion-body.filter-modal__list
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BALENCIAGA
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BALMAIN
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BOTTEGA
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name VENETA
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BRUNELLO
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name CUCINELLI
+            .accordion-wrapper
+                button.accordion-head(type='button') Размер
+                ul.accordion-body.filter-modal__list
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BALENCIAGA
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BALMAIN
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BOTTEGA
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name VENETA
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BRUNELLO
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name CUCINELLI
+            .accordion-wrapper
+                button.accordion-head(type='button') Тип
+                ul.accordion-body.filter-modal__list
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BALENCIAGA
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BALMAIN
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BOTTEGA
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name VENETA
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name BRUNELLO
+                    li.filter-modal__item
+                        label.label--have-checkbox.page-filter__label
+                            input.checkbox(type='checkbox')
+                            span.checkbox-style
+                                svg.icon.icon-check
+                                    use(xlink:href="assets/sprites/sprite.svg#check")
+                            span.page-filter__label-name CUCINELLI
+            label.label--have-checkbox.page-filter__label
+                input.checkbox(type='checkbox')
+                span.checkbox-style
+                    svg.icon.icon-check
+                        use(xlink:href="assets/sprites/sprite.svg#check")
+                span.page-filter__label-name
+                    | Новая коллекция
+            button.filter-modal__btn.btn.filter-modal__btn--submit(type='submit') применить фильтры
+            button.filter-modal__btn.btn.btn--white(type='button') очистить фильтры
