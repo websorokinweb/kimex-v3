@@ -23,22 +23,41 @@
     }
 
     // Global
+
+    // Header
+
+    .slider--mini{
+        .card{
+            width: calc(50% - 32px);
+        }
+    }
+
+    // Header
 }
 
 @media screen and (max-width: 1200px){
+    // Header
+
+    .dropdown__top-categories{
+        margin-left: 48px;
+    }
+
+    // Header
+
     // Card-up
 
     .card-up__gallery{
         min-height: unset;
         .arrow-next,
         .arrow-prev{
-            // left: 6%;
+            // left: 7%;
         }
     }
     
     .card-up__navigation{
         margin: 25px 16px 25px 0;
-        min-width: unset;
+        min-width: 16%;
+        // width: 20%;
         .swiper-slide{
             
         }
@@ -46,12 +65,18 @@
     
     .card-up__left{
         min-width: unset;
-        max-width: 50vw;
+        max-width: 70vw;
+        width: 100%;
     }
 
     .card-up__big{
-        min-height: 100%;
-        max-height: none;
+        min-height: 100% !important;
+        // min-height: 656px;
+        max-height: none !important;
+        img,
+        .swiper-slide{
+            min-height: 100% !important;
+        }
     }
 
     // Card-up
@@ -77,6 +102,24 @@
 }
 
 @media screen and (max-width: 1170px){
+    // Header
+
+    .simple-navigation__list+.simple-navigation__list{
+        margin-left: 30px;
+    }
+
+    .dropdown__top-categories{
+        margin-left: 30px;
+    }
+
+    .slider--mini{
+        .card{
+            width: 50%;
+        }
+    }
+
+    // Header
+
     // Footer
 
     .footer__info-list{
@@ -97,9 +140,39 @@
     }
 
     // Footer
+
+    // Cart
+
+    .cart__right{
+        min-width: 32%;
+    }
+    
+    // Cart
 }
 
 @media screen and (max-width: 1100px){
+    // Header
+
+    .dropdown__slider{
+        max-width: 238px;
+    }
+
+    .simple-navigation__list+.simple-navigation__list{
+        margin-left: 40px;
+    }
+
+    .dropdown__top-categories{
+        margin-left: 40px;
+    }
+
+    .slider--mini{
+        .card{
+            width: 100%;
+        }
+    }
+
+    // Header
+
     // Index
 
     .home-choose{
@@ -114,6 +187,14 @@
     }
 
     // Index
+    
+    // Cart
+
+    .cart__right{
+        min-width: unset;
+        max-width: 320px;
+    }
+    // Cart
 
     // Lk
 
@@ -270,12 +351,11 @@
 
     // Global
 
-    .slider-auto{
-        .card{
-            width: calc(25% - 32px);
-        }
-        .swiper-wrapper{
-            transform: translate3d(-1298.05px, 0px, 0px);
+    .slider{
+        .slider-auto{
+            .card{
+                width: calc(25vw - 32px);
+            }
         }
     }
 
@@ -335,6 +415,20 @@
     
 
     // Card-up
+    
+    // Cart
+
+    .cart__inner{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart__right{
+        max-width: 490px;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+    // Cart
 }
 
 @media screen and (max-width: 950px){
@@ -1652,8 +1746,15 @@
         transform: translate(-0.5px, -25px);
         width: 100%;
         .card{
-            max-width: calc(50vw - 8px) !important;
-            min-width: calc(50vw - 8px) !important;
+            max-width: calc(50% - 16px) !important;
+            min-width: calc(50% - 16px) !important;
+            .card__discount, .card__new{
+                left: 8px;
+                top: 8px;
+            }
+            .card__like{
+                top: 5.5px;
+            }
         }
     }
 
@@ -1669,8 +1770,10 @@
         }
     }
 
-    // Global
 
+    
+    // Global
+    
     // Modals
 
     .join-modal{
@@ -1963,7 +2066,7 @@
             min-height: 197px;
             img{
                 max-height: 186px;
-                max-height: 100%;
+                // max-height: 100%;
                 // max-width: unset;
             }
         }
@@ -1973,10 +2076,18 @@
         min-height: 300px !important;
     }
 
+    // Global
+
+    // Index
+
+    .home-banners{
+        margin-top: -60px;
+    }
+
     .mini-cataloge{
         .slider-auto{
             .card{
-                min-height: 259px !important;
+                min-height: 260px !important;
             }
             .card__top{
                 img{
@@ -1987,5 +2098,5 @@
         }
     } 
 
-    // Global
+    // Index
 }

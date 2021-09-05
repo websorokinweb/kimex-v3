@@ -21,6 +21,10 @@
             left: 48px;
             top: unset;
         }
+        .arrow-next,
+        .arrow-prev{
+            
+        }
         .arrow-next{
             bottom: 0;
             transform: rotate(90deg);
@@ -36,7 +40,7 @@
         // min-width: 102px;
         margin-right: 16px;
         height: 100%;
-        min-width: 104px;
+        // min-width: 104px;
         .swiper-wrapper{
             min-height: 100%;
         }
