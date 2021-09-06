@@ -31,7 +31,7 @@ section.home-banners
                   img(src='temp/index-banner-2.jpg' alt='')
                 a.home-banners__imgwrapper(href='#')
                   img(src='temp/index-banner-3.jpg' alt='')
-section.actually.slider
+section.actually.slider.slider-left-margin
     .container
         h3.subtitle актуальное
         .slider--big-slides.swiper-container
@@ -50,7 +50,7 @@ section.actually.slider
                     span.card-big__title Юбка
         .arrow-prev.arrow-prev--big-slides
         .arrow-next.arrow-next--big-slides
-section.mini-cataloge.slider-auto-wrapper
+section.mini-cataloge
     .container
         .tabs-wrapper
             .tabs.mobile-overflow
@@ -61,22 +61,22 @@ section.mini-cataloge.slider-auto-wrapper
                 a.tab.subtitle.hover-line(href='#tab-3')
                     h3 exclusive
         .tabs-container
-            #tab-1.tabs-content.tabs-content--active.cataloge-wrapper
+            #tab-1.tabs-content.tabs-content--active.cataloge-wrapper.slider.slider-auto-wrapper
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
                 include ../components/_slider-auto.pug
-            #tab-2.tabs-content.cataloge-wrapper
+            #tab-2.tabs-content.cataloge-wrapper.slider.slider-auto-wrapper
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
                 include ../components/_slider-auto.pug
-            #tab-3.tabs-content.cataloge-wrapper
+            #tab-3.tabs-content.cataloge-wrapper.slider.slider-auto-wrapper
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
                 include ../components/_card-row.pug
                 include ../components/_slider-auto.pug
-section.instagram.slider
+section.instagram.slider.slider-left-margin
     .container
         h3.subtitle
           | instagram

@@ -323,7 +323,12 @@ const instagram = new Swiper('.slider--instagram', {
         950: {
             slidesPerView: 3,
         },
-    }
+    },
+    on: {
+        init: function () {
+            this.slideTo(0)
+        },
+    },
 });
 
 const bigSlides = new Swiper('.slider--big-slides', {
@@ -350,7 +355,12 @@ const bigSlides = new Swiper('.slider--big-slides', {
         950: {
             slidesPerView: 4,
         },
-    }
+    },
+    on: {
+        init: function () {
+            this.slideTo(0)
+        },
+    },
 });
 
 const miniSlider = new Swiper('.slider--mini', {
