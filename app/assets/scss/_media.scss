@@ -429,6 +429,31 @@
         margin-top: 25px;
     }
     // Cart
+
+    // 404
+
+    .not-found{
+        padding: 63px 0 60px;
+    }
+
+    .not-found__title{
+        font-size: 200px;
+        line-height: 142px;
+        margin-bottom: 33px;
+    }
+
+    .not-found__subtitle{
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 30px;
+    }
+    
+    .not-found__descr{
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    // 404
 }
 
 @media screen and (max-width: 950px){
@@ -865,13 +890,14 @@
     .slider-auto-wrapper{
         .slider-auto{
             position: relative;
-            width: 100vw;
+            width: 100%;
+            transform: translate(0, -25px);
             .swiper-wrapper{
-                margin-left: 31px !important;
+                margin-left: 0px !important;
             }
             .card{
                 width: 100%;
-                max-width: 32.15%;
+                max-width: 33.3%;
                 min-width: unset;
             }
         }
@@ -1369,16 +1395,6 @@
     }
 
     // Cataloge
-
-    .slider{
-        .slider-auto{
-            transform: translate(-16px, -25px);
-            .card{
-                max-width: calc(34% - 16px);
-                min-width: calc(34% - 16px);
-            }
-        }
-    }
 }
 
 @media screen and (max-width: 600px){
@@ -1737,23 +1753,51 @@
     }
 
     // Lk
+
+    // 404
+
+    .not-found-slider{
+        display: none;
+    }
+
+    .not-found{
+        padding: 33px 0 30px;
+    }
+
+    .not-found__title{
+        font-size: 100px;
+        line-height: 75px;
+        margin-bottom: 13px;
+    }
+
+    .not-found__subtitle{
+        font-size: 12px;
+        line-height: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .not-found__descr{
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    // 404
 }
 
 @media screen and (max-width: 545px){
     // Global
     
-    .slider-auto{
-        transform: translate(-0.5px, -25px);
-        width: 100%;
-        .card{
-            max-width: calc(50% - 16px) !important;
-            min-width: calc(50% - 16px) !important;
-            .card__discount, .card__new{
-                left: 8px;
-                top: 8px;
-            }
-            .card__like{
-                top: 5.5px;
+    .slider-auto-wrapper{
+        .slider-auto{
+            .card{
+                max-width: 50%;
+                .card__discount, .card__new{
+                    left: 8px;
+                    top: 8px;
+                }
+                .card__like{
+                    top: 5.5px;
+                }
             }
         }
     }
@@ -1769,8 +1813,6 @@
             }
         }
     }
-
-
     
     // Global
     
