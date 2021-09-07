@@ -109,6 +109,9 @@
         display: flex;
         align-items: center;
         width: 100%;
+        .card-cart__size--show-size{
+            display: none;
+        }
     }
     &__imgwrapper{
         border: 1px solid $anothergray;
@@ -206,6 +209,9 @@
             text-align: center;
         }
     }
+    &__size-change{
+        margin-left: 12px;
+    }
     &__price{
         display: flex;
         flex-direction: column;
@@ -247,9 +253,11 @@
         right: 0;
     }
     &--show-size{
-        .card-cart__size{
-            display: flex;
-            align-items: center;
+        .card-cart__right{
+            .card-cart__size{
+                display: flex;
+                align-items: center;
+            }
         }
     }
     .card__like{

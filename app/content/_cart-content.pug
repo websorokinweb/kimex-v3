@@ -4,16 +4,6 @@ section.cart
             .cart__inner
                 .cart__left
                     .card-cart
-                        span.card__like
-                            svg
-                                use(
-                                    xlink:href="assets/sprites/sprite.svg#save"
-                                )
-                        span.card-cart__bin
-                            svg
-                                use(
-                                    xlink:href="assets/sprites/sprite.svg#bin"
-                                )
                         .card-cart__left
                             a.card-cart__imgwrapper(href='#')
                                 img(src='temp/novelty-week-3.jpg')
@@ -23,6 +13,9 @@ section.cart
                                 p.card-cart__vendor Артикул: 255461
                                 p.card-cart__color Цвет: 
                                     span Бежевый
+                                p.card-cart__size Размер:
+                                    input.input(type='text' value='43' maxlength="2")
+                                    span.card-cart__size-change.link Изменить
                         .card-cart__right
                             p.card-cart__size Размер:
                                 input.input(type='text' value='43' maxlength="2")
@@ -30,21 +23,21 @@ section.cart
                                 button.card-cart__count--minus -
                                 input.card-cart__count-input( type='number' value='1' min='1' max='100')
                                 button.card-cart__count--plus +
+                                span.card__like
+                                    svg
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#save"
+                                        )
+                                span.card-cart__bin
+                                    svg
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#bin"
+                                        )
                             .card-cart__price
                                 span.card-cart__price--curr 29 995 ₸
                                 p 109 990 ₸ 
                                     span.card-cart__price--discount &nbsp; -50%
                     .card-cart.card-cart--show-size
-                        span.card__like
-                            svg
-                                use(
-                                    xlink:href="assets/sprites/sprite.svg#save"
-                                )
-                        span.card-cart__bin
-                            svg
-                                use(
-                                    xlink:href="assets/sprites/sprite.svg#bin"
-                                )
                         .card-cart__left
                             a.card-cart__imgwrapper(href='#')
                                 img(src='temp/novelty-week-2.jpg')
@@ -54,6 +47,9 @@ section.cart
                                 p.card-cart__vendor Артикул: 2441145
                                 p.card-cart__color Цвет: 
                                     span Коричневый
+                                p.card-cart__size Размер:
+                                    input.input(type='text' value='43' maxlength="2" disabled)
+                                    span.card-cart__size-change.link Изменить
                         .card-cart__right
                             p.card-cart__size Размер:
                                 input.input(type='text' value='43' maxlength="2")
@@ -61,21 +57,21 @@ section.cart
                                 button.card-cart__count--minus -
                                 input.card-cart__count-input( type='number' value='1' min='1' max='100')
                                 button.card-cart__count--plus +
+                                span.card__like
+                                    svg
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#save"
+                                        )
+                                span.card-cart__bin
+                                    svg
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#bin"
+                                        )
                             .card-cart__price
                                 span.card-cart__price--curr 32 995 ₸
                                 p 65 990 ₸ 
                                     span.card-cart__price--discount &nbsp; -64%
                     .card-cart
-                        span.card__like
-                            svg
-                                use(
-                                    xlink:href="assets/sprites/sprite.svg#save"
-                                )
-                        span.card-cart__bin
-                            svg
-                                use(
-                                    xlink:href="assets/sprites/sprite.svg#bin"
-                                )
                         .card-cart__left
                             a.card-cart__imgwrapper(href='#')
                                 img(src='temp/novelty-week-3.jpg')
@@ -85,13 +81,26 @@ section.cart
                                 p.card-cart__vendor Артикул: 255461
                                 p.card-cart__color Цвет: 
                                     span Бежевый
+                                p.card-cart__size Размер:
+                                    input.input(type='text' value='43' maxlength="2")
                         .card-cart__right
                             p.card-cart__size Размер:
                                 input.input(type='text' value='43' maxlength="2")
+                                span.card-cart__size-change.link Изменить
                             .card-cart__count
                                 button.card-cart__count--minus -
                                 input.card-cart__count-input( type='number' value='1' min='1' max='100')
                                 button.card-cart__count--plus +
+                                span.card__like
+                                    svg
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#save"
+                                        )
+                                span.card-cart__bin
+                                    svg
+                                        use(
+                                            xlink:href="assets/sprites/sprite.svg#bin"
+                                        )
                             .card-cart__price
                                 span.card-cart__price--curr 29 995 ₸
                                 p 109 990 ₸ 

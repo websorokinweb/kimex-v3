@@ -482,6 +482,12 @@ $('.card-cart__bin').on('click', function(){
     $(this).closest('.card-cart').addClass('card-cart--hidden')
 });
 
+$('.card-cart__size-change').on('click', function(){
+    let input = $(this).prev();
+    input.removeAttr('disabled');
+    input.focus();
+});
+
 // cart
 let currClone = null
 function clonePagination(currSlider){

@@ -60,6 +60,10 @@ body{
     transform: translateY(-50%);
 }
 
+.hidden{
+    display: none !important;
+}
+
 // svg>symbol {display:none}
 // :target {display: inline}
 
